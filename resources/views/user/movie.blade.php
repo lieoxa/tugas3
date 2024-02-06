@@ -34,7 +34,7 @@
                 <section class="splide new" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <ul class="splide__list">
-                            <li class="splide__slide">
+                            <li class="splide__slide li">
                                 <div class="img-slide position-relative">
                                     <button type="button"
                                         class="btn-1 putar d-flex btn btn-light bg-white border-black favorit position-absolute translate-middle fw-bold py-0"><span
@@ -49,7 +49,7 @@
                                     <img src="{{ asset('img/slide.jpg') }}" class="w-100 rounded-5">
                                 </div>
                             </li>
-                            <li class="splide__slide">
+                            <li class="splide__slide li">
                                 <div class="img-slide position-relative">
                                     <button type="button"
                                         class="btn-1 putar d-flex btn btn-light bg-white border-black favorit position-absolute translate-middle fw-bold py-0"><span
@@ -64,7 +64,7 @@
                                     <img src="{{ asset('img/slide1.jpg') }}" class="w-100 rounded-5">
                                 </div>
                             </li>
-                            <li class="splide__slide">
+                            <li class="splide__slide li">
                                 <div class="img-slide position-relative">
                                     <button type="button"
                                         class="btn-1 putar d-flex btn btn-light bg-white border-black favorit position-absolute translate-middle fw-bold py-0"><span
@@ -108,7 +108,7 @@
                                         'text-secondary'"
                                     x-on:click="filter = 'animasi'">Animasi Anak-Anak</span>
                             </li>
-                            <li class="splide__slide me-0">
+                            <li class="splide__slide">
                                 <span
                                     :class="filter == 'super_hero' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
@@ -126,7 +126,7 @@
                                         'text-secondary'"
                                     x-on:click="filter = 'anime'">Anime Jepang</span>
                             </li>
-                            <li class="splide__slide me-0">
+                            <li class="splide__slide">
                                 <span
                                     :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold me-4' :
                                         'text-secondary'"
@@ -138,9 +138,9 @@
                                         'text-secondary'"
                                     x-on:click="filter = 'serial'">Serial ber Episode</span>
                             </li>
-                            <li class="splide__slide me-1">
+                            <li class="splide__slide">
                                 <span
-                                    :class="filter == 'horror' ? 'title-service text-white fs-8 fw-bold me-4' :
+                                    :class="filter == 'horror' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
                                     x-on:click="filter = 'horror'">Film Horror</span>
                             </li>
@@ -167,87 +167,87 @@
                     <section class="splide new-1" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/comedy7.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/comedy6.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/comedy5.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
@@ -263,7 +263,7 @@
                     <section class="splide new-2" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -273,7 +273,7 @@
                                     <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -283,7 +283,7 @@
                                     <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -292,7 +292,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -301,7 +301,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -310,7 +310,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -319,7 +319,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -328,7 +328,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -337,7 +337,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -346,7 +346,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -355,7 +355,7 @@
                                     </div>
                                     <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -448,47 +448,47 @@
                     <section class="splide new-3" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero4.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero5.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero6.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero7.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero8.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero9.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/hero10.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
@@ -586,70 +586,70 @@
                     <section class="splide new-6" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">One Piece</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">A Silent Voice</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Weathering</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim3.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Suzume</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim4.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Your Name</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim5.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Ocean Waves</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim6.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Howls Castle</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">KIKI's</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim8.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Spirited Away</h6>
                                     </div>
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/anim9.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
@@ -668,48 +668,48 @@
                     <section class="splide new-5" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
@@ -818,25 +818,25 @@
                     <section class="splide new-7" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
                                     style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide position-relative">
+                                <li class="splide__slide li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
@@ -852,21 +852,21 @@
                     <section class="splide new-4" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi1.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi3.jpg') }}" class="card-img-top slider-img">
                                 </li>
-                                <li class="splide__slide">
+                                <li class="splide__slide li">
                                     <img src="{{ asset('img/fi4.jpg') }}" class="card-img-top slider-img">
                                 </li>
                             </ul>

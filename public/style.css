@@ -138,7 +138,7 @@ h1{
     border-radius: 0.5rem !important;
 }
 .splide__slide{
-    min-width: 29% !important;
+    
 }
 .saran{
     min-width: 55% !important;
@@ -268,4 +268,7 @@ h1{
     --bs-btn-hover-border-color: #fff;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #a1a1a3b2;
+}
+.li{
+    min-width: 29% !important;
 }
