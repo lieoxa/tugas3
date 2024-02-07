@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/detail', function () {
+    return view('detail');
+});
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
@@ -28,6 +32,3 @@ Route::group(['middleware' => 'guest'], function () {
 Route::get('/movie', [AuthController::class, 'movie'])->name('movie');
 Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/detail', function () {
-    return view('detail');
-});

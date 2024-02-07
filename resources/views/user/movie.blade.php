@@ -15,12 +15,13 @@
 <nav class="navbar sticky-top pb-3" style="background: #222327;">
     <div class="container-fluid d-flex mt-2">
         <img src="img/muviku.png" class="navbar-brand my-auto" style="width: 30%;" loading="lazy">
-        {{-- <img src="img/profile.png" style="width: 12%" class="mt-2">  SUDAH LOGIN --}}
-        <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+        <img src="img/profile.png" style="width: 10%" class="">  
+        {{-- SUDAH LOGIN --}}
+        {{-- <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
             @csrf
             @method('DELETE')
             <button type="submit" class="logout btn btn-outline-light my-auto">Masuk</button>
-        </form>
+        </form> --}}
     </div>
 </nav>
 
@@ -106,25 +107,25 @@
                                 <span
                                     :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'animasi'">Animasi Anak-Anak</span>
+                                    x-on:click="filter = 'animasi'">Animasi</span>
                             </li>
                             <li class="splide__slide">
                                 <span
-                                    :class="filter == 'super_hero' ? 'title-service text-white fs-8 fw-bold' :
+                                    :class="filter == 'hero' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'super_hero'">Film Aksi</span>
+                                    x-on:click="filter = 'hero'">Aksi</span>
                             </li>
-                            <li class="splide__slide ">
+                            <li class="splide__slide">
                                 <span
                                     :class="filter == 'podcast' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'podcast'">Acara Podcast</span>
+                                    x-on:click="filter = 'podcast'">Podcast</span>
                             </li>
                             <li class="splide__slide ">
                                 <span
                                     :class="filter == 'anime' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'anime'">Anime Jepang</span>
+                                    x-on:click="filter = 'anime'">Anime</span>
                             </li>
                             <li class="splide__slide">
                                 <span
@@ -136,13 +137,13 @@
                                 <span
                                     :class="filter == 'serial' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'serial'">Serial ber Episode</span>
+                                    x-on:click="filter = 'serial'">Serial</span>
                             </li>
                             <li class="splide__slide">
                                 <span
                                     :class="filter == 'horror' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'horror'">Film Horror</span>
+                                    x-on:click="filter = 'horror'">Horror</span>
                             </li>
                             <li class="splide__slide ">
                                 <span
@@ -729,6 +730,9 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="d-flex">
+                                            <img src="img/saran1.jpg" class="w-25">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
                                                 <h6 class="m-0">Tokyo Revenger</h6>
@@ -840,6 +844,33 @@
                                     <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                 </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
+                                    style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li">
+                                    <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li">
+                                    <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li">
+                                    <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -879,36 +910,36 @@
 
     {{-- NAVIGATION --}}
 
-    {{-- <div class="navigation">
-        <ul>
-            <li class="list active">
-                <a href="#">
-                    <span class="icon"><img src="img/logo-muviku.png" style="width: 25px; height:28px;"></ion-icon></span>
-                    <span class="text">MUVIKU</span>
+    <div class="menu-wrapper sticky-bottom start-50">
+        <div class="navigation container-fluid" id="navigation">
+            <li>
+                <a class="btnn border-end-0 border-bottom-0 border-start-0 active">
+                    <img src="img/logo-muviku.png" style="width: 20%;">
+                    <span>Utama</span>
                 </a>
             </li>
-            <li class="1">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-search" style="filter: invert()"></i></ion-icon></span>
-                    <span class="text">Cari</span>
+            <li>
+                <a class="btnn border-end-0 border-bottom-0 border-start-0">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <span>Cari</span>
                 </a>
             </li>
-            <li class="1">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-heart" style="filter: invert()"></i></ion-icon></span>
-                    <span class="text">Kesukaan</span>
+            <li>
+                <a class="btnn border-end-0 border-bottom-0 border-start-0">
+                    <i class="bi bi-heart" aria-hidden="true"></i>
+                    <span>Suka</span>
                 </a>
             </li>
-            <li class="1">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person-circle"
-                            style="filter: invert()"></i></ion-icon></span>
-                    <span class="text">Profil</span>
+            <li>
+                <a class="btnn border-end-0 border-bottom-0 border-start-0" style="margin-top: 0.35rem">
+                    <i class="bi bi-person fs-4" aria-hidden="true"></i>
+                    <span>Profil</span>
                 </a>
             </li>
-            <div class="indicator"></div>
-        </ul>
-    </div> --}}
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -1086,44 +1117,18 @@
             e.preventDefault();
         });
     </script>
-    {{-- <script>
-        (function(global) {
+        {{-- <script>
+            var btnContainer = document.getElementById("navigation");
+            var btns = btnContainer.getElementsByClassName("btnn");
 
-            if (typeof(global) === "undefined") {
-                throw new Error("window is undefined");
+            for(var i =0; i<btns.length; i++){
+                btns[i].addEventListener('click', function(){
+                    var current = document.getElementsByClassName(" active");
+                    current[0].className =  current[0].className.replace(" active");
+                    this.className += " active";
+                })
             }
-
-            var _hash = "!";
-            var noBackPlease = function() {
-                global.location.href += "#";
-
-                // Making sure we have the fruit available for juice (^__^)
-                global.setTimeout(function() {
-                    global.location.href += "!";
-                }, 50);
-            };
-
-            global.onhashchange = function() {
-                if (global.location.hash !== _hash) {
-                    global.location.hash = _hash;
-                }
-            };
-
-            global.onload = function() {
-                noBackPlease();
-
-                // Disables backspace on page except on input fields and textarea..
-                document.body.onkeydown = function(e) {
-                    var elm = e.target.nodeName.toLowerCase();
-                    if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
-                        e.preventDefault();
-                    }
-                    // Stopping the event bubbling up the DOM tree...
-                    e.stopPropagation();
-                };
-            }
-        })(window);
-    </script> --}}
+        </script> --}}
 
 </body>
 
