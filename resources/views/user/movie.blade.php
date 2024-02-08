@@ -107,13 +107,13 @@
                                 <span
                                     :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'animasi'">Animasi</span>
+                                    x-on:click="filter = 'animasi'">Film Indonesia</span>
                             </li>
                             <li class="splide__slide">
                                 <span
                                     :class="filter == 'hero' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'hero'">Aksi</span>
+                                    x-on:click="filter = 'hero'">Film Korea</span>
                             </li>
                             <li class="splide__slide">
                                 <span
@@ -131,7 +131,7 @@
                                 <span
                                     :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold me-4' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'korea'">Film Korea</span>
+                                    x-on:click="filter = 'korea'">Aksi</span>
                             </li>
                             <li class="splide__slide ">
                                 <span
@@ -149,7 +149,7 @@
                                 <span
                                     :class="filter == 'indonesia' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'indonesia'">Film Indonesia</span>
+                                    x-on:click="filter = 'indonesia'">Animasi</span>
                             </li>
                         </ul>
                     </div>
@@ -931,9 +931,9 @@
                 </a>
             </li>
             <li>
-                <a class="btnn border-end-0 border-bottom-0 border-start-0" style="margin-top: 0.35rem">
+                <a class="btnn border-end-0 border-bottom-0 border-start-0">
                     <i class="bi bi-person fs-4" aria-hidden="true"></i>
-                    <span>Profil</span>
+                    <span style="margin-top: -4px">Profil</span>
                 </a>
             </li>
         </div>
@@ -970,7 +970,7 @@
     <script>
         var splide = new Splide('.splide.slider-1', {
             pagination: false,
-            gap: '2rem',
+            gap: '3rem',
             arrows: false,
             lazyLoad: 'nearby',
             autoWidth: true,
@@ -1117,7 +1117,7 @@
             e.preventDefault();
         });
     </script>
-        {{-- <script>
+        <script>
             var btnContainer = document.getElementById("navigation");
             var btns = btnContainer.getElementsByClassName("btnn");
 
@@ -1128,7 +1128,7 @@
                     this.className += " active";
                 })
             }
-        </script> --}}
+        </script>
 
 </body>
 
