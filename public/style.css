@@ -36,6 +36,9 @@ h1{
 .saran-1{
     min-width: 85% !important;
 }
+.saran-2{
+    min-width: 75% !important;
+}
 .btn-warning:hover{
     background-color: yellow;
 }

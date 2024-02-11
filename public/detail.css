@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,41 @@
 body {
     justify-content: center;
     align-items: center;
-    background: #222327;
+    background: #16171a;
     user-select: none;
+    color: white;
+}
+
+.w-17 {
+    width: 12%;
+}
+
+h6 {
+    margin: 0;
+    color: #eaeaeb;
+}
+
+p {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.btn1 {
+    left: 18px;
+    top: 18px;
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 15px;
+    color: #fff;
+    background: rgba(128, 128, 128, 0.589);
+    padding: 8px;
+    border: solid #000000 0.1px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
 }

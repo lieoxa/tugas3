@@ -105,15 +105,15 @@
                             </li>
                             <li class="splide__slide ">
                                 <span
-                                    :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
+                                    :class="filter == 'indonesia' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'animasi'">Film Indonesia</span>
+                                    x-on:click="filter = 'indonesia'">Film Indonesia</span>
                             </li>
                             <li class="splide__slide">
                                 <span
-                                    :class="filter == 'hero' ? 'title-service text-white fs-8 fw-bold' :
+                                    :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'hero'">Film Korea</span>
+                                    x-on:click="filter = 'korea'">Film Korea</span>
                             </li>
                             <li class="splide__slide">
                                 <span
@@ -129,9 +129,9 @@
                             </li>
                             <li class="splide__slide">
                                 <span
-                                    :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold me-4' :
+                                    :class="filter == 'aksi' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'korea'">Aksi</span>
+                                    x-on:click="filter = 'aksi'">Aksi</span>
                             </li>
                             <li class="splide__slide ">
                                 <span
@@ -147,7 +147,7 @@
                             </li>
                             <li class="splide__slide ">
                                 <span
-                                    :class="filter == 'indonesia' ? 'title-service text-white fs-8 fw-bold' :
+                                    :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
                                     x-on:click="filter = 'indonesia'">Animasi</span>
                             </li>
@@ -730,8 +730,10 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="d-flex">
-                                            <img src="img/saran1.jpg" class="w-25">
+                                        <div class="container row d-flex w-100 mt-2" style="padding-left: 25px">
+                                            <img src="img/saran1.jpg" class="col-4">
+                                            <img src="img/saran1.jpg" class="col-4">
+                                            <img src="img/saran1.jpg" class="col-4">
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
@@ -749,6 +751,11 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="container row d-flex w-100 mt-2" style="padding-left: 25px">
+                                            <img src="img/saran.jpg" class="col-4">
+                                            <img src="img/saran.jpg" class="col-4">
+                                            <img src="img/saran.jpg" class="col-4">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
                                                 <h6 class="m-0">Jujutsu Kaisen</h6>
@@ -765,6 +772,11 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran2.webp" class="card-img-top w-100" alt="...">
+                                        <div class="container row d-flex w-100 mt-2" style="padding-left: 25px">
+                                            <img src="img/saran2.webp" class="col-4">
+                                            <img src="img/saran2.webp" class="col-4">
+                                            <img src="img/saran2.webp" class="col-4">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
                                                 <h6 class="m-0">Mr. Bean</h6>
@@ -781,10 +793,15 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran3.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="container row d-flex w-100 mt-2" style="padding-left: 25px">
+                                            <img src="img/saran3.jpg" class="col-4">
+                                            <img src="img/saran3.jpg" class="col-4">
+                                            <img src="img/saran3.jpg" class="col-4">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
                                                 <h6 class="m-0">Demon Slayer</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">15
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">26
                                                     Episode</p>
                                             </div>
                                             <div class="tombol w-50 text-end">
@@ -797,6 +814,11 @@
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran4.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="container row d-flex w-100 mt-2" style="padding-left: 25px">
+                                            <img src="img/saran4.jpg" class="col-4">
+                                            <img src="img/saran4.jpg" class="col-4">
+                                            <img src="img/saran4.jpg" class="col-4">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
                                                 <h6 class="m-0">Peace Maker</h6>
@@ -878,27 +900,70 @@
 
                 {{-- SLIDE KE SEBELAH --}}
 
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
+                <div class="mb-4 container-sm">
                     <h1 class="text-white text-start fw-bold">FIlm Indonesia</h1>
                     <section class="splide new-4" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list gap-2">
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
+                                <li class="splide__slide saran-2">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/fi1.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white my-auto text-start" style="width: 80%">
+                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
+                                            </div>
+                                            <div class="tombol text-end" style="width: 20%">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
+                                <li class="splide__slide saran-2">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/fi2.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white my-auto text-start" style="width: 80%">
+                                                <h6 class="m-0">Balada Si Roy</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                            </div>
+                                            <div class="tombol text-end" style="width: 20%">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img">
+                                <li class="splide__slide saran-2">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/fi3.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white my-auto text-start" style="width: 80%">
+                                                <h6 class="m-0">MARS</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2016</p>
+                                            </div>
+                                            <div class="tombol text-end" style="width: 20%">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi3.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi4.jpg') }}" class="card-img-top slider-img">
+                                <li class="splide__slide saran-2">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/fi4.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white my-auto text-start" style="width: 80%">
+                                                <h6 class="m-0">Satria Dewa Gatotkaca</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                            </div>
+                                            <div class="tombol text-end" style="width: 20%">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -970,7 +1035,7 @@
     <script>
         var splide = new Splide('.splide.slider-1', {
             pagination: false,
-            gap: '3rem',
+            gap: '1rem',
             arrows: false,
             lazyLoad: 'nearby',
             autoWidth: true,
