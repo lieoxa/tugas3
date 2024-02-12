@@ -30,8 +30,8 @@
                         <h3> 16</h3>
                         <h3 class="fw-medium mb-3">Episode </h3>
                     </div>
-                    <div class="row list-episode list-unstyled">
-                        <li class="col-12 mb-2">
+                    <div class="row grid gap-2 list-episode list-unstyled">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e1.png" alt="">
                                 </div>
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e2.png" alt="">
                                 </div>
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e3.png" alt="">
                                 </div>
@@ -61,17 +61,17 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e4.png" alt="">
                                 </div>
                                 <div class="epis w-100 d-flex my-auto justify-content-between">
                                     <h6 class="my-auto">Curse Womb Must Die</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
+                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0 my-auto" style="width: 10%"></i>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e5.png" alt="">
                                 </div>
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e6.png" alt="">
                                 </div>
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e7.png" alt="">
                                 </div>
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-12 mb-2">
+                        <li class="col-12 g-col-12">
                             <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
                                 <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e8.png" alt="">
                                 </div>
