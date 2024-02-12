@@ -12,111 +12,137 @@
 </head>
 
 <body>
-    <div class="full" style="margin-top: -43px">
-        <button class="btn1 sticky-top"><img src="img/back.png" style="width:25px; flex-direction: row;"></button>
-        <img src="img/saran.jpg" class="w-100" alt="...">
-        <div class="parent">
-            <div class="half container mt-2">
-                <div class="title mb-2">
-                    <h1>Jujutsu Kaisen</h1>
+    <div class="full mb-3" style="margin-top: -43px">
+        <button onclick="window.location='{{ route('movie') }}'" class="btn1 sticky-top border-0"><i class="bi bi-arrow-left-circle-fill"></i></button>
+        <img src="img/jk.jpg" class="w-100" alt="...">
+        <div class="parent position-relative">
+            <div class="half z-2 mb-4 pt-5" style="margin-top: -172px; padding-left: 12px; padding-right: 12px;">
+                <div class="title d-flex mb-1 justify-content-between">
+                    <h1 class="fw-bolder">Jujutsu Kaisen</h1>
+                    <button class="btn-heart sticky-top border-0" onclick="changeIconAndColor(this)"><i class="bi bi-heart"></i></button>
                 </div>
-                <div class="desk mb-4">
+                <div class="desk">
                     <p>Jujutsu Kaisen bercerita tentang Yuji Itadori yang menjadi murid SMA
                         karena sebuah kejadian. Iseng-iseng melakukan aktivitas melakukan aktivitas paranormal tanpa
                         dasar dengan klub gaib. </p>
                 </div>
-                <div class="episode">
-                    <div class="jumlah-e d-flex gap-2">
-                        <h3> 16</h3>
-                        <h3 class="fw-medium mb-3">Episode </h3>
-                    </div>
-                    <div class="row grid gap-2 list-episode list-unstyled">
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e1.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex justify-content-between">
-                                    <h6 class="my-auto">Ryomen Sukuna</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+            </div>
+            <div class="episode container">
+                <div class="jumlah-e d-flex gap-2">
+                    <h4> 24</h4>
+                    <h5 class="fw-medium mb-3">Episode </h5>
+                </div>
+                <div class="row grid gap-2 list-episode list-unstyled">
+                    <li class="col-12 g-col-12 d-flex">
+                        <div class="w-50 py-2 px-2 d-flex card-body border border-secondary bg-dark rounded-4 gap-2">
+                            <div class="ep my-auto w-17"><img class="rounded-3" src="img/e1.png" style="width: 92%">
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e2.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">For Myself</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                            <div class="epis w-75 d-flex justify-content-between">
+                                <h6 class="my-auto">Ryomen Sukuna</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="visibility: hidden; width: 10%"></i>
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e3.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">Girl of Steel</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                        </div>
+                        <div class="my-auto ps-2 w-25 durasi">
+                            <p>05:00 / 23:57</p>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12 d-flex">
+                        <div class="w-50 py-2 px-2 d-flex card-body border border-secondary bg-dark rounded-4 gap-2">
+                            <div class="ep my-auto w-17"><img class="rounded-3" src="img/e2.png" style="width: 92%">
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e4.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">Curse Womb Must Die</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0 my-auto" style="width: 10%"></i>
-                                </div>
+                            <div class="epis w-75 d-flex justify-content-between">
+                                <h6 class="my-auto">For Myself</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="visibility: hidden; width: 10%"></i>
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e5.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">Curse Womb Must Die -II-</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                        </div>
+                        <div class="my-auto ps-2 w-25 durasi">
+                            <p>05:00 / 23:57</p>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e3.png" alt="">
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e6.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">After Rain</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">Girl of Steel</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e7.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">Assault</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e4.png" alt="">
                             </div>
-                        </li>
-                        <li class="col-12 g-col-12">
-                            <div class="py-2 px-2 d-flex card-body border bg-dark bg-gradient rounded-4">
-                                <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e8.png" alt="">
-                                </div>
-                                <div class="epis w-100 d-flex my-auto justify-content-between">
-                                    <h6 class="my-auto">Boredom</h6>
-                                    <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                                </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">Curse Womb Must Die</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0 my-auto" style="width: 10%"></i>
                             </div>
-                        </li>
-                    </div>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e5.png" alt="">
+                            </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">Curse Womb Must Die -II-</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e6.png" alt="">
+                            </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">After Rain</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e7.png" alt="">
+                            </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">Assault</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-12 g-col-12">
+                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e8.png" alt="">
+                            </div>
+                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                <h6 class="my-auto">Boredom</h6>
+                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
+                            </div>
+                        </div>
+                    </li>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+<script>
+    let isFavorite = false;
+
+function changeIconAndColor(button) {
+    // Mengambil elemen ikon pada tombol
+    var iconElement = button.querySelector("i");
+
+    // Mengganti kelas ikon untuk mengubahnya menjadi bintang terisi (filled star)
+    iconElement.classList.toggle("bi-heart");
+    iconElement.classList.toggle("bi-heart-fill");
+
+    // Mengubah warna ikon menjadi kuning
+    var currentColor = iconElement.style.color;
+    iconElement.style.color = (currentColor === "#D04848") ? "" : "#D04848";
+
+    isFavorite = !isFavorite;
+}
+
+</script>
 
 </html>

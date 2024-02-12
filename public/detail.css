@@ -25,24 +25,36 @@ h6 {
 p {
     font-size: 14px;
     color: #aaaaaa;
+    margin: 0;
 }
 
 .btn1 {
+    position: absolute;
     left: 18px;
-    top: 18px;
+    top: 10px;
     font-family: Roboto, sans-serif;
     font-weight: 0;
-    font-size: 15px;
+    font-size: 40px;
     color: #fff;
-    background: rgba(128, 128, 128, 0.589);
-    padding: 8px;
-    border: solid #000000 0.1px;
-    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    background: rgba(128, 128, 128, 0);
+
     border-radius: 50px;
-    transition: 1000ms;
-    transform: translateY(0);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
+}
+
+.half {
+    background: rgb(22, 23, 26);
+    background: linear-gradient(0deg, rgba(22, 23, 26, 1) 44%, rgba(22, 23, 26, 0.8939950980392157) 74%, rgba(22, 23, 26, 0.7819502801120448) 90%, rgba(22, 23, 26, 0) 100%);
+}
+
+.durasi {
+    font-size: 14px;
+}
+
+.btn-heart {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 25px;
+    color: #D04848;
+    background: rgba(128, 128, 128, 0);
+    border-radius: 50px;
 }

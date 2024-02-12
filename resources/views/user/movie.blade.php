@@ -894,6 +894,12 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi1.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="episode row d-flex container mt-2">
+                                            <img src="img/fi1.jpg" class="col-3" alt="...">
+                                            <img src="img/fi1.jpg" class="col-3" alt="...">
+                                            <img src="img/fi1.jpg" class="col-3" alt="...">
+                                            <img src="img/fi1.jpg" class="col-3" alt="...">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
                                                 <h6 class="m-0">Tulang Belulang Tulang</h6>
@@ -909,6 +915,12 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi2.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="episode row d-flex container mt-2">
+                                            <img src="img/fi2.jpg" class="col-3" alt="...">
+                                            <img src="img/fi2.jpg" class="col-3" alt="...">
+                                            <img src="img/fi2.jpg" class="col-3" alt="...">
+                                            <img src="img/fi2.jpg" class="col-3" alt="...">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
                                                 <h6 class="m-0">Balada Si Roy</h6>
@@ -924,6 +936,12 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi3.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="episode row d-flex container mt-2">
+                                            <img src="img/fi3.jpg" class="col-3" alt="...">
+                                            <img src="img/fi3.jpg" class="col-3" alt="...">
+                                            <img src="img/fi3.jpg" class="col-3" alt="...">
+                                            <img src="img/fi3.jpg" class="col-3" alt="...">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
                                                 <h6 class="m-0">MARS</h6>
@@ -939,10 +957,37 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi4.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="episode row d-flex container mt-2">
+                                            <img src="img/fi4.jpg" class="col-3" alt="...">
+                                            <img src="img/fi4.jpg" class="col-3" alt="...">
+                                            <img src="img/fi4.jpg" class="col-3" alt="...">
+                                            <img src="img/fi4.jpg" class="col-3" alt="...">
+                                        </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
                                                 <h6 class="m-0">Satria Dewa Gatotkaca</h6>
                                                 <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                            </div>
+                                            <div class="tombol text-end" style="width: 20%">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide saran-2">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/fi5.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="episode row d-flex container mt-2">
+                                            <img src="img/fi5.jpg" class="col-3" alt="...">
+                                            <img src="img/fi5.jpg" class="col-3" alt="...">
+                                            <img src="img/fi5.jpg" class="col-3" alt="...">
+                                            <img src="img/fi5.jpg" class="col-3" alt="...">
+                                        </div>
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white my-auto text-start" style="width: 80%">
+                                                <h6 class="m-0">Yowes Ben 2</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2019</p>
                                             </div>
                                             <div class="tombol text-end" style="width: 20%">
                                                 <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
@@ -1018,7 +1063,23 @@
         splide.mount();
     </script>
 
-    {{-- ///// --}}
+    <script>
+        var splide = new Splide('.splide.slider-1', {
+            // perPage: 5,
+            // type: 'loop',
+            // arrows: 'false'
+            // focus: 0,
+            pagination: false,
+            autoWidth: true,
+            gap: '1.2rem',
+            arrows: false,
+            lazyLoad: 'nearby',
+            drag: 'free',
+
+            // omitEnd: true,
+        });
+        splide.mount();
+    </script>
 
     <Script>
         var splide = new Splide('.splide.new-1', {
@@ -1163,7 +1224,7 @@
             e.preventDefault();
         });
     </script>
-    <script>
+    {{-- <script>
         var btnContainer = document.getElementById("navigation");
         var btns = btnContainer.getElementsByClassName("btnn");
 
@@ -1174,7 +1235,7 @@
                 this.className += " active";
             })
         }
-    </script>
+    </script> --}}
 
 </body>
 
