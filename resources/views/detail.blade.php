@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="detail.css">
@@ -17,10 +15,11 @@
         <img src="img/jk.jpg" class="w-100" alt="...">
         <div class="parent position-relative">
             <div class="half z-2 mb-4 pt-5" style="margin-top: -172px; padding-left: 12px; padding-right: 12px;">
-                <div class="title d-flex mb-1 justify-content-between">
-                    <h1 class="fw-bolder">Jujutsu Kaisen</h1>
+                <div class="title mb-2 d-flex justify-content-between">
+                    <h1 class="fw-bolder">Jujutsu Kaisen</h1><br>
                     <button class="btn-heart sticky-top border-0" onclick="changeIconAndColor(this)"><i class="bi bi-heart"></i></button>
                 </div>
+                <h6 class="mb-2" style="font-size:0.9rem">Perusahaan produksi : MAPPA</h6>
                 <div class="desk">
                     <p>Jujutsu Kaisen bercerita tentang Yuji Itadori yang menjadi murid SMA
                         karena sebuah kejadian. Iseng-iseng melakukan aktivitas melakukan aktivitas paranormal tanpa
@@ -143,6 +142,11 @@ function changeIconAndColor(button) {
     isFavorite = !isFavorite;
 }
 
+</script>
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
 </script>
 
 </html>

@@ -75,4 +75,8 @@ class AuthController extends Controller
 
         return redirect()->route('login');
     }
+    public function detail()
+    {
+        return view('detail');
+    }
 }

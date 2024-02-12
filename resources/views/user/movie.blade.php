@@ -149,7 +149,7 @@
                                 <span
                                     :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
                                         'text-secondary'"
-                                    x-on:click="filter = 'indonesia'">Animasi</span>
+                                    x-on:click="filter = 'animasi'">Animasi</span>
                             </li>
                         </ul>
                     </div>
@@ -732,13 +732,13 @@
                     <section class="splide new-9" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide saran-1">
+                                <li class="splide__slide saran-1" onclick="window.location='{{ route('detail') }}'">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
+                                        <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Tokyo Revenger</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">24
+                                                <h6 class="m-0">Jujutsu Kaisen</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">16
                                                     Episode</p>
                                             </div>
                                             <div class="tombol w-50 text-end">
@@ -750,11 +750,11 @@
                                 </li>
                                 <li class="splide__slide saran-1">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
+                                        <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Jujutsu Kaisen</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">16
+                                                <h6 class="m-0">Tokyo Revenger</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">24
                                                     Episode</p>
                                             </div>
                                             <div class="tombol w-50 text-end">
@@ -894,7 +894,7 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi1.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2">
+                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
                                             <img src="img/fi1.jpg" class="col-3" alt="...">
                                             <img src="img/fi1.jpg" class="col-3" alt="...">
                                             <img src="img/fi1.jpg" class="col-3" alt="...">
@@ -915,11 +915,11 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi2.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2">
-                                            <img src="img/fi2.jpg" class="col-3" alt="...">
-                                            <img src="img/fi2.jpg" class="col-3" alt="...">
-                                            <img src="img/fi2.jpg" class="col-3" alt="...">
-                                            <img src="img/fi2.jpg" class="col-3" alt="...">
+                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
+                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
@@ -936,11 +936,11 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi3.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2">
-                                            <img src="img/fi3.jpg" class="col-3" alt="...">
-                                            <img src="img/fi3.jpg" class="col-3" alt="...">
-                                            <img src="img/fi3.jpg" class="col-3" alt="...">
-                                            <img src="img/fi3.jpg" class="col-3" alt="...">
+                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
+                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
@@ -957,11 +957,11 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi4.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2">
-                                            <img src="img/fi4.jpg" class="col-3" alt="...">
-                                            <img src="img/fi4.jpg" class="col-3" alt="...">
-                                            <img src="img/fi4.jpg" class="col-3" alt="...">
-                                            <img src="img/fi4.jpg" class="col-3" alt="...">
+                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
+                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
@@ -978,11 +978,11 @@
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/fi5.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2">
-                                            <img src="img/fi5.jpg" class="col-3" alt="...">
-                                            <img src="img/fi5.jpg" class="col-3" alt="...">
-                                            <img src="img/fi5.jpg" class="col-3" alt="...">
-                                            <img src="img/fi5.jpg" class="col-3" alt="...">
+                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
+                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
@@ -1010,7 +1010,7 @@
         <div class="navigation container-fluid" id="navigation">
             <li>
                 <a class="btnn border-end-0 border-bottom-0 border-start-0 active">
-                    <img src="img/logo-muviku.png" style="width: 20%;">
+                    <img src="img/logo-muviku.png" class="mb-1" style="width: 20%;">
                     <span>Utama</span>
                 </a>
             </li>
@@ -1224,7 +1224,7 @@
             e.preventDefault();
         });
     </script>
-    {{-- <script>
+    <script>
         var btnContainer = document.getElementById("navigation");
         var btns = btnContainer.getElementsByClassName("btnn");
 
@@ -1235,7 +1235,7 @@
                 this.className += " active";
             })
         }
-    </script> --}}
+    </script>
 
 </body>
 
