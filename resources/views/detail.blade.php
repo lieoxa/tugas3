@@ -138,9 +138,9 @@ function changeIconAndColor(button) {
     // Mengubah warna ikon menjadi kuning
     var currentColor = iconElement.style.color;
     iconElement.style.color = (currentColor === "#D04848") ? "" : "#D04848";
-
-    isFavorite = !isFavorite;
+isFavorite = !isFavorite;
 }
+    
 
 </script>
 <script>

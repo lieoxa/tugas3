@@ -7,8 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> --}}
     <title>MUVIKU</title>
 </head>
 
@@ -401,7 +402,7 @@
                 {{-- SLIDE KE EMPAT --}}
 
                 <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Hanya Ada di MUVIKU</h1>
+                    <h1 class="text-white text-start fw-bold">Hanya Ada di <span style="color: #15F5BA">MUVIKU</span></h1>
                     <section class="splide new-8" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list" style="gap: 0.5rem;">
@@ -893,12 +894,68 @@
                             <ul class="splide__list">
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/fi1.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
-                                            <img src="img/fi1.jpg" class="col-3" alt="...">
-                                            <img src="img/fi1.jpg" class="col-3" alt="...">
-                                            <img src="img/fi1.jpg" class="col-3" alt="...">
-                                            <img src="img/fi1.jpg" class="col-3" alt="...">
+                                        <div id="main-slider" class="splide pb-2">
+                                            <div class="splide__track">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <!-- Add more thumbnail slider items as needed -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="thumbnail-slider" class="splide">
+                                            <div class="splide__track border-0">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <!-- Add more thumbnail slider items as needed -->
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
@@ -914,17 +971,73 @@
                                 </li>
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/fi2.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
-                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi2.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                        <div id="main-slider1" class="splide pb-2">
+                                            <div class="splide__track">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <!-- Add more thumbnail slider items as needed -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="thumbnail-slider1" class="splide">
+                                            <div class="splide__track border-0">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <!-- Add more thumbnail slider items as needed -->
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Balada Si Roy</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
                                             </div>
                                             <div class="tombol text-end" style="width: 20%">
                                                 <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
@@ -935,59 +1048,73 @@
                                 </li>
                                 <li class="splide__slide saran-2">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/fi3.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
-                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi3.jpg" class="col-3" alt="..." style="height: 27.41px;">
+                                        <div id="main-slider2" class="splide pb-2">
+                                            <div class="splide__track">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Main Slide 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Main Slide 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Main Slide 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Main Slide 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Main Slide 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for main slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Main Slide 2">
+                                                    </li>
+                                                    <!-- Add more main slider items as needed -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="thumbnail-slider2" class="splide">
+                                            <div class="splide__track border-0">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <!-- Add more thumbnail slider items as needed -->
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">MARS</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2016</p>
-                                            </div>
-                                            <div class="tombol text-end" style="width: 20%">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-2">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/fi4.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
-                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi4.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                        </div>
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Satria Dewa Gatotkaca</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
-                                            </div>
-                                            <div class="tombol text-end" style="width: 20%">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-2">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/fi5.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="episode row d-flex container mt-2 mb-2" style="margin-left: -6px">
-                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                            <img src="img/fi5.jpg" class="col-3" alt="..." style="height: 27.41px;">
-                                        </div>
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Yowes Ben 2</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2019</p>
+                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
                                             </div>
                                             <div class="tombol text-end" style="width: 20%">
                                                 <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
@@ -1003,9 +1130,9 @@
             </div>
         </section>
     </div>
-
+    
     {{-- NAVIGATION --}}
-
+    
     <div class="menu-wrapper sticky-bottom start-50">
         <div class="navigation container-fluid" id="navigation">
             <li>
@@ -1034,14 +1161,14 @@
             </li>
         </div>
     </div>
-
-
+    
+    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         const list = document.querySelectorAll('.list');
-
+    
         function activeLink() {
             list.forEach((item) =>
                 item.classList.remove('active'));
@@ -1050,7 +1177,7 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-
+    
     <script>
         var splide = new Splide('.splide.new', {
             arrows: false,
@@ -1062,7 +1189,7 @@
         });
         splide.mount();
     </script>
-
+    
     <script>
         var splide = new Splide('.splide.slider-1', {
             // perPage: 5,
@@ -1075,12 +1202,12 @@
             arrows: false,
             lazyLoad: 'nearby',
             drag: 'free',
-
+    
             // omitEnd: true,
         });
         splide.mount();
     </script>
-
+    
     <Script>
         var splide = new Splide('.splide.new-1', {
             perPage: 4,
@@ -1092,9 +1219,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-2', {
             perPage: 4,
             focus: 0,
@@ -1105,9 +1232,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-3', {
             perPage: 4,
             focus: 0,
@@ -1118,9 +1245,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-4', {
             perPage: 4,
             focus: 0,
@@ -1131,9 +1258,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-5', {
             perPage: 4,
             focus: 0,
@@ -1144,9 +1271,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-6', {
             perPage: 4,
             focus: 0,
@@ -1157,9 +1284,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-7', {
             perPage: 4,
             focus: 0,
@@ -1170,9 +1297,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-8', {
             perPage: 2,
             rewind: true,
@@ -1182,9 +1309,9 @@
             focus: 0,
             omitEnd: true,
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-9', {
             perPage: 2,
             rewind: true,
@@ -1195,9 +1322,9 @@
             omitEnd: true,
             gap: '0.5rem',
         });
-
+    
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-10', {
             perPage: 2,
             arrows: false,
@@ -1208,7 +1335,7 @@
             gap: '0.5rem',
         });
         splide.mount();
-
+    
         var splide = new Splide('.splide.new-11', {
             arrows: false,
             lazyLoad: 'nearby',
@@ -1219,6 +1346,121 @@
         });
         splide.mount();
     </script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var main = new Splide('#main-slider', {
+            type: 'fade',
+            heightRatio: 0.7,
+            pagination: false,
+            arrows: false,
+            cover: true,
+        });
+    
+        var thumbnails = new Splide('#thumbnail-slider', {
+            arrows: false,
+            rewind: true,
+            fixedWidth: 104,
+            fixedHeight: 58,
+            isNavigation: true,
+            gap: '0.9rem',
+            padding: { left: '0.5rem', right: '0.5rem', },
+            focus: 'center',
+            pagination: false,
+            cover: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            breakpoints: {
+                640: {
+                    fixedWidth: 45,
+                    fixedHeight: 45,
+                },
+            },
+        });
+    
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var main = new Splide('#main-slider1', {
+            type: 'fade',
+            heightRatio: 0.7,
+            pagination: false,
+            arrows: false,
+            cover: true,
+        });
+    
+        var thumbnails = new Splide('#thumbnail-slider1', {
+            arrows: false,
+            rewind: true,
+            fixedWidth: 104,
+            fixedHeight: 58,
+            isNavigation: true,
+            gap: '0.9rem',
+            padding: { left: '0.5rem', right: '0.5rem', },
+            focus: 'center',
+            pagination: false,
+            cover: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            breakpoints: {
+                640: {
+                    fixedWidth: 45,
+                    fixedHeight: 45,
+                },
+            },
+        });
+    
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var main = new Splide('#main-slider2', {
+            type: 'fade',
+            heightRatio: 0.7,
+            pagination: false,
+            arrows: false,
+            cover: true,
+        });
+    
+        var thumbnails = new Splide('#thumbnail-slider2', {
+            arrows: false,
+            rewind: true,
+            fixedWidth: 104,
+            fixedHeight: 58,
+            isNavigation: true,
+            gap: '0.9rem',
+            padding: { left: '0.5rem', right: '0.5rem', },
+            focus: 'center',
+            pagination: false,
+            cover: true,
+            dragMinThreshold: {
+                mouse: 4,
+                touch: 10,
+            },
+            breakpoints: {
+                640: {
+                    fixedWidth: 45,
+                    fixedHeight: 45,
+                },
+            },
+        });
+    
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+    });
+    </script>
+    
+    
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
@@ -1227,8 +1469,8 @@
     <script>
         var btnContainer = document.getElementById("navigation");
         var btns = btnContainer.getElementsByClassName("btnn");
-
-        for (var i = 0; i < btns.length; i++) {
+    
+        for (var i = 0; i <script btns.length; i++) {
             btns[i].addEventListener('click', function() {
                 var current = document.getElementsByClassName(" active");
                 current[0].className = current[0].className.replace(" active");
@@ -1236,7 +1478,7 @@
             })
         }
     </script>
-
+    
 </body>
 
 </html>
