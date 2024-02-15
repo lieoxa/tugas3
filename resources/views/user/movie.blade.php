@@ -16,8 +16,13 @@
 <nav class="navbar sticky-top pb-3" style="background: #222327;">
     <div class="container-fluid d-flex mt-2">
         <img src="img/muviku.png" class="navbar-brand my-auto" style="width: 30%;" loading="lazy">
-        <img src="img/profile.png" style="width: 10%" class="">
+
         {{-- SUDAH LOGIN --}}
+        
+        <img src="img/profile.png" style="width: 10%" class="">
+
+        {{-- BLUM LOGIN --}}
+
         {{-- <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
             @csrf
             @method('DELETE')
@@ -30,7 +35,7 @@
 
     {{-- SLIDE  ATAS --}}
 
-    <div class="mt-1 mb-5">
+    <div class="mt-1 mb-4">
         <div class="container-sm">
             <div class="mb-4">
                 <section class="splide new" aria-label="Splide Basic HTML Example">
@@ -402,7 +407,7 @@
                 {{-- SLIDE KE EMPAT --}}
 
                 <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Hanya Ada di <span style="color: #15F5BA">MUVIKU</span></h1>
+                    <h1 class="text-white text-start fw-bold">Hanya Ada di <span class="muviku">MUVIKU</span></h1>
                     <section class="splide new-8" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
                             <ul class="splide__list" style="gap: 0.5rem;">
@@ -897,27 +902,27 @@
                                         <div id="main-slider" class="splide pb-2">
                                             <div class="splide__track">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi1.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi1.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                     </li>
@@ -925,31 +930,31 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        
+
                                         <div id="thumbnail-slider" class="splide">
                                             <div class="splide__track border-0">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi1.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi1.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                     </li>
@@ -974,27 +979,27 @@
                                         <div id="main-slider1" class="splide pb-2">
                                             <div class="splide__track">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                     </li>
@@ -1002,31 +1007,31 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        
+
                                         <div id="thumbnail-slider1" class="splide">
                                             <div class="splide__track border-0">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                     </li>
@@ -1036,8 +1041,8 @@
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
+                                                <h6 class="m-0">Balada Si Roy</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
                                             </div>
                                             <div class="tombol text-end" style="width: 20%">
                                                 <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
@@ -1051,61 +1056,61 @@
                                         <div id="main-slider2" class="splide pb-2">
                                             <div class="splide__track">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
-                                                        <!-- Content for main slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Main Slide 1">
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for main slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Main Slide 2">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for main slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Main Slide 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
+                                                        <!-- Content for main slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Main Slide 1">
+                                                    </li>
+                                                    <li class="splide__slide rounded-3">
+                                                        <!-- Content for main slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Main Slide 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded-3">
+                                                        <!-- Content for main slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Main Slide 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for main slider item 2 -->
                                                         <img src="img/fi1.jpg" alt="Main Slide 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded-3">
                                                         <!-- Content for main slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Main Slide 1">
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for main slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Main Slide 2">
                                                     </li>
                                                     <!-- Add more main slider items as needed -->
                                                 </ul>
                                             </div>
                                         </div>
-                                        
+
                                         <div id="thumbnail-slider2" class="splide">
                                             <div class="splide__track border-0">
                                                 <ul class="splide__list">
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi3.jpg" alt="Thumbnail 1">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
+                                                        <!-- Content for thumbnail slider item 1 -->
+                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                    </li>
+                                                    <li class="splide__slide rounded border">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded border">
+                                                        <!-- Content for thumbnail slider item 2 -->
+                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                    </li>
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 2 -->
                                                         <img src="img/fi1.jpg" alt="Thumbnail 2">
                                                     </li>
-                                                    <li class="splide__slide">
+                                                    <li class="splide__slide rounded border">
                                                         <!-- Content for thumbnail slider item 1 -->
                                                         <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                     </li>
                                                     <!-- Add more thumbnail slider items as needed -->
                                                 </ul>
@@ -1113,7 +1118,7 @@
                                         </div>
                                         <div class="saran-bawah d-flex ps-6 pe-4">
                                             <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                <h6 class="m-0">Mars</h6>
                                                 <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
                                             </div>
                                             <div class="tombol text-end" style="width: 20%">
@@ -1130,11 +1135,11 @@
             </div>
         </section>
     </div>
-    
+
     {{-- NAVIGATION --}}
-    
+
     <div class="menu-wrapper sticky-bottom start-50">
-        <div class="navigation container-fluid" id="navigation">
+        <div class="navigation container-fluid" id="navigationn">
             <li>
                 <a class="btnn border-end-0 border-bottom-0 border-start-0 active">
                     <img src="img/logo-muviku.png" class="mb-1" style="width: 20%;">
@@ -1161,14 +1166,14 @@
             </li>
         </div>
     </div>
-    
-    
+
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         const list = document.querySelectorAll('.list');
-    
+
         function activeLink() {
             list.forEach((item) =>
                 item.classList.remove('active'));
@@ -1177,7 +1182,7 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink));
     </script>
-    
+
     <script>
         var splide = new Splide('.splide.new', {
             arrows: false,
@@ -1189,7 +1194,7 @@
         });
         splide.mount();
     </script>
-    
+
     <script>
         var splide = new Splide('.splide.slider-1', {
             // perPage: 5,
@@ -1202,12 +1207,12 @@
             arrows: false,
             lazyLoad: 'nearby',
             drag: 'free',
-    
+
             // omitEnd: true,
         });
         splide.mount();
     </script>
-    
+
     <Script>
         var splide = new Splide('.splide.new-1', {
             perPage: 4,
@@ -1219,9 +1224,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-2', {
             perPage: 4,
             focus: 0,
@@ -1232,9 +1237,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-3', {
             perPage: 4,
             focus: 0,
@@ -1245,9 +1250,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-4', {
             perPage: 4,
             focus: 0,
@@ -1258,9 +1263,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-5', {
             perPage: 4,
             focus: 0,
@@ -1271,9 +1276,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-6', {
             perPage: 4,
             focus: 0,
@@ -1284,9 +1289,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-7', {
             perPage: 4,
             focus: 0,
@@ -1297,9 +1302,9 @@
             lazyLoad: 'nearby',
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-8', {
             perPage: 2,
             rewind: true,
@@ -1309,9 +1314,9 @@
             focus: 0,
             omitEnd: true,
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-9', {
             perPage: 2,
             rewind: true,
@@ -1322,9 +1327,9 @@
             omitEnd: true,
             gap: '0.5rem',
         });
-    
+
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-10', {
             perPage: 2,
             arrows: false,
@@ -1335,7 +1340,7 @@
             gap: '0.5rem',
         });
         splide.mount();
-    
+
         var splide = new Splide('.splide.new-11', {
             arrows: false,
             lazyLoad: 'nearby',
@@ -1346,139 +1351,148 @@
         });
         splide.mount();
     </script>
-    
+
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var main = new Splide('#main-slider', {
-            type: 'fade',
-            heightRatio: 0.7,
-            pagination: false,
-            arrows: false,
-            cover: true,
-        });
-    
-        var thumbnails = new Splide('#thumbnail-slider', {
-            arrows: false,
-            rewind: true,
-            fixedWidth: 104,
-            fixedHeight: 58,
-            isNavigation: true,
-            gap: '0.9rem',
-            padding: { left: '0.5rem', right: '0.5rem', },
-            focus: 'center',
-            pagination: false,
-            cover: true,
-            dragMinThreshold: {
-                mouse: 4,
-                touch: 10,
-            },
-            breakpoints: {
-                640: {
-                    fixedWidth: 45,
-                    fixedHeight: 45,
-                },
-            },
-        });
-    
-        main.sync(thumbnails);
-        main.mount();
-        thumbnails.mount();
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            var main = new Splide('#main-slider', {
+                type: 'fade',
+                heightRatio: 0.7,
+                pagination: false,
+                arrows: false,
+                cover: true,
+            });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var main = new Splide('#main-slider1', {
-            type: 'fade',
-            heightRatio: 0.7,
-            pagination: false,
-            arrows: false,
-            cover: true,
-        });
-    
-        var thumbnails = new Splide('#thumbnail-slider1', {
-            arrows: false,
-            rewind: true,
-            fixedWidth: 104,
-            fixedHeight: 58,
-            isNavigation: true,
-            gap: '0.9rem',
-            padding: { left: '0.5rem', right: '0.5rem', },
-            focus: 'center',
-            pagination: false,
-            cover: true,
-            dragMinThreshold: {
-                mouse: 4,
-                touch: 10,
-            },
-            breakpoints: {
-                640: {
-                    fixedWidth: 45,
-                    fixedHeight: 45,
+            var thumbnails = new Splide('#thumbnail-slider', {
+                arrows: false,
+                rewind: true,
+                fixedWidth: 104,
+                fixedHeight: 58,
+                isNavigation: true,
+                gap: '0.5rem',
+                padding: {
+                    left: '0.5rem',
+                    right: '0.5rem',
                 },
-            },
-        });
-    
-        main.sync(thumbnails);
-        main.mount();
-        thumbnails.mount();
-    });
+                focus: 'center',
+                pagination: false,
+                cover: true,
+                dragMinThreshold: {
+                    mouse: 4,
+                    touch: 10,
+                },
+                breakpoints: {
+                    640: {
+                        fixedWidth: 45,
+                        fixedHeight: 45,
+                    },
+                },
+            });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var main = new Splide('#main-slider2', {
-            type: 'fade',
-            heightRatio: 0.7,
-            pagination: false,
-            arrows: false,
-            cover: true,
+            main.sync(thumbnails);
+            main.mount();
+            thumbnails.mount();
         });
-    
-        var thumbnails = new Splide('#thumbnail-slider2', {
-            arrows: false,
-            rewind: true,
-            fixedWidth: 104,
-            fixedHeight: 58,
-            isNavigation: true,
-            gap: '0.9rem',
-            padding: { left: '0.5rem', right: '0.5rem', },
-            focus: 'center',
-            pagination: false,
-            cover: true,
-            dragMinThreshold: {
-                mouse: 4,
-                touch: 10,
-            },
-            breakpoints: {
-                640: {
-                    fixedWidth: 45,
-                    fixedHeight: 45,
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var main = new Splide('#main-slider1', {
+                type: 'fade',
+                heightRatio: 0.7,
+                pagination: false,
+                arrows: false,
+                cover: true,
+            });
+
+            var thumbnails = new Splide('#thumbnail-slider1', {
+                arrows: false,
+                rewind: true,
+                fixedWidth: 104,
+                fixedHeight: 58,
+                isNavigation: true,
+                gap: '0.5rem',
+                padding: {
+                    left: '0.5rem',
+                    right: '0.5rem',
                 },
-            },
+                focus: 'center',
+                pagination: false,
+                cover: true,
+                dragMinThreshold: {
+                    mouse: 4,
+                    touch: 10,
+                },
+                breakpoints: {
+                    640: {
+                        fixedWidth: 45,
+                        fixedHeight: 45,
+                    },
+                },
+            });
+
+            main.sync(thumbnails);
+            main.mount();
+            thumbnails.mount();
         });
-    
-        main.sync(thumbnails);
-        main.mount();
-        thumbnails.mount();
-    });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var main = new Splide('#main-slider2', {
+                type: 'fade',
+                heightRatio: 0.7,
+                pagination: false,
+                arrows: false,
+                cover: true,
+            });
+
+            var thumbnails = new Splide('#thumbnail-slider2', {
+                arrows: false,
+                rewind: true,
+                fixedWidth: 104,
+                fixedHeight: 58,
+                isNavigation: true,
+                gap: '0.5rem',
+                padding: {
+                    left: '0.5rem',
+                    right: '0.5rem',
+                },
+                focus: 'center',
+                pagination: false,
+                cover: true,
+                dragMinThreshold: {
+                    mouse: 4,
+                    touch: 10,
+                },
+                breakpoints: {
+                    640: {
+                        fixedWidth: 45,
+                        fixedHeight: 45,
+                    },
+                },
+            });
+
+            main.sync(thumbnails);
+            main.mount();
+            thumbnails.mount();
+        });
     </script>
-    
-    
+
+
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
     </script>
     <script>
-        var btnContainer = document.getElementById("navigation");
-        var btns = btnContainer.getElementsByClassName("btnn");
-    
-        for (var i = 0; i <script btns.length; i++) {
-            btns[i].addEventListener('click', function() {
-                var current = document.getElementsByClassName(" active");
-                current[0].className = current[0].className.replace(" active");
+        var btnContainer = document.getElementById("navigationn");
+        var btnns = btnContainer.getElementsByClassName("btnn");
+
+        for (var i = 0; i < btnns.length; i++) {
+            btnns[i].addEventListener('click', function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             })
         }
     </script>
-    
+
 </body>
 
 </html>
