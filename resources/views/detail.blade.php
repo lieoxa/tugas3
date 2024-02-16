@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top position-absolute w-100 p-0" style="height:68.59px;">
+    <nav class="navbar sticky-top position-fixed w-100 p-0" style="height:68.59px;" id="mainNav">
         <div class="container-fluid d-flex">
             <button onclick="window.location='{{ route('movie') }}'" class="btn1 border-0 position-fixed"><i
-                    class="modus-icons rounded-pill" aria-hidden="true">chevron_left_bold</i></button>
+                    class="modus-icons" aria-hidden="true">chevron_left</i></button>
         </div>
     </nav>
     <div class="full mb-3" style="margin-top: -43px">
@@ -42,106 +42,193 @@
             </div>
             <div class="episode container">
                 <div class="jumlah-e d-flex gap-2">
-                    <h4> 24</h4>
-                    <h5 class="fw-medium mb-3">Episode </h5>
+                    <h5 class="fw-medium mb-3">Season </h5>
                 </div>
-                <div class="row grid gap-2 list-episode list-unstyled">
-                    <li class="col-12 g-col-12 d-flex">
-                        <div class="w-50 py-2 px-2 d-flex card-body border border-secondary bg-dark rounded-4 gap-2">
-                            <div class="ep my-auto w-17"><img class="rounded-3" src="img/e1.png" style="width: 92%">
-                            </div>
-                            <div class="epis w-75 d-flex justify-content-between">
-                                <h6 class="my-auto">Ryomen Sukuna</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
-                                    style="visibility: hidden; width: 10%"></i>
+                <div class="accordion accordion-flush gap-2 d-grid" id="accordionFlushExample">
+                    <div class="accordion-item rounded-4 border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button rounded-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Season 1
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse rounded-5"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body px-2 pt-0 rounded-5">
+                                <div class="row grid gap-2 list-episode list-unstyled">
+                                    <li class="col-12 g-col-12">
+                                        <div
+                                            class="py-2 px-2 d-flex card-body  border border-secondary bg-dark rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Ryomen Sukuna</h6>
+                                                <i class="bi bi-chevron-down text-dark rounded-pill fs-5 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div
+                                            class="py-2 px-2 d-flex card-body  border border-secondary bg-dark rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e2.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">For My Self</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e3.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Girl of Steel</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e4.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Curse Womb Must Die</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0 my-auto"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e5.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Curse Womb Must Die -II-</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e6.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">After Rain</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e7.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Assault</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-12 g-col-12">
+                                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
+                                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e8.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="epis w-100 d-flex my-auto justify-content-between">
+                                                <h6 class="my-auto">Boredom</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="width: 10%"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="accordion accordion-flush" id="accordionFlushExamplee">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed px-2" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseNine"
+                                                    aria-expanded="false" aria-controls="flush-collapseNine">
+                                                    <img class="w-17 rounded-3" src="img/e8.png">
+                                                    <h6 class="my-auto">Boredom</h6>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseNine" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExamplee">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to demonstrate the <code>.accordion-flush</code>
+                                                    class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="my-auto ps-2 w-25 durasi">
-                            <p>05:00 / 23:57</p>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12 d-flex">
-                        <div class="w-50 py-2 px-2 d-flex card-body border border-secondary bg-dark rounded-4 gap-2">
-                            <div class="ep my-auto w-17"><img class="rounded-3" src="img/e2.png" style="width: 92%">
-                            </div>
-                            <div class="epis w-75 d-flex justify-content-between">
-                                <h6 class="my-auto">For Myself</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
-                                    style="visibility: hidden; width: 10%"></i>
-                            </div>
-                        </div>
-                        <div class="my-auto ps-2 w-25 durasi">
-                            <p>05:00 / 23:57</p>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e3.png" alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">Girl of Steel</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e4.png" alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">Curse Womb Must Die</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0 my-auto" style="width: 10%"></i>
+                    </div>
+                    <div class="accordion-item rounded-4 border">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button rounded-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Season 2
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse rounded-5"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body px-2 pt-0 rounded-5">
+                                <div class="row grid gap-2 list-episode list-unstyled">
+                                    <li class="col-12 g-col-12 d-flex">
+                                        <div
+                                            class="w-50 py-2 px-2 d-flex card-body border border-secondary bg-dark rounded-4 gap-2">
+                                            <div class="ep my-auto w-17"><img class="rounded-3" src="img/e1.png"
+                                                    style="width: 92%">
+                                            </div>
+                                            <div class="epis w-75 d-flex justify-content-between">
+                                                <h6 class="my-auto">Ryomen Sukuna</h6>
+                                                <i class="bi bi-play-circle-fill text-white fs-4 me-0"
+                                                    style="visibility: hidden; width: 10%"></i>
+                                            </div>
+                                        </div>
+                                        <div class="my-auto ps-2 w-25 durasi">
+                                            <p>05:00 / 23:57</p>
+                                        </div>
+                                    </li>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e5.png" alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">Curse Womb Must Die -II-</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e6.png" alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">After Rain</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e7.png"
-                                    alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">Assault</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-12 g-col-12">
-                        <div class="py-2 px-2 d-flex card-body border bg-dark border-info rounded-4">
-                            <div class="ep my-auto w-17"><img class="w-75 rounded-3" src="img/e8.png"
-                                    alt="">
-                            </div>
-                            <div class="epis w-100 d-flex my-auto justify-content-between">
-                                <h6 class="my-auto">Boredom</h6>
-                                <i class="bi bi-play-circle-fill text-white fs-4 me-0" style="width: 10%"></i>
-                            </div>
-                        </div>
-                    </li>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("scroll", function() {
+            var nav = document.getElementById("mainNav");
+
+            if (window.scrollY > 10) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        });
+    });
+</script>
 <script>
     let isFavorite = false;
 

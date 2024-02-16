@@ -13,6 +13,13 @@ body {
     color: white;
 }
 
+nav.scrolled {
+    transition: .7s ease;
+    background-color: #994D1C;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    color: blue;
+}
+
 .w-17 {
     width: 12%;
 }
@@ -81,12 +88,56 @@ label {
 
 .modus-icons {
     color: white;
-    padding: 4px 8px 3px 0px;
+    padding: 0px 0px 0px 0px;
     border-radius: 40px;
     font-size: 50px;
-    margin-top: 5.79px;
+    margin-top: 15px;
+    margin-left: -4px;
 }
 
 .additional-text {
     display: none;
 }
+
+.accordion-button{
+    background-color: transparent;
+    border-radius: 0;
+    color: white;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-collapse{
+    background-color: #16171a;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #16171a;
+    color: white;
+}
+#mainNav {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#mainNav.scrolled {
+    background-color: #16171a;
+    border-bottom: 0.1px solid rgba(207, 207, 207, 0.438);
+}
+.accordion-item{
+    background-color: #16171a;
+}
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+    color: white;
+}
+.bi-chevron-down::before{
+    background-color: white;
+    border-radius: 40px;
+    padding: 2px;
+}
+/* .accordion {
+    --bs-accordion-btn-icon: url(img/chevron-down.svg);
+    --bs-accordion-btn-active-icon: url(img/che);
+} */

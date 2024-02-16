@@ -97,1043 +97,1045 @@
 
         {{-- SLIDE FILM --}}
 
-        <div class="container-sm">
-            <div class="container mb-3 p-0 border-bottom-1" style="max-height: 44px;" x-data="{ filter: 'all' }">
-                <section class="splide slider-1 mt-0 mb-4" aria-label="Splide Basic HTML Example">
-                    <div class="splide__track">
-                        <h3></h3>
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <span
-                                    :class="filter == 'all' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'all'">Rekomendasi</span>
-                            </li>
-                            <li class="splide__slide ">
-                                <span
-                                    :class="filter == 'indonesia' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'indonesia'">Film Indonesia</span>
-                            </li>
-                            <li class="splide__slide">
-                                <span
-                                    :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'korea'">Film Korea</span>
-                            </li>
-                            <li class="splide__slide">
-                                <span
-                                    :class="filter == 'podcast' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'podcast'">Podcast</span>
-                            </li>
-                            <li class="splide__slide ">
-                                <span
-                                    :class="filter == 'anime' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'anime'">Anime</span>
-                            </li>
-                            <li class="splide__slide">
-                                <span
-                                    :class="filter == 'aksi' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'aksi'">Aksi</span>
-                            </li>
-                            <li class="splide__slide ">
-                                <span
-                                    :class="filter == 'serial' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'serial'">Serial</span>
-                            </li>
-                            <li class="splide__slide">
-                                <span
-                                    :class="filter == 'horror' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'horror'">Horror</span>
-                            </li>
-                            <li class="splide__slide ">
-                                <span
-                                    :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
-                                        'text-secondary'"
-                                    x-on:click="filter = 'animasi'">Animasi</span>
-                            </li>
-                        </ul>
+        <div x-data="{ sliders : '' }">
+            <div class="container-sm">
+                <div class="container mb-3 p-0 border-bottom-1" style="max-height: 44px;" x-data="{ filter: 'all' }">
+                    <section class="splide slider-1 mt-0 mb-4" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <h3></h3>
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <span
+                                        :class="filter == 'all' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'all';sliders = ''">Rekomendasi</span>
+                                </li>
+                                <li class="splide__slide ">
+                                    <span
+                                        :class="filter == 'indonesia' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'indonesia';sliders = 'indonesia'">Film Indonesia</span>
+                                </li>
+                                <li class="splide__slide">
+                                    <span
+                                        :class="filter == 'korea' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'korea';sliders = 'korea'">Film Korea</span>
+                                </li>
+                                <li class="splide__slide">
+                                    <span
+                                        :class="filter == 'podcast' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'podcast';sliders = 'podcast'">Podcast</span>
+                                </li>
+                                <li class="splide__slide ">
+                                    <span
+                                        :class="filter == 'anime' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'anime';sliders = 'anime'">Anime</span>
+                                </li>
+                                <li class="splide__slide">
+                                    <span
+                                        :class="filter == 'hero' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'hero';sliders = 'hero'">Super Hero</span>
+                                </li>
+                                <li class="splide__slide ">
+                                    <span
+                                        :class="filter == 'serial' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'serial';sliders = 'serial'">Serial</span>
+                                </li>
+                                <li class="splide__slide">
+                                    <span
+                                        :class="filter == 'horror' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'horror';sliders = 'horror'">Horror</span>
+                                </li>
+                                <li class="splide__slide ">
+                                    <span
+                                        :class="filter == 'animasi' ? 'title-service text-white fs-8 fw-bold' :
+                                            'text-secondary'"
+                                        x-on:click="filter = 'animasi';sliders = 'animasi'">Animasi</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="d-flex gap-2 mt-3" style="overflow-x: auto;overflow: overlay;">
                     </div>
-                </section>
-                <div class="d-flex gap-2 mt-3" style="overflow-x: auto;overflow: overlay;">
                 </div>
             </div>
+
+            {{-- SLIDE PERTAMA --}}
+
+            <section>
+                <div class="text-center mb-2">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                        {{-- <h1 class="text-white text-start fw-bold">Film Terbaru</h1> --}}
+                        <section class="splide new-1" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/comedy7.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/fi1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/comedy6.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/comedy5.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE DUA --}}
+
+                    <div class="animate" style="margin-right: 12px; margin-left:12px;margin-bottom: 2rem;" x-show="sliders == '' ? true : (sliders == 'animasi')">
+                        <h1 class="text-white text-start fw-bold">Animasi Anak-Anak</h1>
+                        <section class="splide new-2" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color: #000000;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Tonton Sekarang">
+                                        </div>
+                                        <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
+                                            alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Tonton Sekarang">
+                                        </div>
+                                        <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Tonton Sekarang">
+                                        </div>
+                                        <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Tonton Sekarang">
+                                        </div>
+                                        <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Tonton Sekarang">
+                                        </div>
+                                        <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <div class="tonton position-absolute start-50 translate-middle w-100"
+                                            style="top: 88%">
+                                            <input type="button"
+                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                                value="Episode Terbaru">
+                                        </div>
+                                        <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    {{-- SLIDE KE TIGA --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                        <section class="splide new-11" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide coming-soon">
+                                        <div class="cs">
+                                            <img src="img/cs.jpg" class="card-img-top-1 w-100" alt="...">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide coming-soon">
+                                        <div class="cs">
+                                            <img src="img/cs1.jpg" class="card-img-top-1 w-100" alt="...">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide coming-soon">
+                                        <div class="cs">
+                                            <img src="img/cs2.jpg" class="card-img-top-1 w-100" alt="...">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE EMPAT --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                        <h1 class="text-white text-start fw-bold">Hanya Ada di <span class="muviku">MUVIKU</span></h1>
+                        <section class="splide new-8" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list" style="gap: 0.5rem;">
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy.jpg') }}"
+                                            class="card-img-top film-khusus slider-img" alt="...">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy1.jpg') }}"
+                                            class="card-img-top film-khusus slider-img" alt="...">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy2.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy3.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy4.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy5.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy6.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                    <li class="splide__slide saran">
+                                        <img src="{{ asset('img/comedy7.jpg') }}"
+                                            class="card-img-top film-khusus slider-img">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE LIMA --}}
+
+                    <div class="hero mb-4" style="margin-right: 12px; margin-left:12px; margin-bottom: 1.9rem;" x-show="sliders == '' ? true : (sliders == 'hero')">
+                        <h1 class="text-white text-start fw-bold">Super Hero</h1>
+                        <section class="splide new-3" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero4.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero5.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero6.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero7.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero8.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero9.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/hero10.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE ENAM --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'podcast')">
+                        <h1 class="text-white text-start fw-bold">Acara Podcast</h1>
+                        <section class="splide new-10" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast.jpg" class="w-100 podcast" alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast1.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast2.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast3.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast4.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast5.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast6.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast7.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast8.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                    <li class="splide__slide saran-1 position-relative">
+                                        <img src="img/play-button.png"
+                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                            style="width: 25%;">
+                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                        <img src="img/podcast9.jpg" class="w-100 podcast " alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE TUJUH --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'anime')">
+                        <h1 class="text-white text-start fw-bold">Anime Jepang</h1>
+                        <section class="splide new-6" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">One Piece</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">A Silent Voice</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Weathering</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim3.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Suzume</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim4.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Your Name</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim5.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Ocean Waves</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim6.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Howls Castle</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">KIKI's</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim8.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Spirited Away</h6>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide li">
+                                        <img src="{{ asset('img/anim9.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                        <div class="card-body mt-1 mx-auto">
+                                            <h6 class="card-title text-left text-white">Mononoke</h6>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE DELAPAN --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'korea')">
+                        <h1 class="text-white text-start fw-bold">Film Korea</h1>
+                        <section class="splide new-5" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE SEMBILAN --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'serial')">
+                        <h1 class="text-white text-start fw-bold">Serial ber Episode
+                        </h1>
+                        <section class="splide new-9" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide saran-1" onclick="window.location='{{ route('detail') }}'">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white w-50 my-auto text-start">
+                                                    <h6 class="m-0">Jujutsu Kaisen</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">16
+                                                        Episode</p>
+                                                </div>
+                                                <div class="tombol w-50 text-end">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-1">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white w-50 my-auto text-start">
+                                                    <h6 class="m-0">Tokyo Revenger</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">24
+                                                        Episode</p>
+                                                </div>
+                                                <div class="tombol w-50 text-end">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-1">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <img src="img/saran2.webp" class="card-img-top w-100" alt="...">
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white w-50 my-auto text-start">
+                                                    <h6 class="m-0">Mr. Bean</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">15
+                                                        Episode</p>
+                                                </div>
+                                                <div class="tombol w-50 text-end">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-1">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <img src="img/saran3.jpg" class="card-img-top w-100" alt="...">
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white w-50 my-auto text-start">
+                                                    <h6 class="m-0">Demon Slayer</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">26
+                                                        Episode</p>
+                                                </div>
+                                                <div class="tombol w-50 text-end">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-1">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <img src="img/saran4.jpg" class="card-img-top w-100" alt="...">
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white w-50 my-auto text-start">
+                                                    <h6 class="m-0">Peace Maker</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">8
+                                                        Episode</p>
+                                                </div>
+                                                <div class="tombol w-50 text-end">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE SEPULUH --}}
+
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'horror')">
+                        <h1 class="text-white text-start fw-bold">Film Horror</h1>
+                        <section class="splide new-7" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%" alt="...">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                    <li class="splide__slide li position-relative">
+                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                        <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
+                                            style="width: 100%">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    {{-- SLIDE KE SEBELAH --}}
+
+                    <div class="mb-4 container-sm" x-show="sliders == '' ? true : (sliders == 'indonesia')">
+                        <h1 class="text-white text-start fw-bold">FIlm Indonesia</h1>
+                        <section class="splide new-4" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide saran-2">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <div id="main-slider" class="splide pb-2">
+                                                <div class="splide__track">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <!-- Add more thumbnail slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div id="thumbnail-slider" class="splide">
+                                                <div class="splide__track border-0">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <!-- Add more thumbnail slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white my-auto text-start" style="width: 80%">
+                                                    <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
+                                                </div>
+                                                <div class="tombol text-end" style="width: 20%">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-2">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <div id="main-slider1" class="splide pb-2">
+                                                <div class="splide__track">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <!-- Add more thumbnail slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div id="thumbnail-slider1" class="splide">
+                                                <div class="splide__track border-0">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <!-- Add more thumbnail slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white my-auto text-start" style="width: 80%">
+                                                    <h6 class="m-0">Balada Si Roy</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                                </div>
+                                                <div class="tombol text-end" style="width: 20%">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide saran-2">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <div id="main-slider2" class="splide pb-2">
+                                                <div class="splide__track">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Main Slide 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Main Slide 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Main Slide 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Main Slide 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Main Slide 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for main slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Main Slide 1">
+                                                        </li>
+                                                        <!-- Add more main slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div id="thumbnail-slider2" class="splide">
+                                                <div class="splide__track border-0">
+                                                    <ul class="splide__list">
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                        </li>
+                                                        <li class="splide__slide rounded border">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        </li>
+                                                        <!-- Add more thumbnail slider items as needed -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                                <div class="text-white my-auto text-start" style="width: 80%">
+                                                    <h6 class="m-0">Mars</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
+                                                </div>
+                                                <div class="tombol text-end" style="width: 20%">
+                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                        style="width: 50%"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        {{-- SLIDE PERTAMA --}}
-
-        <section>
-            <div class="text-center mb-2">
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    {{-- <h1 class="text-white text-start fw-bold">Film Terbaru</h1> --}}
-                    <section class="splide new-1" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/comedy7.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/comedy6.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/comedy5.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE DUA --}}
-
-                <div class="animate" style="margin-right: 12px; margin-left:12px;margin-bottom: 2rem;">
-                    <h1 class="text-white text-start fw-bold">Animasi Anak-Anak</h1>
-                    <section class="splide new-2" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color: #000000;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Tonton Sekarang">
-                                    </div>
-                                    <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
-                                        alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Tonton Sekarang">
-                                    </div>
-                                    <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Tonton Sekarang">
-                                    </div>
-                                    <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Tonton Sekarang">
-                                    </div>
-                                    <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Tonton Sekarang">
-                                    </div>
-                                    <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <div class="tonton position-absolute start-50 translate-middle w-100"
-                                        style="top: 88%">
-                                        <input type="button"
-                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
-                                    </div>
-                                    <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-
-
-                {{-- SLIDE KE TIGA --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <section class="splide new-11" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide coming-soon">
-                                    <div class="cs">
-                                        <img src="img/cs.jpg" class="card-img-top-1 w-100" alt="...">
-                                    </div>
-                                </li>
-                                <li class="splide__slide coming-soon">
-                                    <div class="cs">
-                                        <img src="img/cs1.jpg" class="card-img-top-1 w-100" alt="...">
-                                    </div>
-                                </li>
-                                <li class="splide__slide coming-soon">
-                                    <div class="cs">
-                                        <img src="img/cs2.jpg" class="card-img-top-1 w-100" alt="...">
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE EMPAT --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Hanya Ada di <span class="muviku">MUVIKU</span></h1>
-                    <section class="splide new-8" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list" style="gap: 0.5rem;">
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy.jpg') }}"
-                                        class="card-img-top film-khusus slider-img" alt="...">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy1.jpg') }}"
-                                        class="card-img-top film-khusus slider-img" alt="...">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy2.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy3.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy4.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy5.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy6.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                                <li class="splide__slide saran">
-                                    <img src="{{ asset('img/comedy7.jpg') }}"
-                                        class="card-img-top film-khusus slider-img">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE LIMA --}}
-
-                <div class="hero mb-4" style="margin-right: 12px; margin-left:12px; margin-bottom: 1.9rem;">
-                    <h1 class="text-white text-start fw-bold">Super Hero</h1>
-                    <section class="splide new-3" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/hero10.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE ENAM --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Acara Podcast</h1>
-                    <section class="splide new-10" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast.jpg" class="w-100 podcast" alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast1.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast2.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast3.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast4.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast5.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast6.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast7.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast8.jpg" class="w-100 podcast " alt="">
-                                </li>
-                                <li class="splide__slide saran-1 position-relative">
-                                    <img src="img/play-button.png"
-                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                        style="width: 25%;">
-                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                    <img src="img/podcast9.jpg" class="w-100 podcast " alt="">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE TUJUH --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Anime Jepang</h1>
-                    <section class="splide new-6" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">One Piece</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">A Silent Voice</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Weathering</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Suzume</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Your Name</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Ocean Waves</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Howls Castle</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">KIKI's</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Spirited Away</h6>
-                                    </div>
-                                </li>
-                                <li class="splide__slide li">
-                                    <img src="{{ asset('img/anim9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">Mononoke</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE DELAPAN --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Film Korea</h1>
-                    <section class="splide new-5" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE SEMBILAN --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Serial ber Episode
-                    </h1>
-                    <section class="splide new-9" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide saran-1" onclick="window.location='{{ route('detail') }}'">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Jujutsu Kaisen</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">16
-                                                    Episode</p>
-                                            </div>
-                                            <div class="tombol w-50 text-end">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-1">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Tokyo Revenger</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">24
-                                                    Episode</p>
-                                            </div>
-                                            <div class="tombol w-50 text-end">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-1">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran2.webp" class="card-img-top w-100" alt="...">
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Mr. Bean</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">15
-                                                    Episode</p>
-                                            </div>
-                                            <div class="tombol w-50 text-end">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-1">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran3.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Demon Slayer</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">26
-                                                    Episode</p>
-                                            </div>
-                                            <div class="tombol w-50 text-end">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-1">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <img src="img/saran4.jpg" class="card-img-top w-100" alt="...">
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white w-50 my-auto text-start">
-                                                <h6 class="m-0">Peace Maker</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">8
-                                                    Episode</p>
-                                            </div>
-                                            <div class="tombol w-50 text-end">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE SEPULUH --}}
-
-                <div class="mb-4" style="margin-right: 12px; margin-left:12px;">
-                    <h1 class="text-white text-start fw-bold">Film Horror</h1>
-                    <section class="splide new-7" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-                {{-- SLIDE KE SEBELAH --}}
-
-                <div class="mb-4 container-sm">
-                    <h1 class="text-white text-start fw-bold">FIlm Indonesia</h1>
-                    <section class="splide new-4" aria-label="Splide Basic HTML Example">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide saran-2">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <div id="main-slider" class="splide pb-2">
-                                            <div class="splide__track">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <!-- Add more thumbnail slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div id="thumbnail-slider" class="splide">
-                                            <div class="splide__track border-0">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <!-- Add more thumbnail slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Tulang Belulang Tulang</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
-                                            </div>
-                                            <div class="tombol text-end" style="width: 20%">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-2">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <div id="main-slider1" class="splide pb-2">
-                                            <div class="splide__track">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <!-- Add more thumbnail slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div id="thumbnail-slider1" class="splide">
-                                            <div class="splide__track border-0">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <!-- Add more thumbnail slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Balada Si Roy</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
-                                            </div>
-                                            <div class="tombol text-end" style="width: 20%">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide saran-2">
-                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                        <div id="main-slider2" class="splide pb-2">
-                                            <div class="splide__track">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Main Slide 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Main Slide 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Main Slide 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Main Slide 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Main Slide 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded-3">
-                                                        <!-- Content for main slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Main Slide 1">
-                                                    </li>
-                                                    <!-- Add more main slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div id="thumbnail-slider2" class="splide">
-                                            <div class="splide__track border-0">
-                                                <ul class="splide__list">
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 2 -->
-                                                        <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                    </li>
-                                                    <li class="splide__slide rounded border">
-                                                        <!-- Content for thumbnail slider item 1 -->
-                                                        <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                    </li>
-                                                    <!-- Add more thumbnail slider items as needed -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="saran-bawah d-flex ps-6 pe-4">
-                                            <div class="text-white my-auto text-start" style="width: 80%">
-                                                <h6 class="m-0">Mars</h6>
-                                                <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
-                                            </div>
-                                            <div class="tombol text-end" style="width: 20%">
-                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                    style="width: 50%"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
     </div>
 
     {{-- NAVIGATION --}}
