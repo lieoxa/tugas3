@@ -17,11 +17,15 @@ nav.scrolled {
     transition: .7s ease;
     background-color: #994D1C;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    color: blue;
+    color: white;
 }
 
 .w-17 {
     width: 12%;
+}
+
+.w-10{
+    width: 8%;
 }
 
 h6 {
@@ -42,6 +46,7 @@ p {
     color: #fff;
     background: rgba(128, 128, 128, 0);
     border-radius: 50px;
+    margin-bottom: 6px;
 }
 
 .half {
@@ -59,6 +64,7 @@ p {
     color: #D04848;
     background: rgba(128, 128, 128, 0);
     border-radius: 50px;
+    margin-top: 5px;
 }
 
 #cb {
@@ -89,9 +95,8 @@ label {
 .modus-icons {
     color: white;
     padding: 0px 0px 0px 0px;
-    border-radius: 40px;
     font-size: 50px;
-    margin-top: 15px;
+    margin-top: 8px;
     margin-left: -4px;
 }
 
@@ -123,6 +128,9 @@ label {
     background-color: #16171a;
     border-bottom: 0.1px solid rgba(207, 207, 207, 0.438);
 }
+#mainNav .txt-detail.scrolled {
+    color: white;
+}
 .accordion-item{
     background-color: #16171a;
 }
@@ -133,11 +141,21 @@ label {
     color: white;
 }
 .bi-chevron-down::before{
+    font-size: 16px;
     background-color: white;
     border-radius: 40px;
-    padding: 2px;
+    padding: 5px;
 }
-/* .accordion {
-    --bs-accordion-btn-icon: url(img/chevron-down.svg);
-    --bs-accordion-btn-active-icon: url(img/che);
-} */
+.eps-icon-down::after {
+    background-image: url(img/down.png);
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    content: "";
+    background-repeat: no-repeat;
+    transition: var(--bs-accordion-btn-icon-transition);
+    background-size: 26px;
+}
+.txt-detail{
+    margin-top: 1.2rem !important;
+}
