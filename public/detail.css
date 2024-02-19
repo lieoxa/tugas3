@@ -156,6 +156,9 @@ label {
     transition: var(--bs-accordion-btn-icon-transition);
     background-size: 26px;
 }
+.eps-icon-down:not(.collapsed)::after {
+    background-image: url(img/down.png);
+}
 .txt-detail{
     margin-top: 1.2rem !important;
 }

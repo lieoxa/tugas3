@@ -268,10 +268,10 @@
 
                     <div class="animate" style="margin-right: 12px; margin-left:12px;margin-bottom: 2rem;" x-show="sliders == '' ? true : (sliders == 'animasi')">
                         <h1 class="text-white text-start fw-bold">Animasi Anak-Anak</h1>
-                        <section class="splide new-2" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide li position-relative">
+                        <section class="asfa">
+                            <div class="asd">
+                                <div class="d-flex gap-2 mt-3" style="overflow-x: auto;overflow: overlay;" id="resetKategori">
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -280,8 +280,8 @@
                                         </div>
                                         <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -290,8 +290,8 @@
                                         </div>
                                         <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -299,8 +299,8 @@
                                                 value="Episode Terbaru">
                                         </div>
                                         <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -308,8 +308,8 @@
                                                 value="Tonton Sekarang">
                                         </div>
                                         <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -317,8 +317,8 @@
                                                 value="Episode Terbaru">
                                         </div>
                                         <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -326,8 +326,8 @@
                                                 value="Tonton Sekarang">
                                         </div>
                                         <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -335,8 +335,8 @@
                                                 value="Episode Terbaru">
                                         </div>
                                         <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -344,8 +344,8 @@
                                                 value="Tonton Sekarang">
                                         </div>
                                         <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -353,8 +353,8 @@
                                                 value="Episode Terbaru">
                                         </div>
                                         <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -362,8 +362,8 @@
                                                 value="Tonton Sekarang">
                                         </div>
                                         <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
+                                    </div>
+                                    <div class="li position-relative">
                                         <div class="tonton position-absolute start-50 translate-middle w-100"
                                             style="top: 88%">
                                             <input type="button"
@@ -371,8 +371,8 @@
                                                 value="Episode Terbaru">
                                         </div>
                                         <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -1217,19 +1217,6 @@
 
     <Script>
         var splide = new Splide('.splide.new-1', {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
-        var splide = new Splide('.splide.new-2', {
             perPage: 4,
             focus: 0,
             omitEnd: true,

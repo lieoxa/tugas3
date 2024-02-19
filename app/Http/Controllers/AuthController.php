@@ -79,4 +79,8 @@ class AuthController extends Controller
     {
         return view('detail');
     }
+    public function search()
+    {
+        return view('user.search');
+    }
 }
