@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     {{-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> --}}
@@ -18,7 +18,7 @@
         <img src="img/muviku.png" class="navbar-brand my-auto" style="width: 30%;" loading="lazy">
 
         {{-- SUDAH LOGIN --}}
-        
+
         <img src="img/profile.png" style="width: 10%" class="">
 
         {{-- BLUM LOGIN --}}
@@ -97,7 +97,7 @@
 
         {{-- SLIDE FILM --}}
 
-        <div x-data="{ sliders : '' }">
+        <div x-data="{ sliders: '' }">
             <div class="container-sm">
                 <div class="container mb-3 p-0 border-bottom-1" style="max-height: 44px;" x-data="{ filter: 'all' }">
                     <section class="splide slider-1 mt-0 mb-4" aria-label="Splide Basic HTML Example">
@@ -161,7 +161,7 @@
                             </ul>
                         </div>
                     </section>
-                    <div class="d-flex gap-2 mt-3" style="overflow-x: auto;overflow: overlay;">
+                    <div class="d-flex gap-2 bar mt-3">
                     </div>
                 </div>
             </div>
@@ -170,7 +170,8 @@
 
             <section>
                 <div class="text-center mb-2">
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : false">
                         {{-- <h1 class="text-white text-start fw-bold">Film Terbaru</h1> --}}
                         <section class="splide new-1" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
@@ -266,112 +267,111 @@
 
                     {{-- SLIDE KE DUA --}}
 
-                    <div class="animate" style="margin-right: 12px; margin-left:12px;margin-bottom: 2rem;" x-show="sliders == '' ? true : (sliders == 'animasi')">
+                    <div class="animate" style="margin-right: 12px; margin-left:12px;margin-bottom: 2rem;"
+                        x-show="sliders == '' ? true : (sliders == 'animasi')">
                         <h1 class="text-white text-start fw-bold">Animasi Anak-Anak</h1>
-                        <section class="asfa">
-                            <div class="asd">
-                                <div class="d-flex gap-2 mt-3" style="overflow-x: auto;overflow: overlay;" id="resetKategori">
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color: #000000;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
-                                            alt="...">
+                        <section class="animasi">
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color: #000000;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Tonton Sekarang">
-                                        </div>
-                                        <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
-                                            alt="...">
+                                    <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
+                                        alt="...">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Tonton Sekarang">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi1.jpg') }}" class="card-img-top slider-img"
+                                        alt="...">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Tonton Sekarang">
-                                        </div>
-                                        <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Tonton Sekarang">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi3.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Tonton Sekarang">
-                                        </div>
-                                        <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Tonton Sekarang">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi5.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Tonton Sekarang">
-                                        </div>
-                                        <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Tonton Sekarang">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi7.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Tonton Sekarang">
-                                        </div>
-                                        <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#AD0000;color:white;width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Tonton Sekarang">
                                     </div>
-                                    <div class="li position-relative">
-                                        <div class="tonton position-absolute start-50 translate-middle w-100"
-                                            style="top: 88%">
-                                            <input type="button"
-                                                style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                                value="Episode Terbaru">
-                                        </div>
-                                        <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
+                                    <img src="{{ asset('img/animasi9.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <div class="tonton position-absolute start-50 translate-middle w-100"
+                                        style="top: 88%">
+                                        <input type="button"
+                                            style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
+                                            value="Episode Terbaru">
                                     </div>
+                                    <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
                                 </div>
                             </div>
                         </section>
@@ -381,7 +381,8 @@
 
                     {{-- SLIDE KE TIGA --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : false">
                         <section class="splide new-11" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
                                 <ul class="splide__list">
@@ -407,7 +408,8 @@
 
                     {{-- SLIDE KE EMPAT --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : false">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : false">
                         <h1 class="text-white text-start fw-bold">Hanya Ada di <span class="muviku">MUVIKU</span></h1>
                         <section class="splide new-8" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
@@ -451,137 +453,136 @@
 
                     {{-- SLIDE KE LIMA --}}
 
-                    <div class="hero mb-4" style="margin-right: 12px; margin-left:12px; margin-bottom: 1.9rem;" x-show="sliders == '' ? true : (sliders == 'hero')">
+                    <div class="hero mb-4" style="margin-right: 12px; margin-left:12px; margin-bottom: 1.9rem;"
+                        x-show="sliders == '' ? true : (sliders == 'hero')">
                         <h1 class="text-white text-start fw-bold">Super Hero</h1>
-                        <section class="splide new-3" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero4.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero5.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero6.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero7.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero8.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero9.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/hero10.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                </ul>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="li">
+                                    <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero4.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero5.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero6.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero7.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero8.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero9.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/hero10.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
                             </div>
                         </section>
                     </div>
 
                     {{-- SLIDE KE ENAM --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'podcast')">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : (sliders == 'podcast')">
                         <h1 class="text-white text-start fw-bold">Acara Podcast</h1>
-                        <section class="splide new-10" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast.jpg" class="w-100 podcast" alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast1.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast2.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast3.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast4.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast5.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast6.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast7.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast8.jpg" class="w-100 podcast " alt="">
-                                    </li>
-                                    <li class="splide__slide saran-1 position-relative">
-                                        <img src="img/play-button.png"
-                                            class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
-                                            style="width: 25%;">
-                                        <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
-                                        <img src="img/podcast9.jpg" class="w-100 podcast " alt="">
-                                    </li>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast.jpg" class="w-100 podcast" alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast1.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast2.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast3.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast4.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast5.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast6.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast7.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast8.jpg" class="w-100 podcast " alt="">
+                                </div>
+                                <div class="saran-1 position-relative">
+                                    <img src="img/play-button.png"
+                                        class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
+                                        style="width: 25%;">
+                                    <img src="img/logo-podcast.png" class="logo-podcast position-absolute">
+                                    <img src="img/podcast9.jpg" class="w-100 podcast " alt="">
+                                </div>
                                 </ul>
                             </div>
                         </section>
@@ -589,81 +590,81 @@
 
                     {{-- SLIDE KE TUJUH --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'anime')">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : (sliders == 'anime')">
                         <h1 class="text-white text-start fw-bold">Anime Jepang</h1>
-                        <section class="splide new-6" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">One Piece</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">A Silent Voice</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Weathering</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim3.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Suzume</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim4.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Your Name</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim5.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Ocean Waves</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim6.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Howls Castle</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">KIKI's</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim8.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Spirited Away</h6>
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide li">
-                                        <img src="{{ asset('img/anim9.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                        <div class="card-body mt-1 mx-auto">
-                                            <h6 class="card-title text-left text-white">Mononoke</h6>
-                                        </div>
-                                    </li>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="li">
+                                    <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">One Piece</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">A Silent Voice</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Weathering</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim3.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Suzume</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim4.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Your Name</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim5.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Ocean Waves</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim6.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Howls Castle</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">KIKI's</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim8.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Spirited Away</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim9.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Mononoke</h6>
+                                    </div>
+                                </div>
                                 </ul>
                             </div>
                         </section>
@@ -671,222 +672,219 @@
 
                     {{-- SLIDE KE DELAPAN --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'korea')">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : (sliders == 'korea')">
                         <h1 class="text-white text-start fw-bold">Film Korea</h1>
-                        <section class="splide new-5" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                </ul>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
+                                <div class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </div>
                             </div>
                         </section>
                     </div>
 
                     {{-- SLIDE KE SEMBILAN --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'serial')">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : (sliders == 'serial')">
                         <h1 class="text-white text-start fw-bold">Serial ber Episode
                         </h1>
-                        <section class="splide new-9" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide saran-1" onclick="window.location='{{ route('detail') }}'">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
-                                                <div class="text-white w-50 my-auto text-start">
-                                                    <h6 class="m-0">Jujutsu Kaisen</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">16
-                                                        Episode</p>
-                                                </div>
-                                                <div class="tombol w-50 text-end">
-                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                        style="width: 50%"></i>
-                                                </div>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <div class="saran-1" onclick="window.location='{{ route('detail') }}'">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">Jujutsu Kaisen</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">16
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="splide__slide saran-1">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
-                                                <div class="text-white w-50 my-auto text-start">
-                                                    <h6 class="m-0">Tokyo Revenger</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">24
-                                                        Episode</p>
-                                                </div>
-                                                <div class="tombol w-50 text-end">
-                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                        style="width: 50%"></i>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="saran-1">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/saran1.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">Tokyo Revenger</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">24
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="splide__slide saran-1">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <img src="img/saran2.webp" class="card-img-top w-100" alt="...">
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
-                                                <div class="text-white w-50 my-auto text-start">
-                                                    <h6 class="m-0">Mr. Bean</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">15
-                                                        Episode</p>
-                                                </div>
-                                                <div class="tombol w-50 text-end">
-                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                        style="width: 50%"></i>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="saran-1">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/saran2.webp" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">Mr. Bean</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">15
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="splide__slide saran-1">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <img src="img/saran3.jpg" class="card-img-top w-100" alt="...">
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
-                                                <div class="text-white w-50 my-auto text-start">
-                                                    <h6 class="m-0">Demon Slayer</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">26
-                                                        Episode</p>
-                                                </div>
-                                                <div class="tombol w-50 text-end">
-                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                        style="width: 50%"></i>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="saran-1">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/saran3.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">Demon Slayer</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">26
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="splide__slide saran-1">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <img src="img/saran4.jpg" class="card-img-top w-100" alt="...">
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
-                                                <div class="text-white w-50 my-auto text-start">
-                                                    <h6 class="m-0">Peace Maker</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">8
-                                                        Episode</p>
-                                                </div>
-                                                <div class="tombol w-50 text-end">
-                                                    <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
-                                                        style="width: 50%"></i>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="saran-1">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/saran4.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">Peace Maker</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">8
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
 
                     {{-- SLIDE KE SEPULUH --}}
 
-                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;" x-show="sliders == '' ? true : (sliders == 'horror')">
+                    <div class="mb-4" style="margin-right: 12px; margin-left:12px;"
+                        x-show="sliders == '' ? true : (sliders == 'horror')">
                         <h1 class="text-white text-start fw-bold">Film Horror</h1>
-                        <section class="splide new-7" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%" alt="...">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                    <li class="splide__slide li position-relative">
-                                        <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                        <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
-                                            style="width: 100%">
-                                    </li>
-                                </ul>
+                        <section>
+                            <div class="d-flex gap-2 bar mt-1">
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%" alt="...">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
+                                <li class="splide__slide li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                </li>
                             </div>
                         </section>
                     </div>
@@ -899,7 +897,8 @@
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide saran-2">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <div
+                                            class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                             <div id="main-slider" class="splide pb-2">
                                                 <div class="splide__track">
                                                     <ul class="splide__list">
@@ -976,7 +975,8 @@
                                         </div>
                                     </li>
                                     <li class="splide__slide saran-2">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <div
+                                            class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                             <div id="main-slider1" class="splide pb-2">
                                                 <div class="splide__track">
                                                     <ul class="splide__list">
@@ -1053,7 +1053,8 @@
                                         </div>
                                     </li>
                                     <li class="splide__slide saran-2">
-                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <div
+                                            class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                             <div id="main-slider2" class="splide pb-2">
                                                 <div class="splide__track">
                                                     <ul class="splide__list">
@@ -1142,13 +1143,13 @@
 
     <div class="menu-wrapper sticky-bottom start-50">
         <div class="navigation container-fluid" id="navigationn">
-            <li>
+            <li onclick="window.location='{{ route('movie') }}'">
                 <a class="btnn border-end-0 border-bottom-0 border-start-0 active">
                     <img src="img/logo-muviku.png" class="mb-1" style="width: 20%;">
                     <span>Utama</span>
                 </a>
             </li>
-            <li>
+            <li onclick="window.location='{{ route('search') }}'">
                 <a class="btnn border-end-0 border-bottom-0 border-start-0">
                     <i class="bi bi-search" aria-hidden="true"></i>
                     <span>Cari</span>
@@ -1229,59 +1230,7 @@
 
         splide.mount();
 
-        var splide = new Splide('.splide.new-3', {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
         var splide = new Splide('.splide.new-4', {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
-        var splide = new Splide('.splide.new-5', {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
-        var splide = new Splide('.splide.new-6', {
-            perPage: 4,
-            focus: 0,
-            omitEnd: true,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
-        var splide = new Splide('.splide.new-7', {
             perPage: 4,
             focus: 0,
             omitEnd: true,
@@ -1306,31 +1255,7 @@
 
         splide.mount();
 
-        var splide = new Splide('.splide.new-9', {
-            perPage: 2,
-            rewind: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            focus: 0,
-            omitEnd: true,
-            gap: '0.5rem',
-        });
-
-        splide.mount();
-
-        var splide = new Splide('.splide.new-10', {
-            perPage: 2,
-            arrows: false,
-            lazyLoad: 'nearby',
-            pagination: false,
-            focus: 0,
-            omitEnd: true,
-            gap: '0.5rem',
-        });
-        splide.mount();
-
-        var splide = new Splide('.splide.new-11', {
+    var splide = new Splide('.splide.new-11', {
             arrows: false,
             lazyLoad: 'nearby',
             autoplay: true,
@@ -1469,7 +1394,7 @@
             e.preventDefault();
         });
     </script>
-    <script>
+    {{-- <script>
         var btnContainer = document.getElementById("navigationn");
         var btnns = btnContainer.getElementsByClassName("btnn");
 
@@ -1480,7 +1405,7 @@
                 this.className += " active";
             })
         }
-    </script>
+    </script> --}}
 
 </body>
 

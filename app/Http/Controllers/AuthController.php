@@ -77,7 +77,7 @@ class AuthController extends Controller
     }
     public function detail()
     {
-        return view('detail');
+        return view('user.detail');
     }
     public function search()
     {

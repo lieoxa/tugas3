@@ -185,7 +185,6 @@ h1 {
 
 .fs-8 {
     font-size: 18px;
-    ;
 }
 
 .btn .btn-outline-light:hover {
@@ -247,7 +246,7 @@ h1 {
     padding-top: 7px;
     margin-top: 0;
     color: #fff;
-    border-top: 5px solid #15F5BA;
+    border-top: 5px solid #f5f115;
     width: 100%;
     border-radius: 1px;
     transition: 0.3s ease;
@@ -304,4 +303,11 @@ h1 {
 }
 .muviku{
     color: #15F5BA;
+}
+.bar{
+    overflow-x: auto;
+    overflow: overlay;
+}
+.bar::-webkit-scrollbar {
+    display: none;
 }

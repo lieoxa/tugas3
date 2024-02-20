@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@trimble-oss/modus-icons@1.9.0/dist/modus-solid/fonts/modus-icons.css">
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="css/detail.css">
     <title>Detail</title>
 </head>
 
@@ -73,11 +73,14 @@
                                             </h2>
                                             <div id="s1-e1" class="accordion-collapse collapse"
                                                 data-bs-parent="#s1_e1">
-                                                <div class="accordion-body p-0 p-2">
-                                                    <div class="desc text-white">
+                                                <div class="accordion-body p-0 p-2 d-flex">
+                                                    <div class="desc text-white w-75">
                                                         Placeholder content for this accordion,
                                                         which is intended to demonstrate the class. This is the first
                                                         item's accordion body.
+                                                    </div>
+                                                    <div class="icon-play w-25">
+                                                        <img src="img/play-button.png" class="w-100">
                                                     </div>
                                                 </div>
                                             </div>
