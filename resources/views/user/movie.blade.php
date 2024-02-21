@@ -819,6 +819,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{-- <div class="saran-1">
+                                    <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                        <img src="img/one-piece.jpg" class="card-img-top w-100" alt="...">
+                                        <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="text-white w-50 my-auto text-start">
+                                                <h6 class="m-0">One Piece</h6>
+                                                <p class="mb-0 text-secondary" style="font-size: 12px">1068
+                                                    Episode</p>
+                                            </div>
+                                            <div class="tombol w-50 text-end">
+                                                <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
+                                                    style="width: 50%"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> --}}
                             </div>
                         </section>
                     </div>
@@ -1226,6 +1242,7 @@
             pagination: false,
             lazyLoad: 'nearby',
             gap: '0.5rem',
+            drag: 'free',
         });
 
         splide.mount();
@@ -1251,6 +1268,7 @@
             lazyLoad: 'nearby',
             focus: 0,
             omitEnd: true,
+            drag:'free',
         });
 
         splide.mount();
