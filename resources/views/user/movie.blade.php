@@ -1153,7 +1153,7 @@
                     <span>Suka</span>
                 </a>
             </li>
-            <li>
+            <li onclick="window.location='{{ route('profile') }}'">
                 <a class="btnn border-end-0 border-bottom-0 border-start-0">
                     <i class="bi bi-person fs-4" aria-hidden="true"></i>
                     <span style="margin-top: -4px">Profil</span>

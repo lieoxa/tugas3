@@ -18,9 +18,9 @@
     <div class="old">
         <div class="bg-img position-relative">
             <img src="img/bg-profile.jpg" class="w-100 bg-profile">
-            <div class="foto-profile">
+            <div class="foto-profile w-100">
                 <img src="img/profile.png" class="w-25 mx-auto foto">
-            <h5 class="text-white">Adriel Felix Posuma</h5>
+                <h5 class="text-white">Adriel Felix</h5>
             </div>
         </div>
     </div>

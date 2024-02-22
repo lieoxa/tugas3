@@ -19,8 +19,9 @@
         <nav class="navbar">
             <div class="col-12 position-relative">
                 <form class="d-flex col-12" role="search">
-                    <input class="form-control" type="search" placeholder="Cari di sini..." aria-label="Search">
+                    <input class="form-control pe-6" type="search" placeholder="Cari di sini..." aria-label="Search">
                     <button type="submit" class="icon-search"><i class="modus-icons" aria-hidden="true">search</i></button>
+                    <button type="submit" class="btn-search btn bg-info">Cari</button>
                 </form>
             </div>
         </nav>
@@ -57,37 +58,55 @@
                     <ul class="splide__list">
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
-                                <img src="img/anime-art.webp" class="card-img">
+                                <img src="img/jumanji.jpg" class="card-img">
                                 <div class="card-img-overlay card-1 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Card Title</h5>
-                                    <p class="card-text lh-1"><small>Khusus untuk kamu</small></p>
+                                    <h5 class="card-title fw-bold">Jumanji</h5>
+                                    <p class="card-text lh-1"><small>Teka teki didalam game</small></p>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
-                                <img src="img/one-piece.jpg" class="card-img">
+                                <img src="img/pilih2.jpg" class="card-img">
                                 <div class="card-img-overlay card-2 text-primary p-6">
-                                    <h5 class="card-title fw-bold">One Piece</h5>
+                                    <h5 class="card-title fw-bold">One Piece Red</h5>
                                     <p class="card-text lh-1"><small>Petualangan bajak laut</small></p>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
-                                <img src="img/e1.png" class="card-img">
+                                <img src="img/horror2.jpg" class="card-img">
                                 <div class="card-img-overlay card-3 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Card title</h5>
-                                    <p class="card-text lh-1"><small>Last updated 3 mins ago</small></p>
+                                    <h5 class="card-title fw-bold">KKN</h5>
+                                    <p class="card-text lh-1"><small>Kisah horror desa penari</small></p>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
-                                <img src="img/e1.png" class="card-img">
+                                <img src="img/anim1.jpg" class="card-img">
                                 <div class="card-img-overlay card-4 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Card title</h5>
-                                    <p class="card-text lh-1"><small>Last updated 3 mins ago</small></p>
+                                    <h5 class="card-title fw-bold">Demon Slayer</h5>
+                                    <p class="card-text lh-1"><small>Kehidupan pemburu iblis</small></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide li">
+                            <div class="card bg-transparent">
+                                <img src="img/pilih.jpg" class="card-img">
+                                <div class="card-img-overlay card-3 text-primary p-6">
+                                    <h5 class="card-title fw-bold">Rio 2</h5>
+                                    <p class="card-text lh-1"><small>Perjalanan keluarga blu</small></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide li">
+                            <div class="card bg-transparent">
+                                <img src="img/pilih1.jpg" class="card-img">
+                                <div class="card-img-overlay card-4 text-primary p-6">
+                                    <h5 class="card-title fw-bold">Squid Game</h5>
+                                    <p class="card-text lh-1"><small>Bertahan untuk uang</small></p>
                                 </div>
                             </div>
                         </li>
@@ -189,7 +208,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="splide__slide d-grid gap-2 li-anim">
+                        <li class="splide__slide d-grid gap-2 li-anim-end">
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">

@@ -27,6 +27,9 @@ small{
 p{
     margin-bottom: 0;
 }
+h5{
+    font-size: 1.12rem;
+}
 .card-title{
     margin: 0px 0px 0px;
 }
@@ -37,7 +40,9 @@ p{
     background-color: #2c2c2c;
     text-align: center;
 }
-
+.pe-6{
+    padding-right: 44.5px;
+}
 .menu-wrapper .navigation {
     display: flex;
     padding: 0;
@@ -96,7 +101,10 @@ p{
     max-height: 160px;
     border-radius: 0.375rem;
 }
-
+.card-img{
+    max-height: 151.72px;
+    min-height: 151.72px;
+}
 .form-control {
     height: 40px;
     background-color: #dddddd;
@@ -120,7 +128,13 @@ p{
     top: 16%;
     left: 8px;
 }
-
+.btn-search{
+    background: none;
+    position: absolute;
+    border: none;
+    top: 2px;
+    right: 2.5px;
+}
 .form-control {
     border: none;
 }
@@ -155,6 +169,8 @@ p{
 
 .card-img-overlay {
     background: linear-gradient(0deg, rgb(22, 23, 26) 30%, rgba(22, 23, 26, 0.137) 70%, rgba(22, 23, 26, 0) 100%);
+    max-height: 151.72px;
+    min-height: 151.72px;
 }
 .lh-1{
     line-height: 0.7 !important;
@@ -164,6 +180,9 @@ p{
 }
 .li-anim{
     min-width: 85% !important;
+}
+.li-anim-end{
+    min-width: 100% !important;
 }
 .img-anim{
     min-height: 68px;
