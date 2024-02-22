@@ -19,10 +19,8 @@
         <nav class="navbar">
             <div class="col-12 position-relative">
                 <form class="d-flex col-12" role="search">
-                    <input class="form-control" type="search" placeholder="Cari..." aria-label="Search">
-                    <button type="submit" class="icon-search"><i class="modus-icons"
-                            aria-hidden="true">search</i></button>
-
+                    <input class="form-control" type="search" placeholder="Cari di sini..." aria-label="Search">
+                    <button type="submit" class="icon-search"><i class="modus-icons" aria-hidden="true">search</i></button>
                 </form>
             </div>
         </nav>
@@ -62,7 +60,7 @@
                                 <img src="img/anime-art.webp" class="card-img">
                                 <div class="card-img-overlay card-1 text-primary p-6">
                                     <h5 class="card-title fw-bold">Card Title</h5>
-                                    <p class="card-text lh-1"><small>Last updated 3 mins ago</small></p>
+                                    <p class="card-text lh-1"><small>Khusus untuk kamu</small></p>
                                 </div>
                             </div>
                         </li>
@@ -71,7 +69,7 @@
                                 <img src="img/one-piece.jpg" class="card-img">
                                 <div class="card-img-overlay card-2 text-primary p-6">
                                     <h5 class="card-title fw-bold">One Piece</h5>
-                                    <p class="card-text lh-1"><small>Petualangan menjadi raja bajak laut</small></p>
+                                    <p class="card-text lh-1"><small>Petualangan bajak laut</small></p>
                                 </div>
                             </div>
                         </li>
@@ -107,13 +105,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;" onclick="window.location='{{ route('detail') }}'">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/saran.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim2.jpeg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Jujutsu Kaisen</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">Jujutsu Kaisen 0</h6>
+                                            <p class="text-secondary perusahaan"><small>MAPPA</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -121,13 +119,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim3.jpg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">Weathering With You</h6>
+                                            <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,57 +133,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim5.jpg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="splide__slide d-grid gap-2 li-anim">
-                            <div class="card bg-transparent border-0" style="max-width: 540px;">
-                                <div class="row g-0 d-flex">
-                                    <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
-                                    </div>
-                                    <div class="col-8 text-white">
-                                        <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-transparent border-0" style="max-width: 540px;">
-                                <div class="row g-0 d-flex">
-                                    <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
-                                    </div>
-                                    <div class="col-8 text-white">
-                                        <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-transparent border-0" style="max-width: 540px;">
-                                <div class="row g-0 d-flex">
-                                    <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
-                                    </div>
-                                    <div class="col-8 text-white">
-                                        <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">Ocean Waves</h6>
+                                            <p class="text-secondary perusahaan"><small> Ghibli</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -195,13 +149,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim.jpg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">One Piece Red</h6>
+                                            <p class="text-secondary perusahaan"><small>Toei Animation</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -209,13 +163,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim1.jpg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">Your Name</h6>
+                                            <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -223,13 +177,57 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded" alt="...">
+                                        <img src="img/tren-anim6.jpg" class="img-fluid rounded img-anim" alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Card title</h6>
-                                            <p class="text-secondary"><small>MAPPA</small></p>
-                                            <p class="text-secondary"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <h6 class="card-title">Spirited Away</h6>
+                                            <p class="text-secondary perusahaan"><small>Ghibli</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide d-grid gap-2 li-anim">
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/tren-anim7.jpg" class="img-fluid rounded img-anim" alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Suzume</h6>
+                                            <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/tren-anim8.webp" class="img-fluid rounded img-anim" alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Demon Slayer</h6>
+                                            <p class="text-secondary perusahaan"><small>Ufotable</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/ta.jpg" class="img-fluid rounded img-anim" alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Princess Mononoke</h6>
+                                            <p class="text-secondary perusahaan"><small>Ghibli</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -373,7 +371,7 @@
                     <span>Suka</span>
                 </a>
             </li>
-            <li>
+            <li onclick="window.location='{{ route('profile') }}'">
                 <a class="btnn border-end-0 border-bottom-0 border-start-0">
                     <i class="bi bi-person fs-4" aria-hidden="true"></i>
                     <span style="margin-top: -4px">Profil</span>

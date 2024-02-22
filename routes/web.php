@@ -33,3 +33,5 @@ Route::get('/movie', [AuthController::class, 'movie'])->name('movie');
 Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/detail', [AuthController::class, 'detail'])->name('detail');
 Route::get('/search', [AuthController::class, 'search'])->name('search');
+Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+

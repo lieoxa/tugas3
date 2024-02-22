@@ -603,13 +603,6 @@
                                     </div>
                                 </div>
                                 <div class="li">
-                                    <img src="{{ asset('img/anim1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                    <div class="card-body mt-1 mx-auto">
-                                        <h6 class="card-title text-left text-white">A Silent Voice</h6>
-                                    </div>
-                                </div>
-                                <div class="li">
                                     <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
@@ -642,6 +635,13 @@
                                         style="width: 100%">
                                     <div class="card-body mt-1 mx-auto">
                                         <h6 class="card-title text-left text-white">Howls Castle</h6>
+                                    </div>
+                                </div>
+                                <div class="li">
+                                    <img src="{{ asset('img/anim2.jpg') }}" class="card-img-top slider-img"
+                                        style="width: 100%">
+                                    <div class="card-body mt-1 mx-auto">
+                                        <h6 class="card-title text-left text-white">Demon Slayer</h6>
                                     </div>
                                 </div>
                                 <div class="li">
@@ -938,10 +938,6 @@
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                         </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                        </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
                                                 </div>
@@ -969,10 +965,6 @@
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/fi2.jpg" alt="Thumbnail 1">
-                                                        </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1016,10 +1008,6 @@
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/fi1.jpg" alt="Thumbnail 2">
                                                         </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
-                                                        </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
                                                 </div>
@@ -1047,10 +1035,6 @@
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                        </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1094,10 +1078,6 @@
                                                             <!-- Content for main slider item 2 -->
                                                             <img src="img/fi1.jpg" alt="Main Slide 2">
                                                         </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for main slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Main Slide 1">
-                                                        </li>
                                                         <!-- Add more main slider items as needed -->
                                                     </ul>
                                                 </div>
@@ -1125,10 +1105,6 @@
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                        </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1305,13 +1281,9 @@
                     left: '0.5rem',
                     right: '0.5rem',
                 },
-                focus: 'center',
                 pagination: false,
                 cover: true,
-                dragMinThreshold: {
-                    mouse: 4,
-                    touch: 10,
-                },
+                drag: false ,
                 breakpoints: {
                     640: {
                         fixedWidth: 45,
@@ -1345,13 +1317,9 @@
                     left: '0.5rem',
                     right: '0.5rem',
                 },
-                focus: 'center',
                 pagination: false,
                 cover: true,
-                dragMinThreshold: {
-                    mouse: 4,
-                    touch: 10,
-                },
+                drag: false,
                 breakpoints: {
                     640: {
                         fixedWidth: 45,
@@ -1385,13 +1353,9 @@
                     left: '0.5rem',
                     right: '0.5rem',
                 },
-                focus: 'center',
                 pagination: false,
                 cover: true,
-                dragMinThreshold: {
-                    mouse: 4,
-                    touch: 10,
-                },
+                drag: false,
                 breakpoints: {
                     640: {
                         fixedWidth: 45,
