@@ -175,7 +175,7 @@
             value: text
         } = await Swal.fire({
             input: "textarea",
-            inputLabel: "Laporkan",
+            title: "Laporkan",
             inputPlaceholder: "Ketik laporanmu disini...",
             inputAttributes: {
                 "aria-label": "Type your message here"
