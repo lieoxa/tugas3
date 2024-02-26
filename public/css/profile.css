@@ -8,11 +8,27 @@
 body {
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
+    min-height: 92vh;
     background: #222327;
     user-select: none;
 }
 
+i {
+    padding-right: 8px;
+}
+
+hr {
+    margin: 0 0;
+}
+
+input {
+    border: 1px solid black;
+    height: 50px;
+    text-indent: 10px;
+}
+p{
+    font-size: 14px;
+}
 .menu-wrapper {
     border-top: 0.1px solid #646464;
     height: 70px;
@@ -69,7 +85,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.profil{
+.profil {
     background-color: #fcfcfc;
 }
 
@@ -87,7 +103,7 @@ body {
 }
 
 .foto {
-    border-radius: 50px;
+    border-radius: 999px;
     border: 3px solid #FEE501;
     display: block;
     margin-left: auto;
@@ -95,30 +111,88 @@ body {
 }
 
 .menu {
-    margin-top: -52px;
+    margin-top: -56px;
 }
-.accordion{
+
+.accordion {
     border-radius: 20px;
 }
+
 .accordion-button {
     padding: 21px 1rem;
 }
+
 .accordion-button::after {
     background-image: none;
     margin-left: auto;
     content: "";
     background-repeat: no-repeat;
 }
+
 .accordion-button:not(.collapsed)::after {
     background-image: none;
 }
-.bi-chevron-right{
+
+.bi-chevron-right {
     position: absolute;
     right: 13px;
 }
-.accordion-button:focus{
+
+.accordion-button:focus {
     box-shadow: none;
 }
-i{
-    padding-right: 8px;
+
+.modal-title {
+    text-align: center;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 18px;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: auto;
+    border: none;
+    background: #ffffff;
+    padding: 11px 15px;
+    border-radius: 5px;
+    color: #646464;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.edit-profil {
+    margin-top: 50%;
+    background-color: #fcfcfc;
+}
+.edit-akun{
+    margin-top: 50%;
+}
+.edit-pw{
+    margin-top: 30%;
+}
+.btn-simpan {
+    color: white;
+}
+
+input::placeholder {
+    color: #acacac;
+}
+
+.label-upload {
+    height: 50px;
+    padding-top: 12px !important;
+}
+
+.border-dark {
+    border: 1px solid black;
+}
+
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgba(0, 0, 0, 0.76) !important;
+    backdrop-filter: blur(4px);
+}
+
+label {
+    color: #acacac;
 }

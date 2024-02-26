@@ -20,8 +20,9 @@
             <div class="col-12 position-relative">
                 <form class="d-flex col-12" role="search">
                     <input class="form-control pe-6" type="search" placeholder="Cari di sini..." aria-label="Search">
-                    <button type="submit" class="icon-search"><i class="modus-icons" aria-hidden="true">search</i></button>
-                    <button type="submit" class="btn-search btn bg-info">Cari</button>
+                    <button type="submit" class="icon-search"><i class="modus-icons"
+                            aria-hidden="true">search</i></button>
+                    <button type="submit" class="btn-search btn cari text-white">Cari</button>
                 </form>
             </div>
         </nav>
@@ -52,15 +53,15 @@
             </section>
         </div>
         <div class="mb-4">
-            <h1 class="text-white text-start fw-bold">Pilihan Editor</h1>
+            <h1 class="text-white text-start fw-bold">Rekomendasi</h1>
             <section class="splide new-1" aria-label="Splide Basic HTML Example">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/jumanji.jpg" class="card-img">
-                                <div class="card-img-overlay card-1 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Jumanji</h5>
+                                <div class="card-img-overlay card-1 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">Jumanji</h5>
                                     <p class="card-text lh-1"><small>Teka teki didalam game</small></p>
                                 </div>
                             </div>
@@ -68,8 +69,8 @@
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/pilih2.jpg" class="card-img">
-                                <div class="card-img-overlay card-2 text-primary p-6">
-                                    <h5 class="card-title fw-bold">One Piece Red</h5>
+                                <div class="card-img-overlay card-2 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">One Piece Red</h5>
                                     <p class="card-text lh-1"><small>Petualangan bajak laut</small></p>
                                 </div>
                             </div>
@@ -77,8 +78,8 @@
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/horror2.jpg" class="card-img">
-                                <div class="card-img-overlay card-3 text-primary p-6">
-                                    <h5 class="card-title fw-bold">KKN</h5>
+                                <div class="card-img-overlay card-3 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">KKN</h5>
                                     <p class="card-text lh-1"><small>Kisah horror desa penari</small></p>
                                 </div>
                             </div>
@@ -86,8 +87,8 @@
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/anim1.jpg" class="card-img">
-                                <div class="card-img-overlay card-4 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Demon Slayer</h5>
+                                <div class="card-img-overlay card-4 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">Demon Slayer</h5>
                                     <p class="card-text lh-1"><small>Kehidupan pemburu iblis</small></p>
                                 </div>
                             </div>
@@ -95,8 +96,8 @@
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/pilih.jpg" class="card-img">
-                                <div class="card-img-overlay card-3 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Rio 2</h5>
+                                <div class="card-img-overlay card-3 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">Rio 2</h5>
                                     <p class="card-text lh-1"><small>Perjalanan keluarga blu</small></p>
                                 </div>
                             </div>
@@ -104,8 +105,8 @@
                         <li class="splide__slide li">
                             <div class="card bg-transparent">
                                 <img src="img/pilih1.jpg" class="card-img">
-                                <div class="card-img-overlay card-4 text-primary p-6">
-                                    <h5 class="card-title fw-bold">Squid Game</h5>
+                                <div class="card-img-overlay card-4 text-white p-6">
+                                    <h5 class="card-title fw-bold" style="color: #DA137F">Squid Game</h5>
                                     <p class="card-text lh-1"><small>Bertahan untuk uang</small></p>
                                 </div>
                             </div>
@@ -121,16 +122,19 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide d-grid gap-2 li-anim">
-                            <div class="card bg-transparent border-0" style="max-width: 540px;" onclick="window.location='{{ route('detail') }}'">
+                            <div class="card bg-transparent border-0" style="max-width: 540px;"
+                                onclick="window.location='{{ route('detail') }}'">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim2.jpeg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim2.jpeg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Jujutsu Kaisen 0</h6>
                                             <p class="text-secondary perusahaan"><small>MAPPA</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -138,13 +142,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim3.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim3.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Weathering With You</h6>
                                             <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -152,13 +158,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim5.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim5.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Ocean Waves</h6>
                                             <p class="text-secondary perusahaan"><small> Ghibli</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,13 +176,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">One Piece Red</h6>
                                             <p class="text-secondary perusahaan"><small>Toei Animation</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -182,13 +192,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim1.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim1.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Your Name</h6>
                                             <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -196,13 +208,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim6.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim6.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Spirited Away</h6>
                                             <p class="text-secondary perusahaan"><small>Ghibli</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -212,13 +226,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim7.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim7.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Suzume</h6>
                                             <p class="text-secondary perusahaan"><small>CoMix Wave Films</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,13 +242,15 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/tren-anim8.webp" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim8.webp" class="img-fluid rounded img-anim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Demon Slayer</h6>
                                             <p class="text-secondary perusahaan"><small>Ufotable</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +264,8 @@
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Princess Mononoke</h6>
                                             <p class="text-secondary perusahaan"><small>Ghibli</small></p>
-                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small class="my-auto"> 88.8K</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +277,7 @@
         </div>
 
         <div class="mb-4 pb-4">
-            <h1 class="text-white text-start fw-bold">Trending Film</h1>
+            <h1 class="text-white text-start fw-bold">Banyak Ditonton</h1>
             <section class="splide trend-film" aria-label="Splide Basic HTML Example">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -291,7 +310,8 @@
                             <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top slider-img" alt="...">
                         </li>
                         <li class="splide__slide li-1">
-                            <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img" alt="...">
+                            <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
+                                alt="...">
                         </li>
                         <li class="splide__slide li-1">
                             <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
@@ -350,13 +370,13 @@
                 <a class="btnn border-end-0 border-bottom-0 border-start-0 active">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                         viewBox="0,0,256,256">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
-                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
                             <g transform="scale(5.33333,5.33333)">
-                                <path transform="translate(-15.15512,36.5872) rotate(-45.001)"
-                                    d="M34.6,28.1h4v17h-4z" fill="#e6551c"></path>
+                                <path transform="translate(-15.15512,36.5872) rotate(-45.001)" d="M34.6,28.1h4v17h-4z"
+                                    fill="#e6551c"></path>
                                 <path
                                     d="M20,4c-8.83656,0 -16,7.16344 -16,16c0,8.83656 7.16344,16 16,16c8.83656,0 16,-7.16344 16,-16c0,-8.83656 -7.16344,-16 -16,-16z"
                                     fill="#e6551c"></path>
@@ -370,10 +390,10 @@
                                     fill="#bbdefb"></path>
                             </g>
                         </g>
-                        <g fill="#e6551c" fill-rule="nonzero" stroke="none" stroke-width="1"
-                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g fill="#e6551c" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
                             <g>
                                 <path
                                     d="M214.82,225.79v0c0,-3 0.89,-5.5 2.67,-7.5c1.78,-2 4.45333,-3 8.02,-3c3.56,0 6.26333,1 8.11,3c1.84,2 2.76,4.5 2.76,7.5v0c0,2.87333 -0.92,5.28 -2.76,7.22c-1.84667,1.93333 -4.55,2.9 -8.11,2.9c-3.56667,0 -6.24,-0.96667 -8.02,-2.9c-1.78,-1.94 -2.67,-4.34667 -2.67,-7.22z">
