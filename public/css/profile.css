@@ -161,14 +161,14 @@ input[type=file]::file-selector-button {
 }
 
 .edit-profil {
-    margin-top: 50%;
-    background-color: #fcfcfc;
+    /* margin-top: 50%;
+    background-color: #fcfcfc; */
 }
 .edit-akun{
     margin-top: 50%;
 }
 .edit-pw{
-    margin-top: 30%;
+    margin-top: 4%;
 }
 .btn-simpan {
     color: white;
@@ -195,4 +195,72 @@ input::placeholder {
 
 label {
     color: #acacac;
+}
+.modal.fade.bg-success {
+    align-items: center;
+    justify-content: center;
+}
+.pw{
+    height: 72vh;
+}
+.icon-eye-pw{
+    margin-top: 8px; 
+    margin-right: 4px;
+}
+.select-menu{
+    width: 100%;
+}
+.select-menu .select-btn{
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #acacac;
+    border-radius: 5px;
+    align-items: center;
+    background: white;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+.select-btn i{
+    font-size: 15px;
+    color: black;
+}
+.select-menu .options{
+    padding-left: 0;
+    position: relative;
+    margin-top: 4px;
+    border-radius: 8px;
+    background: grey;
+    display: none;
+    padding: 10px;
+}
+.select-menu.active .options{
+    display: block;
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.options .option{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    border-radius: 5px;
+    list-style: none;
+}
+.options .option:hover{
+    background: #f2f2f2;
+}
+.option i{
+    font-size: 20px;
+    margin-right:2px;
+}
+.select-menu ul{
+    margin-bottom: 0;
+}
+.option{
+    background: #fff;
 }

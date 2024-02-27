@@ -22,7 +22,7 @@
                     <input class="form-control pe-6" type="search" placeholder="Cari di sini..." aria-label="Search">
                     <button type="submit" class="icon-search"><i class="modus-icons"
                             aria-hidden="true">search</i></button>
-                    <button type="submit" class="btn-search btn cari text-white">Cari</button>
+                    <a href="#" type="submit" class="btn-search btn cari text-white">Cari</a>
                 </form>
             </div>
         </nav>
@@ -215,6 +215,56 @@
                                         <div class="card-body py-0 px-2">
                                             <h6 class="card-title">Spirited Away</h6>
                                             <p class="text-secondary perusahaan"><small>Ghibli</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide d-grid gap-2 li-anim">
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/tren-anim10.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Drifting Home</h6>
+                                            <p class="text-secondary perusahaan"><small>Studio Colorido</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/tren-anim13.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Maboroshi</h6>
+                                            <p class="text-secondary perusahaan"><small>MAPPA</small></p>
+                                            <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
+                                                    class="my-auto"> 88.8K</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent border-0" style="max-width: 540px;">
+                                <div class="row g-0 d-flex">
+                                    <div class="col-4">
+                                        <img src="img/tren-anim11.jpg" class="img-fluid rounded img-anim"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-8 text-white">
+                                        <div class="card-body py-0 px-2">
+                                            <h6 class="card-title">Hello World</h6>
+                                            <p class="text-secondary perusahaan"><small>Graphinica</small></p>
                                             <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
                                                     class="my-auto"> 88.8K</small></p>
                                         </div>
