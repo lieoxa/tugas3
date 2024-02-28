@@ -46,7 +46,7 @@ p {
     color: #fff;
     background: rgba(128, 128, 128, 0);
     border-radius: 50px;
-    margin-bottom: 6px;
+    margin-bottom: 18px !important;
 }
 
 .half {

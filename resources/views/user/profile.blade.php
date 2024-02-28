@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#fff" />
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -52,7 +52,8 @@
             </div>
             <div class="accordion">
                 <div class="accordion-item rounded-top-3">
-                    <button class="profil accordion-button collapsed position-relative rounded-top-3" type="button">
+                    <button class="profil accordion-button collapsed position-relative rounded-top-3" id="lapor"
+                        type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                         <i class="bi bi-bookmark-check-fill fs-5"></i>
                         Daftar Tonton
                         <i class="bi bi-chevron-right"></i>
@@ -120,7 +121,7 @@
     <div class="modal fade bg-success" id="profil" tabindex="-1" aria-labelledby="profilLabel" aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content edit-profil rounded-5">
-                <div class="modal-body container pt-0">
+                <div class="modal-body container py-0">
                     <div class="image-profil">
                         <div class="img-profil">
                             <img class="mx-auto mt-3" id="preview" src="#" alt="Preview"
@@ -133,21 +134,39 @@
                         </div>
                         <div class="nama">
                             <h6>Nama</h6>
-                            <input type="text" name="" id=""
-                                class="w-100 rounded border-dark txt" placeholder="Ketik nama barumu...">
+                            <input type="text" class="w-100 rounded border txt"
+                                placeholder="Ketik nama barumu...">
                         </div>
+
+                        {{-- <div class="select-menu text-black-50">
+                            <div class="select-btn border">
+                                <span class="sBtn-text" style="font-size: 16px; color: white;">Select your option</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options border">
+                                <li class="option">
+                                    <i class="bi bi-gender-male text-primary"></i>
+                                    <span class="option-text">Laki - laki</span>
+                                </li>
+                                <hr style="background: white">
+                                <li class="option">
+                                    <i class="bi bi-gender-female text-danger"></i>
+                                    <span class="option-text">Perempuan </span>
+                                </li>
+                            </ul>
+                        </div> --}}
                         <div class="img-profile">
                             <h6>Foto Profil</h6>
                             <input type="file" name="" hidden="" class="w-100 rounded border-dark"
                                 onchange="previewImage()" id="fileInput">
                             <label for="fileInput"
-                                class="bg-white label-upload w-100 px-2 pt-2 border-dark rounded  text-center"
+                                class="bgnya-input label-upload w-100 px-2 pt-2 border rounded  text-center"
                                 id="file-input-label" for="file-input"><i class="bi bi-upload"></i>Pilih File</label>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer mx-auto border-top-0">
-                    <button type="submit" class="btn btn-secondary py-2 px-3">Simpan</button>
+                <div class="modal-footer mx-auto border-top-0 pb-0 pt-4">
+                    <button type="submit" class="btn btn-secondary m-0 py-2 px-3">Simpan</button>
                 </div>
             </div>
         </div>
@@ -155,107 +174,89 @@
     <div class="modal fade bg-success text-white" id="akun" tabindex="-1" aria-labelledby="akunLabel"
         aria-hidden="true">
         <div class="modal-dialog container">
-            <div class="modal-content border edit-profil rounded-5" style="background: #222327">
+            <div class="modal-content border edit-akun rounded-5">
                 <div class="modal-dialog text-center py-1">
                     <h1 class="modal-title fs-5" id="akunLabel">Edit Akun</h1>
                 </div>
                 <div class="modal-body container d-grid gap-3 pt-0">
                     <div class="nama">
                         <h6>Email Baru</h6>
-                        <input type="email" name="" id="" class="w-100 rounded border-dark txt"
+                        <input type="email" class="w-100 rounded border txt"
                             placeholder="Ketik email barumu...">
                     </div>
                     <div class="img-profile">
                         <h6>No. Tlpn Baru</h6>
-                        <input type="text" name="" class="w-100 rounded border-dark"
-                            placeholder="Ketik email barumu...">
-                    </div>
-                    <div class="select-menu">
-                        <div class="select-btn">
-                            <span class="sBtn-text">Pilih Gender</span>
-                            <i class="bi bi-chevron-down p-0"></i>
-                        </div>
-                        <ul class="options text-black">
-                            <li class="option">
-                                <i class="bi bi-gender-male"></i>
-                                <span class="option-text">Laki - laki</span>
-                            </li>
-                            <hr class=" justify-center mx-auto" style="width: 90%">
-                            <li class="option">
-                                <i class="bi bi-gender-female"></i>
-                                <span class="option-text">Perempuan</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nama">
-                        <h6>Sosial</h6>
-                        <input type="text" name="" id="" class="w-100 rounded border-dark txt"
-                            placeholder="Ketik nama barumu...">
+                        <input type="text" class="w-100 rounded txt" placeholder="Ketik email barumu...">
                     </div>
                 </div>
-                <div class="modal-footer mx-auto border-top-0">
-                    <button type="button" class="btn btn-secondary py-2 px-3">Simpan</button>
+                <div class="modal-footer mx-auto border-top-0 pb-0 pt-2">
+                    <button type="button" class="btn btn-secondary py-2 px-3 m-0">Simpan</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal bg-success fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel"
         aria-hidden="true">
-        <div class="modal-dialog container">
-            <div class="modal-content rounded-5">
-                <div class="modal-header border-bottom-0 d-block">
+        <div class="modal-dialog container my-auto">
+            <div class="modal-content rounded-5 laporkan">
+                <div class="modal-header border-bottom-0 d-block pt-0">
                     <h1 class="modal-title fs-5" id="laporLabel">Laporkan Kesalahan Film</h1>
                 </div>
-                <div class="modal-body container">
-                    <textarea class="w-100 rounded"name="" id="" cols="30" rows="6"></textarea>
+                <div class="modal-body container py-0" style="height: 148px">
+                    <textarea class="w-100 px-1" cols="30" rows="6"></textarea>
                 </div>
-                <div class="modal-footer border-top-0 justify-content-center">
-                    <button type="button" class="btn text-white bg-secondary px-3"
-                        data-bs-dismiss="modal">Kirim</button>
+                <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
+                    <button type="button m-0" class="btn bg-secondary text-white btn-simpan py-2 px-4"
+                        data-bs-dismiss="modal" style="width: 104.25px">Kirim</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal fade bg-success px-3" id="password" tabindex="-1" aria-labelledby="passwordLabel"
         aria-hidden="true">
-        <div class="modal-content modal-dialog-scrollable pw edit-pw rounded-5 py-2">
+        <div class="modal-content pw edit-pw rounded-5">
             <div class="img-lock">
-                <div class="img-pw mx-auto d-flex mt-3">
+                <div class="img-pw mx-auto d-flex">
                     <img class="mx-auto" src="img/lock.png" style="max-width: 25%; max-height: 25%;">
                 </div>
             </div>
-            <div class="modal-dialog  text-center py-1 my-0">
+            <div class="modal-dialog  text-center py-3 my-0">
                 <h1 class="modal-title fs-5" id="passwordLabel">Ubah Kata Sandi</h1>
             </div>
-            <div class="modal-body container d-grid gap-3 pt-0">
+            <div class="modal-body container d-grid gap-3 py-0">
                 <div class="pw-lama">
-                    <h6>Sandi Lama</h6>
-                    <input type="password" name="" id=""
-                        class="w-100 rounded border-dark txt position-relative" placeholder="Ketik sandi lamamu...">
-                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"></i>
+                    <h6>kata Sandi Lama</h6>
+                    <input type="password" name="" id="pwlama"
+                        class="w-100 rounded border txt position-relative" placeholder="Ketik kata sandi lamamu...">
+                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"
+                        id="togglepwLama"></i>
                 </div>
                 <div class="pw-baru">
-                    <h6>Sandi Baru</h6>
-                    <input type="password" name="" id=""
-                        class="w-100 rounded border-dark txt position-relative" placeholder="Ketik sandi barumu...">
-                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"></i>
+                    <h6>Kata Sandi Baru</h6>
+                    <input type="password" name="" id="pwbaru"
+                        class="w-100 rounded border txt position-relative" placeholder="Ketik kata sandi barumu...">
+                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"
+                        id="togglepwBaru"></i>
                 </div>
                 <div class="confirm-pw">
-                    <h6>Konfirmasi Sandi Baru</h6>
-                    <input type="password" name="" id=""
-                        class="w-100 rounded border-dark txt position-relative"
-                        placeholder="Ketik ulang sandi barumu...">
-                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"></i>
+                    <h6>Konfirmasi kata Sandi Baru</h6>
+                    <input type="password" name="" id="confirmpw"
+                        class="w-100 rounded border txt position-relative"
+                        placeholder="Ketik ulang kata sandi barumu...">
+                    <i class="bi-eye position-absolute icon-eye-pw" style="font-size: 24px; right: 13px;"
+                        id="togglepwConfirm"></i>
+                    <p class="mb-0 mt-1">Lupa kata sandi? <span class="text-warning"><i>Klik disini</i></span></p>
                 </div>
-                <p class="mb-0">Lupa kata sandi? <span class="text-warning"><i>Klik disini</i></span></p>
             </div>
-            <div class="modal-footer mx-auto border-top-0 d-block text-center">
-                <button type="button" class="btn bg-secondary btn-simpan py-2 px-4">Simpan</button>
+            <div class="modal-footer mx-auto border-top-0 d-flex text-center pb-0 pt-4 gap-2">
+                <button type="button m-0" class="btn btn-simpan border py-2" style="width: 104.25px"
+                    data-bs-dismiss="modal">Batal</button>
+                <button type="button m-0" class="btn bg-secondary btn-simpan py-2 px-4"
+                data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" id="simpan">Simpan</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
     <div class="modal bg-success fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel"
         aria-hidden="true">
         <div class="modal-dialog container">
@@ -273,9 +274,58 @@
     </div>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script>
+    const InputPwLama = document.getElementById("pwlama");
+    const togglePwLama = document.getElementById("togglepwLama");
+
+    togglePwLama.addEventListener("click", function() {
+        const type = InputPwLama.type === "password" ? "text" : "password";
+        InputPwLama.type = type;
+        if (type == 'text') {
+            togglePwLama.classList.remove("bi-eye");
+            togglePwLama.classList.add("bi-eye-fill");
+        } else {
+            togglePwLama.classList.add("bi-eye");
+            togglePwLama.classList.remove("bi-eye-fill");
+        }
+    });
+</script>
+<script>
+    const InputPwBaru = document.getElementById("pwbaru");
+    const togglePwBaru = document.getElementById("togglepwBaru");
+
+    togglePwBaru.addEventListener("click", function() {
+        const type = InputPwBaru.type === "password" ? "text" : "password";
+        InputPwBaru.type = type;
+        if (type == 'text') {
+            togglePwBaru.classList.remove("bi-eye");
+            togglePwBaru.classList.add("bi-eye-fill");
+        } else {
+            togglePwBaru.classList.add("bi-eye");
+            togglePwBaru.classList.remove("bi-eye-fill");
+        }
+    });
+</script>
+<script>
+    const InputPwConfirm = document.getElementById("confirmpw");
+    const toggleConfirmPw = document.getElementById("togglepwConfirm");
+
+    toggleConfirmPw.addEventListener("click", function() {
+        const type = InputPwConfirm.type === "password" ? "text" : "password";
+        InputPwConfirm.type = type;
+        if (type == 'text') {
+            toggleConfirmPw.classList.remove("bi-eye");
+            toggleConfirmPw.classList.add("bi-eye-fill");
+        } else {
+            toggleConfirmPw.classList.add("bi-eye");
+            toggleConfirmPw.classList.remove("bi-eye-fill");
+        }
+    });
 </script>
 <script>
     function previewImage() {
@@ -301,18 +351,42 @@
 </script>
 <script>
     const optionMenu = document.querySelector(".select-menu"),
-            selectBtn = optionMenu.querySelector(".select-btn"),
-            options = optionMenu.querySelector(".option"),
-            sBtn_text = optionMenu.querySelector(".sBtn-text");
-
-selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
-
-options.forEach(option =>{
-    option.addEventListener("click", ()=>{
-        let selectedOption = option.querySelector(".option-text").innerText;
-        sBtn_text.innerText = selectedOption;
-        console.log(selectedOption)
-    })
-})
+        selectBtn = optionMenu.querySelector(".select-btn"),
+        options = optionMenu.querySelectorAll(".option"),
+        sBtn_text = optionMenu.querySelector(".sBtn-text");
+    selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            let selectedOption = option.querySelector(".option-text").innerText;
+            sBtn_text.innerText = selectedOption;
+            optionMenu.classList.remove("active");
+        });
+    });
 </script>
+<script>
+    document.getElementById('simpan').addEventListener('click', function() {
+        let timerInterval;
+        Swal.fire({
+            text: "Sandi lama/baru atau konfirmasi sandi anda salah.",
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+                const timer = Swal.getPopup().querySelector("b");
+                timerInterval = setInterval(() => {
+                    timer.textContent = `${Swal.getTimerLeft()}`;
+                }, 100);
+            },
+            willClose: () => {
+                clearInterval(timerInterval);
+            }
+        }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log("I was closed by the timer");
+            }
+        });
+    });
+</script>
+
 </html>
