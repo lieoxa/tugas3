@@ -102,7 +102,6 @@
                 <div class="container mb-3 p-0 border-bottom-1" style="max-height: 44px;" x-data="{ filter: 'all' }">
                     <section class="splide slider-1 mt-0 mb-4" aria-label="Splide Basic HTML Example">
                         <div class="splide__track">
-                            <h3></h3>
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <span

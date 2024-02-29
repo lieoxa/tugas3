@@ -87,8 +87,8 @@ class AuthController extends Controller
     {
         return view('user.profile');
     }
-    public function wacthlist()
+    public function watchlist()
     {
-        return view('user.wacthlist');
+        return view('user.watchlist');
     }
 }

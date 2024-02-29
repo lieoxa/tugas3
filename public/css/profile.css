@@ -31,13 +31,14 @@ p {
     font-size: 14px;
 }
 
-textarea{
+textarea {
     border-radius: 12px;
     background-color: #222327;
     color: white;
     padding-left: 12px;
     padding-right: 12px;
 }
+
 .menu-wrapper {
     border-top: 0.1px solid #646464;
     height: 70px;
@@ -176,7 +177,8 @@ input[type=file]::file-selector-button {
 .edit-akun {
     margin-top: 50%;
 }
-.txt{
+
+.txt {
     background-color: #222327;
     border: 1px solid white;
     color: white;
@@ -188,8 +190,12 @@ input[type=file]::file-selector-button {
     height: auto;
 }
 
-.laporkan{
+.laporkan {
     margin-top: 50%;
+}
+
+.logout {
+    margin-top: 72%;
 }
 
 .btn-simpan {
@@ -230,10 +236,11 @@ label {
     color: gray;
 }
 
-.select-menu{
+.select-menu {
     width: 100%;
 }
-.select-menu .select-btn{
+
+.select-menu .select-btn {
     display: flex;
     height: 55px;
     background: #222327;
@@ -244,28 +251,33 @@ label {
     align-items: center;
     cursor: pointer;
     justify-content: space-between;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-.select-btn i{
+
+.select-btn i {
     font-size: 25px;
     transition: 0.3s;
 }
-.select-menu.active .select-btn i{
+
+.select-menu.active .select-btn i {
     transform: rotate(-180deg);
 }
-.select-menu .options{
+
+.select-menu .options {
     position: relative;
     padding: 20px;
     margin-top: 10px;
     border-radius: 8px;
     background: #222327;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     display: none;
 }
-.select-menu.active .options{
+
+.select-menu.active .options {
     display: block;
 }
-.options .option{
+
+.options .option {
     display: flex;
     height: 55px;
     cursor: pointer;
@@ -274,17 +286,21 @@ label {
     align-items: center;
     background: #222327;
 }
-.options .option span{
+
+.options .option span {
     color: white;
 }
-.options .option:hover{
+
+.options .option:hover {
     background: #F2F2F2;
 }
-.option i{
+
+.option i {
     font-size: 25px;
     margin-right: 12px;
 }
-.option .option-text{
+
+.option .option-text {
     font-size: 18px;
     color: #333;
 }
@@ -301,9 +317,8 @@ label {
     border: 1px solid rgb(104, 104, 104);
 }
 
-.modal-footer>*{
-    
-}
-.bgnya-input{
+.modal-footer>* {}
+
+.bgnya-input {
     background: #222327;
 }

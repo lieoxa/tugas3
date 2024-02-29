@@ -52,7 +52,7 @@
             </div>
             <div class="accordion">
                 <div class="accordion-item rounded-top-3">
-                    <button class="profil accordion-button collapsed position-relative rounded-top-3" id="lapor"
+                    <button onclick="window.location='{{ route('watchlist') }}'" class="profil accordion-button collapsed position-relative rounded-top-3" 
                         type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                         <i class="bi bi-bookmark-check-fill fs-5"></i>
                         Daftar Tonton
@@ -260,13 +260,13 @@
     <div class="modal bg-success fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel"
         aria-hidden="true">
         <div class="modal-dialog container">
-            <div class="modal-content rounded-5">
+            <div class="modal-content logout rounded-5">
                 <div class="modal-header border-bottom-0 text-center d-block pb-0">
                     <h1 class="modal-title fs-5" id="logoutLabel">Anda Yakin Ingin Keluar?</h1>
                 </div>
-                <div class="modal-footer border-top-0 justify-content-center">
+                <div class="modal-footer border-top-0 justify-content-center gap-2">
                     <button onclick="window.location='{{ route('login') }}'" type="button"
-                        class="btn bg-secondary text-white px-3 py-2" data-bs-dismiss="modal">Iya</button>
+                        class="btn bg-secondary text-white px-3 py-2" data-bs-dismiss="modal" style="width: 72.53px">Iya</button>
                     <button type="button" class="btn btn-danger py-2 px-3" data-bs-dismiss="modal">Tidak</button>
                 </div>
             </div>
@@ -367,8 +367,9 @@
     document.getElementById('simpan').addEventListener('click', function() {
         let timerInterval;
         Swal.fire({
-            text: "Sandi lama/baru atau konfirmasi sandi anda salah.",
-            timer: 4000,
+            text: "Harap cek kembali",
+            width: '15em',
+            timer: 3000,
             timerProgressBar: true,
             didOpen: () => {
                 Swal.showLoading();
