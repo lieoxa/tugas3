@@ -91,4 +91,8 @@ class AuthController extends Controller
     {
         return view('user.watchlist');
     }
+    public function op()
+    {
+        return view('user.op');
+    }
 }

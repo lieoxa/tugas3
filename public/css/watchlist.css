@@ -93,13 +93,17 @@ p {
 }
 
 section{
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 section:nth-child(odd){
     background-color: #eee;
 }
 
+.scroll-horizontal{
+    overflow: auto;
+    overflow-x: scroll;
+}
 /* .li {
     max-width: 28%;
     min-width: 28%;

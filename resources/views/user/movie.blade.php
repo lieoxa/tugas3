@@ -175,7 +175,7 @@
                         <section class="splide new-1" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide li">
+                                    <li onclick="window.location='{{ route('op') }}'" class="splide__slide li">
                                         <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
@@ -919,23 +919,19 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                            <img src="img/f1-1.webp">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                            <img src="img/f1-2.webp">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                            <img src="img/f1-3.webp">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                            <img src="img/f1-4.webp">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -947,31 +943,30 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                            <img src="img/f1-1.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                            <img src="img/f1-2.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                            <img src="img/f1-3.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                            <img src="img/f1-4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                        <li class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>4</div>
                                                         </li>
-                                                        <!-- Add more thumbnail slider items as needed -->
+                                                        <!-- Add more thumbn    ail slider items as needed -->
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="saran-bawah d-flex ps-6 pe-4">
                                                 <div class="text-white my-auto text-start" style="width: 80%">
-                                                    <h6 class="m-0">Tulang Belulang Tulang</h6>
+                                                    <h6 class="m-0">Pertaruhan</h6>
                                                     <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
                                                 </div>
                                                 <div class="tombol text-end" style="width: 20%">
@@ -989,23 +984,23 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi2.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi3.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi2.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1017,23 +1012,23 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi2.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi3.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi2.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1087,23 +1082,23 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi3.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 1">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi2.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi3.jpg">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Thumbnail 2">
+                                                            <img src="img/fi1.jpg">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>

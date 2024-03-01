@@ -33,14 +33,16 @@
                 <a href="#horror">Horror</a>
             </nav>
         </div>
-        <section id="anime"></section>
-        <section id="korea"></section>
-        <section id="podcast"></section>
-        <section id="indonesia"></section>
-        <section id="animasi"></section>
-        <section id="hero"></section>
-        <section id="serial"></section>
-        <section id="horror"></section>
+        <div class="scroll-horizontal h-100 d-flex">
+            <section class="w-100" id="anime"></section>
+            <section class="w-100" id="korea"></section>
+            <section class="w-100" id="podcast"></section>
+            <section class="w-100" id="indonesia"></section>
+            <section class="w-100" id="animasi"></section>
+            <section class="w-100" id="hero"></section>
+            <section class="w-100" id="serial"></section>
+            <section class="w-100" id="horror"></section>
+        </div>
 
     </div>
 
@@ -66,15 +68,15 @@
 
     window.onscroll = () => {
 
-        section.forEach(sec =>{
+        section.forEach(sec => {
 
             let top = window.scrollY;
             let offset = sec.offsetTop;
             let height = sec.offsetHeight;
             let id = sec.getAttribute('id');
 
-            if(top >= offset && top < offset + height){
-                navLinks.forEach(links =>{
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(links => {
                     links.classList.remove('active');
                     document.querySelector('nav a[href*=' + id + ']').classList.add('active');
                 })

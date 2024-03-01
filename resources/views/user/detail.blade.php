@@ -25,7 +25,7 @@
         </span>
     </nav>
     <div class="full mb-3" style="margin-top: -43px">
-        <img src="img/jk.jpg" class="w-100" alt="...">
+        <img src="img/jk.jpg" class="w-100 thumbnail-detail" alt="...">
         <div class="parent position-relative">
             <div class="half mb-4 pt-5"
                 style="margin-top: -172px; padding-left: 12px; padding-right: 12px; padding-bottom: 0.49rem;">

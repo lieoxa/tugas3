@@ -162,3 +162,6 @@ label {
 .txt-detail{
     margin-top: 1.2rem !important;
 }
+.thumbnail-detail{
+    height: 585px;
+}
