@@ -921,7 +921,7 @@
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/f1-1.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded-3">
+                                                        {{-- <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/f1-2.webp">
                                                         </li>
@@ -932,7 +932,7 @@
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/f1-4.webp">
-                                                        </li>
+                                                        </li> --}}
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
                                                 </div>
@@ -984,23 +984,7 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg">
+                                                            <img src="img/switch1.webp">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1012,23 +996,23 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg">
+                                                            <img src="img/switch1.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg">
+                                                            <img src="img/switch2.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg">
+                                                            <img src="img/switch3.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi2.jpg">
+                                                            <img src="img/switch4.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg">
+                                                            <img src="img/switch5.webp">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1036,8 +1020,8 @@
                                             </div>
                                             <div class="saran-bawah d-flex ps-6 pe-4">
                                                 <div class="text-white my-auto text-start" style="width: 80%">
-                                                    <h6 class="m-0">Balada Si Roy</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2022</p>
+                                                    <h6 class="m-0">Switchover</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2023</p>
                                                 </div>
                                                 <div class="tombol text-end" style="width: 20%">
                                                     <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"

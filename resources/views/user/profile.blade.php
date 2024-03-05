@@ -118,7 +118,7 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade bg-success" id="profil" tabindex="-1" aria-labelledby="profilLabel" aria-hidden="true">
+    <div class="modal fade bg-modal" id="profil" tabindex="-1" aria-labelledby="profilLabel" aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content edit-profil rounded-5">
                 <div class="modal-body container py-0">
@@ -171,7 +171,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-success text-white" id="akun" tabindex="-1" aria-labelledby="akunLabel"
+    <div class="modal fade bg-modal text-white" id="akun" tabindex="-1" aria-labelledby="akunLabel"
         aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content border edit-akun rounded-5">
@@ -195,7 +195,7 @@
             </div>
         </div>
     </div>
-    <div class="modal bg-success fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel"
+    <div class="modal bg-modal fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel"
         aria-hidden="true">
         <div class="modal-dialog container my-auto">
             <div class="modal-content rounded-5 laporkan">
@@ -212,7 +212,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-success px-3" id="password" tabindex="-1" aria-labelledby="passwordLabel"
+    <div class="modal fade bg-modal px-3" id="password" tabindex="-1" aria-labelledby="passwordLabel"
         aria-hidden="true">
         <div class="modal-content pw edit-pw rounded-5">
             <div class="img-lock">
@@ -257,7 +257,7 @@
         </div>
     </div>
 
-    <div class="modal bg-success fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel"
+    <div class="modal bg-modal fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel"
         aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content logout rounded-5">

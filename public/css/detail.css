@@ -16,7 +16,7 @@ body {
 nav.scrolled {
     transition: .7s ease;
     background-color: #994D1C;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: #16171a;
     color: white;
 }
 
@@ -39,7 +39,7 @@ p {
     margin: 0;
 }
 
-hr{
+hr {
     padding: 0;
     margin: 0;
     color: #b9b9b9;
@@ -90,12 +90,7 @@ hr{
 }
 
 label {
-    display: inline-block;
-    background-color: rgb(1, 74, 209);
-    padding: 3px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .modus-icons {
@@ -130,7 +125,7 @@ label {
 }
 
 #mainNav {
-    background-color: black;
+    background: #16171a;
     transition: background-color 0.3s ease;
 }
 
@@ -193,15 +188,7 @@ label {
     color: white;
 }
 
-iframe {
-    display: none;
-}
-
-iframe.show {
-    display: block;
-}
-
-.select-menu .select-btn{
+.select-menu .select-btn {
     color: black;
     display: flex;
     height: 55px;
@@ -214,47 +201,106 @@ iframe.show {
     align-items: center;
     cursor: pointer;
     justify-content: space-between;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-.select-btn i{
-    font-size: 25px;
-    transition: 0.3s;
-}
-.select-menu.active .select-btn i{
-    transform: rotate(-180deg);
-}
-.select-menu .options{
+
+.select-menu .options {
     position: absolute;
     top: 80px;
     right: 12px;
     padding: 0;
     margin-top: 10px;
     background: #232429;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     display: none;
     border: 2px solid #9e9e9e;
 }
-.select-menu.active .options{
+
+.select-menu.active .options {
     display: block;
 }
-.options .option{
+
+.options .option {
     display: flex;
     height: 55px;
     cursor: pointer;
     padding: 0 16px;
     align-items: center;
 }
-.options .option:hover{
+
+.options .option:hover {
     /* background: #F2F2F2; */
 }
-.option i{
+
+.option i {
     font-size: 25px;
     margin-right: 12px;
 }
-.option .option-text{
+
+.option .option-text {
     font-size: 16px;
     color: #ffffff;
 }
-.bi-bookmark-check-fill{
+
+.bi-bookmark-check-fill {
     color: #0e7bf8;
+}
+
+.kategori {
+    border-top: 0.5px solid rgb(145, 143, 143);
+    margin-top: 16px;
+    overflow-x: scroll;
+    display: flex;
+    overflow: auto; /* Hide scrollbars */
+}
+.kategori::-webkit-scrollbar {
+    display: none;
+}
+
+.kategori a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width: auto;
+}
+
+.kategori a.active{
+    border-bottom: 4px solid rgb(255, 1, 1);
+}
+
+.img-relate img{
+    max-height: 175px; 
+    max-height: 175px;
+    margin-bottom: 4px;
+}
+.img-relate{
+    /* gap: 8px; */
+}
+.bg-modal{
+    --bs-bg-opacity: 1;
+    background-color: rgba(0, 0, 0, 0.76) !important;
+    backdrop-filter: blur(4px);
+}
+.lapor {
+    margin-top: 35%;
+}
+.modal-title {
+    text-align: center;
+}
+.modal-content {
+    background-color: #222327;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border: 1px solid rgb(104, 104, 104);
+}
+textarea {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #222327;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
 }

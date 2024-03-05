@@ -215,7 +215,7 @@ input::placeholder {
     border: 1px solid black;
 }
 
-.bg-success {
+.bg-modal {
     --bs-bg-opacity: 1;
     background-color: rgba(0, 0, 0, 0.76) !important;
     backdrop-filter: blur(4px);
