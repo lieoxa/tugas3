@@ -75,9 +75,9 @@ class AuthController extends Controller
 
         return redirect()->route('login');
     }
-    public function detail()
+    public function serial()
     {
-        return view('user.detail');
+        return view('user.serial');
     }
     public function search()
     {
@@ -91,8 +91,8 @@ class AuthController extends Controller
     {
         return view('user.watchlist');
     }
-    public function op()
+    public function film()
     {
-        return view('user.op');
+        return view('user.film');
     }
 }

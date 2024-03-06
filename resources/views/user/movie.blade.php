@@ -175,7 +175,7 @@
                         <section class="splide new-1" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li onclick="window.location='{{ route('op') }}'" class="splide__slide li">
+                                    <li onclick="window.location='{{ route('film') }}'" class="splide__slide li">
                                         <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
@@ -738,7 +738,7 @@
                         </h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="saran-1" onclick="window.location='{{ route('detail') }}'">
+                                <div class="saran-1" onclick="window.location='{{ route('serial') }}'">
                                     <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
                                         <img src="img/saran.jpg" class="card-img-top w-100" alt="...">
                                         <div class="saran-bawah d-flex ps-6 pe-4">
@@ -1010,9 +1010,8 @@
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/switch4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/switch5.webp">
+                                                        <li class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>4</div>
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1038,25 +1037,8 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for main slider item 1 -->
-                                                            <img src="img/fi3.jpg" alt="Main Slide 1">
+                                                            <img src="img/dbs1.webp" alt="Main Slide 1">
                                                         </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for main slider item 1 -->
-                                                            <img src="img/fi1.jpg" alt="Main Slide 1">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for main slider item 2 -->
-                                                            <img src="img/fi2.jpg" alt="Main Slide 2">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for main slider item 2 -->
-                                                            <img src="img/fi3.jpg" alt="Main Slide 2">
-                                                        </li>
-                                                        <li class="splide__slide rounded-3">
-                                                            <!-- Content for main slider item 2 -->
-                                                            <img src="img/fi1.jpg" alt="Main Slide 2">
-                                                        </li>
-                                                        <!-- Add more main slider items as needed -->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1066,23 +1048,22 @@
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi3.jpg">
+                                                            <img src="img/dbs1.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 1 -->
-                                                            <img src="img/fi1.jpg">
+                                                            <img src="img/dbs2.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi2.jpg">
+                                                            <img src="img/dbs3.webp">
                                                         </li>
                                                         <li class="splide__slide rounded border">
                                                             <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi3.jpg">
+                                                            <img src="img/dbs4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border">
-                                                            <!-- Content for thumbnail slider item 2 -->
-                                                            <img src="img/fi1.jpg">
+                                                        <li class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>2</div>
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1090,8 +1071,8 @@
                                             </div>
                                             <div class="saran-bawah d-flex ps-6 pe-4">
                                                 <div class="text-white my-auto text-start" style="width: 80%">
-                                                    <h6 class="m-0">Mars</h6>
-                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
+                                                    <h6 class="m-0">Di Bulan Suci Ini...</h6>
+                                                    <p class="mb-0 text-secondary" style="font-size: 12px">2023</p>
                                                 </div>
                                                 <div class="tombol text-end" style="width: 20%">
                                                     <i class="bi bi-play-circle-fill text-white fs-6 my-auto me-0"
