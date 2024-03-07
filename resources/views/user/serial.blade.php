@@ -74,6 +74,24 @@
                     </p>
                 </div>
             </div>
+            <div class="btn-fungsional my-4">
+                <div class="text-white">
+                    <ul class="d-flex p-0 justify-content-around" style="list-style: none">
+                        <li class="text-center">
+                            <i class="bi bi-share"></i>
+                            <h6><small>Bagikan</small></h6>
+                        </li>
+                        <li class="text-center" onclick="downloadVideo('downloadVideo', '')">
+                            <div class="mx-auto"><i class="bi bi-download"></i></div>
+                            <h6><small>Download</small></h6>
+                        </li>
+                        <li class="text-center">
+                            <i class="bi bi-share"></i>
+                            <h6><small>Bagikan</small></h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="episode container">
                 <div class="jumlah-e d-flex gap-2">
                     <h5 class="fw-medium mb-3">Season </h5>
@@ -316,10 +334,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="kategori pb-2">
+                        <a class="active" href="#relate">Serial Relate</a>
+                    </div>
+                    <div class="scroll-horizontal  d-flex">
+                        <section class="relate" id="relate">
+                            <div class="img-relate d-flex row g-2" style="max-width: 100vw">
+                                <div class="col-4">
+                                    <img src="img/anim10.jpeg">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/anim11.jpg">
+                                </div>
+                                <div class="col-4">
+                                    <img src="img/anim1.jpg">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="modal bg-modal fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel" aria-hidden="true">
         <div class="modal-dialog container my-auto">
             <div class="modal-content rounded-5 lapor mx-auto">
@@ -328,37 +365,40 @@
                 </div>
                 <div class="modal-body container py-0 px-4">
                     <label for="aa" class="w-100 mb-2 d-flex">
-                        <input id="aa" type="radio" name="jenis-laporan"
+                        <input id="aa" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Kerusakan Gambar atau Audio Film</div>
                     </label>
 
-                    <label for="bb" class="w-100 mb-2 d-flex">
-                        <input id="bb" type="radio" name="jenis-laporan"
-                            style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Kesalahan Tahun Rilis, Nama Sutradara atau Nama Perusahaan</div>
-                    </label>
-
                     <label for="cc" class="w-100 mb-2 d-flex">
-                        <input id="cc" type="radio" name="jenis-laporan"
+                        <input id="cc" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Masalah Teknis atau Kualitas Video</div>
                     </label>
 
-                    <label for="dd" class="w-100 mb-2 d-flex">
-                        <input id="dd" type="radio" name="jenis-laporan"
+                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="bb" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Kesalahan Judul, Thumbnail atau Deskripsi</div>
+                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Tahun Rilis, Nama
+                            Sutradara atau Nama Perusahaan</div>
+                    </label>
+
+                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="bb" type="radio" name="when"
+                            style="min-height:20px; min-width:20px; vertical-align: middle;">
+                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Judul, Thumbnail
+                            atau Deskripsi</div>
                     </label>
 
                     <label for="lainnya" class="w-100 mb-2 d-flex">
-                        <input id="lainnya" type="radio" name="jenis-laporan"
+                        <input id="lainnya" type="radio" name="when" value="other"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Lainnya</div>
                     </label>
 
                     <div id="lainnyaTextarea" class="w-100 d-flex hidden">
-                        <textarea id="lainnyaInput" rows="4" placeholder="Tuliskan laporan Anda di sini..."></textarea>
+                        <textarea name="when_other" id="lainnyaInput" rows="4" style="display: none"
+                            placeholder="Tuliskan laporan Anda di sini..."></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
@@ -369,34 +409,20 @@
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-    const optionMenu = document.querySelector(".select-menu");
-    const selectBtn = optionMenu.querySelector(".select-btn");
-    const options = optionMenu.querySelectorAll(".option");
-    const sBtn_text = optionMenu.querySelector(".sBtn-text");
-
-    // Toggle active class on the menu when the select button is clicked
-    selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
-
-    // Close the menu when clicking outside the menu
-    document.body.addEventListener("click", (event) => {
-        const isClickInsideMenu = optionMenu.contains(event.target);
-
-        if (!isClickInsideMenu) {
-            optionMenu.classList.remove("active");
+<script type="text/javascript">
+    $("body").on("click", "input[name='when']", function() {
+        if ($("input[name='when']:checked").val() == 'other') {
+            $("textarea[name='when_other']").css('display', 'block');
+        } else {
+            $("textarea[name='when_other']").css('display', 'none');
+            $("textarea[name='when_other']").val('');
         }
     });
-
-    // Close the menu when an option is clicked
-    options.forEach((option) => {
-        option.addEventListener("click", () => {
-            optionMenu.classList.remove("active");
-        });
-    });
 </script>
-
 <script>
     let isFavorite = false;
 
@@ -409,7 +435,6 @@
         iconElement.classList.toggle("bi-heart-fill");
     }
 </script>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener("scroll", function() {
@@ -423,7 +448,6 @@
         });
     });
 </script>
-
 <script>
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
@@ -445,6 +469,45 @@
             readMoreBtn.textContent = 'Selengkapnya...';
         }
     }
+</script>
+<script>
+    const optionMenu = document.querySelector(".select-menu"),
+        selectBtn = optionMenu.querySelector(".select-btn"),
+        options = optionMenu.querySelector(".options");
+
+    // Toggle the "active" class on the menu when the button is clicked
+    selectBtn.addEventListener("click", () => {
+        optionMenu.classList.toggle("active");
+    });
+
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (event) => {
+        if (!optionMenu.contains(event.target)) {
+            optionMenu.classList.remove("active");
+        }
+    });
+
+    // Prevent the menu from closing when clicking inside it
+    options.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+
+    // Close the menu when scrolling outside of it
+    document.addEventListener("scroll", () => {
+        optionMenu.classList.remove("active");
+    });
+</script>
+<script>
+    document.getElementById('daftar').addEventListener('click', function() {
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            text: "Berhasil Ditambahkan",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    });
 </script>
 
 </html>

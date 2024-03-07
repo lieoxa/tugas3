@@ -14,7 +14,7 @@
         .bi .bi-play-fill::before,
         [class*=" bi-play-fill"]::before,
         [class^=bi-play-fill]::before {
-            line-height: 1.8;
+            line-height: 0.5;
             vertical-align: -6px;
         }
 
@@ -80,9 +80,9 @@
                     <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Goro Taniguchi</p>
                     </h6>
                     <div class="btn-play">
-                        <a id="myButton" onclick="playVideo()" class="btn btn-light w-100 mt-2" href="#"
-                            style="margin-bottom: 14px !important;"><i class="bi bi-play-fill fs-1 my-auto"></i><span
-                                class="fs-5 fw-bold">Putar</span></a>
+                        <a id="myButton" onclick="playVideo()" class="btn btn-light w-100 mt-2 btn-putar"
+                            href="#" style="margin-bottom: 14px !important;padding-right: 20px"><i
+                                class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
                         <p>Sebagai seorang anak, Uta—mantan musisi Bajak Laut Rambut Merah dan teman masa kecil Monkey
@@ -120,9 +120,6 @@
                                     <i class="bi bi-share"></i>
                                     <h6><small>Bagikan</small></h6>
                                 </li>
-                                <li>
-                                    <button onclick="share">Share</button>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -131,9 +128,9 @@
                             <source src="{{ asset('img/onepiecered.mp4') }}" type="video/mp4">
                         </video>
                     </div>
-                    <iframe class="d-none"
+                    {{-- <iframe class="d-none"
                         src="https://drive.google.com/file/d/1dO9S5lNaI5Cqn3xof4Yjmi41j6K0fgAg/preview" width="100%"
-                        height="auto" allow="autoplay" allowfullscreen="true"></iframe>
+                        height="auto" allow="autoplay" allowfullscreen="true"></iframe> --}}
                     <div class="kategori pb-2">
                         <a class="active" href="#relate">Film Relate</a>
                     </div>
@@ -152,30 +149,12 @@
                                 <div class="col-4">
                                     <img src="img/anim4.jpg">
                                 </div>
-                                {{-- <div class="col-4">
-                                    <img src="img/anim5.jpg">
-                                </div>
-                                <div class="col-4">
-                                    <img src="img/anim6.jpg">
-                                </div>
-                                <div class="col-4">
-                                    <img src="img/anim7.jpg">
-                                </div>
-                                <div class="col-4">
-                                    <img src="img/anim8.jpg">
-                                </div>
-                                <div class="col-4">
-                                    <img src="img/anim9.jpg">
-                                </div>
-                                <div class="col-4">
-                                    <img src="img/anim1.jpg"> --}}
                             </div>
+                        </section>
                     </div>
-    </section>
-    </div>
-    </div>
-    </div>
-    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -188,37 +167,40 @@
                 </div>
                 <div class="modal-body container py-0 px-4">
                     <label for="aa" class="w-100 mb-2 d-flex">
-                        <input id="aa" type="radio" name="jenis-laporan"
+                        <input id="aa" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Kerusakan Gambar atau Audio Film</div>
                     </label>
 
-                    <label for="bb" class="w-100 mb-2 d-flex">
-                        <input id="bb" type="radio" name="jenis-laporan"
-                            style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Kesalahan Tahun Rilis, Nama Sutradara atau Nama Perusahaan</div>
-                    </label>
-
                     <label for="cc" class="w-100 mb-2 d-flex">
-                        <input id="cc" type="radio" name="jenis-laporan"
+                        <input id="cc" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Masalah Teknis atau Kualitas Video</div>
                     </label>
 
-                    <label for="dd" class="w-100 mb-2 d-flex">
-                        <input id="dd" type="radio" name="jenis-laporan"
+                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="bb" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Kesalahan Judul, Thumbnail atau Deskripsi</div>
+                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Tahun Rilis, Nama
+                            Sutradara atau Nama Perusahaan</div>
+                    </label>
+
+                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="bb" type="radio" name="when"
+                            style="min-height:20px; min-width:20px; vertical-align: middle;">
+                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Judul, Thumbnail
+                            atau Deskripsi</div>
                     </label>
 
                     <label for="lainnya" class="w-100 mb-2 d-flex">
-                        <input id="lainnya" type="radio" name="jenis-laporan"
+                        <input id="lainnya" type="radio" name="when" value="other"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
                         <div class="ps-1">Lainnya</div>
                     </label>
 
                     <div id="lainnyaTextarea" class="w-100 d-flex hidden">
-                        <textarea id="lainnyaInput" rows="4" placeholder="Tuliskan laporan Anda di sini..."></textarea>
+                        <textarea name="when_other" id="lainnyaInput" rows="4" style="display: none"
+                            placeholder="Tuliskan laporan Anda di sini..."></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
@@ -229,21 +211,47 @@
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script setup>
-    const share = () => {
-        if (navigator.share) {
-        navigator.share({
-            text: 'Ayammmm',
-            url: 'http://192.168.16.86:8000/film',
-            title: 'Ayam'
+{{-- <script>
+    const shareButton = document.querySelector('.btn-share');
+        const overlay = document.querySelector('.overlay');
+        const shareModal = document.querySelector('.share');
+
+        const title = window.document.title;
+        const url = window.document.location.href;
+
+        shareButton.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: '${title}',
+                    url: '${url}'
+                }).then(() => {
+                    console.log('Thanks');
+                })
+                .catch(console.error);
+            } else {
+                overlay.classList.add('show-share');
+                shareModal.classList.add('show-share');
+            }
         })
-    } else {
-        navigator.clipboard.writeText('Code we want copy')
-    }
-}
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show-share');
+            shareModal.classList.remove('show-share');
+        })
+</script> --}}
+<script type="text/javascript">
+    $("body").on("click", "input[name='when']", function() {
+        if ($("input[name='when']:checked").val() == 'other') {
+            $("textarea[name='when_other']").css('display', 'block');
+        } else {
+            $("textarea[name='when_other']").css('display', 'none');
+            $("textarea[name='when_other']").val('');
+        }
+    });
 </script>
 
 <script>
@@ -320,28 +328,30 @@
     iframe.classList.add('show');
 </script>
 <script>
-    const optionMenu = document.querySelector(".select-menu");
-    const selectBtn = optionMenu.querySelector(".select-btn");
-    const options = optionMenu.querySelectorAll(".option");
-    const sBtn_text = optionMenu.querySelector(".sBtn-text");
+    const optionMenu = document.querySelector(".select-menu"),
+        selectBtn = optionMenu.querySelector(".select-btn"),
+        options = optionMenu.querySelector(".options");
 
-    // Toggle active class on the menu when the select button is clicked
-    selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+    // Toggle the "active" class on the menu when the button is clicked
+    selectBtn.addEventListener("click", () => {
+        optionMenu.classList.toggle("active");
+    });
 
-    // Close the menu when clicking outside the menu
-    document.body.addEventListener("click", (event) => {
-        const isClickInsideMenu = optionMenu.contains(event.target);
-
-        if (!isClickInsideMenu) {
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (event) => {
+        if (!optionMenu.contains(event.target)) {
             optionMenu.classList.remove("active");
         }
     });
 
-    // Close the menu when an option is clicked
-    options.forEach((option) => {
-        option.addEventListener("click", () => {
-            optionMenu.classList.remove("active");
-        });
+    // Prevent the menu from closing when clicking inside it
+    options.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+
+    // Close the menu when scrolling outside of it
+    document.addEventListener("scroll", () => {
+        optionMenu.classList.remove("active");
     });
 </script>
 <script>
@@ -350,9 +360,9 @@
         Swal.fire({
             position: "center",
             icon: "success",
-            title: "Berhasil Ditambahkan Daftar Tontonan",
+            text: "Berhasil Ditambahkan",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         });
     });
 </script>

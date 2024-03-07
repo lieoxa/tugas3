@@ -186,7 +186,7 @@
                     </div>
                     <div class="img-profile">
                         <h6>No. Tlpn Baru</h6>
-                        <input type="text" class="w-100 rounded txt" placeholder="Ketik email barumu...">
+                        <input type="text" class="w-100 rounded txt" placeholder="Ketik no barumu...">
                     </div>
                 </div>
                 <div class="modal-footer mx-auto border-top-0 pb-0 pt-2">
