@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="css/detail.css">
     <title>Detail</title>
     <style>
+        .hidden {
+            display: none;
+        }
+
+        .btn-simpan.active {
+            background-color: #28a745;
+            /* Ganti warna sesuai keinginan Anda */
+            cursor: pointer;
+        }
+
+        .btn-simpan:disabled {
+            background-color: #6c757d;
+            /* Ganti warna sesuai keinginan Anda */
+            cursor: not-allowed;
+        }
+
         .bi .bi-play-fill::before,
         [class*=" bi-play-fill"]::before,
         [class^=bi-play-fill]::before {
@@ -36,10 +52,10 @@
                         class="bi bi-chevron-left" style="font-size: 25px; margin-bottom: 20px;"></i></button>
                 <h2 class="mb-0 txt-detail">Detail</h2>
             </div>
-            <span>
+            {{-- <span>
                 <button class="btn-heart sticky-top border-0" onclick="changeIconAndColor(this)"><i
                         class="bi bi-heart"></i></button>
-            </span>
+            </span> --}}
         </nav>
         <div class="full mb-3" style="margin-top: -43px">
             <img src="img/anim.jpg" class="w-100 thumbnail-detail" alt="...">
@@ -80,8 +96,9 @@
                     <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Goro Taniguchi</p>
                     </h6>
                     <div class="btn-play">
-                        <a id="myButton" onclick="playVideo()" class="btn btn-light w-100 mt-2 btn-putar"
-                            href="#" style="margin-bottom: 14px !important;padding-right: 20px"><i
+                        <a href="#" id="myButton" onclick="playVideo()"
+                            class="btn btn-light w-100 mt-2 btn-putar"
+                            style="margin-bottom: 14px !important;padding-right: 20px"><i
                                 class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
@@ -108,15 +125,15 @@
                     <div class="btn-fungsional my-4">
                         <div class="text-white">
                             <ul class="d-flex p-0 justify-content-around" style="list-style: none">
-                                <li class="text-center">
-                                    <i class="bi bi-share"></i>
-                                    <h6><small>Bagikan</small></h6>
+                                <li class="text-center favorit" id="disukai">
+                                    <i class="bi bi-heart"></i>
+                                    <h6><small>Disukai</small></h6>
                                 </li>
                                 <li class="text-center" onclick="downloadVideo('downloadVideo', '')">
                                     <div class="mx-auto"><i class="bi bi-download"></i></div>
                                     <h6><small>Download</small></h6>
                                 </li>
-                                <li class="text-center">
+                                <li class="text-center share">
                                     <i class="bi bi-share"></i>
                                     <h6><small>Bagikan</small></h6>
                                 </li>
@@ -131,8 +148,10 @@
                     {{-- <iframe class="d-none"
                         src="https://drive.google.com/file/d/1dO9S5lNaI5Cqn3xof4Yjmi41j6K0fgAg/preview" width="100%"
                         height="auto" allow="autoplay" allowfullscreen="true"></iframe> --}}
-                    <div class="kategori pb-2">
-                        <a class="active" href="#relate">Film Relate</a>
+                    <div class="kategori">
+                        <div class="film-relate">
+                            <h5 class="mb-2">Film Relate</h5>
+                        </div>
                     </div>
                     <div class="scroll-horizontal  d-flex">
                         <section class="relate" id="relate">
@@ -169,33 +188,33 @@
                     <label for="aa" class="w-100 mb-2 d-flex">
                         <input id="aa" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Kerusakan Gambar atau Audio Film</div>
+                        <div class="ps-2">Kerusakan Gambar atau Audio Film</div>
                     </label>
 
-                    <label for="cc" class="w-100 mb-2 d-flex">
-                        <input id="cc" type="radio" name="when"
-                            style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Masalah Teknis atau Kualitas Video</div>
-                    </label>
-
-                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
+                    <label for="bb" class="w-100 mb-2 d-flex">
                         <input id="bb" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Tahun Rilis, Nama
+                        <div class="ps-2">Masalah Teknis atau Kualitas Video</div>
+                    </label>
+
+                    <label for="cc" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="cc" type="radio" name="when"
+                            style="min-height:20px; min-width:20px; vertical-align: middle;">
+                        <div class="ps-2 position-absolute" style="left: 20px; top: 0;">Kesalahan Tahun Rilis, Nama
                             Sutradara atau Nama Perusahaan</div>
                     </label>
 
-                    <label for="bb" class="w-100 mb-2 pb-4 position-relative">
-                        <input id="bb" type="radio" name="when"
+                    <label for="dd" class="w-100 mb-2 pb-4 position-relative">
+                        <input id="dd" type="radio" name="when"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1 position-absolute" style="left: 20px; top: 0;">Kesalahan Judul, Thumbnail
+                        <div class="ps-2 position-absolute" style="left: 20px; top: 0;">Kesalahan Judul, Thumbnail
                             atau Deskripsi</div>
                     </label>
 
                     <label for="lainnya" class="w-100 mb-2 d-flex">
                         <input id="lainnya" type="radio" name="when" value="other"
                             style="min-height:20px; min-width:20px; vertical-align: middle;">
-                        <div class="ps-1">Lainnya</div>
+                        <div class="ps-2">Lainnya</div>
                     </label>
 
                     <div id="lainnyaTextarea" class="w-100 d-flex hidden">
@@ -204,8 +223,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <button type="button m-0" class="btn bg-secondary text-white btn-simpan py-2 px-4"
-                        data-bs-dismiss="modal">Laporkan</button>
+                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
+                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -215,34 +234,57 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-{{-- <script>
-    const shareButton = document.querySelector('.btn-share');
-        const overlay = document.querySelector('.overlay');
-        const shareModal = document.querySelector('.share');
+<script>document.addEventListener('fullscreenchange', function () {
+    var video = document.querySelector('video');
+    if (document.fullscreenElement && video) {
+        video.style.setProperty('-webkit-media-controls-timeline', 'none', 'important');
+        video.style.setProperty('-moz-media-controls-timeline', 'none', 'important');
+        video.style.setProperty('-ms-media-controls-timeline', 'none', 'important');
+    }
+});
+</script>
 
-        const title = window.document.title;
-        const url = window.document.location.href;
+<script>
+    const shareData = {
+        title: "OnePiece",
+        text: "Learn web development on MDN!",
+        url: "http://192.168.184.86:8000/film",
+    };
 
-        shareButton.addEventListener('click', () => {
-            if (navigator.share) {
-                navigator.share({
-                    title: '${title}',
-                    url: '${url}'
-                }).then(() => {
-                    console.log('Thanks');
-                })
-                .catch(console.error);
+    const btn = document.querySelector(".share");
+
+    // Share must be triggered by "user activation"
+    btn.addEventListener("click", async () => {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            // resultPara.textContent = `Error: ${err}`;
+        }
+    });
+</script>
+
+<script>
+    const radioButtons = document.querySelectorAll('input[name="when"]');
+    const submitButton = document.querySelector('.btn-simpan');
+
+    // Tambahkan event listener untuk setiap radio button
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Cek apakah salah satu radio button terpilih
+            const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
+
+            // Aktifkan atau nonaktifkan tombol berdasarkan hasil cek
+            submitButton.disabled = !isAnyRadioSelected;
+
+            // Tambah atau hapus kelas "active" untuk mengubah warna tombol
+            if (isAnyRadioSelected) {
+                submitButton.classList.add('active');
             } else {
-                overlay.classList.add('show-share');
-                shareModal.classList.add('show-share');
+                submitButton.classList.remove('active');
             }
-        })
-
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('show-share');
-            shareModal.classList.remove('show-share');
-        })
-</script> --}}
+        });
+    });
+</script>
 <script type="text/javascript">
     $("body").on("click", "input[name='when']", function() {
         if ($("input[name='when']:checked").val() == 'other') {
@@ -302,7 +344,7 @@
         }
     }
 </script>
-<script>
+{{-- <script>
     function playVideo() {
         var elem = document.getElementsByTagName('iframe')[0];
         if (elem.requestFullscreen) {
@@ -319,13 +361,13 @@
         }
         elem.play();
     }
-</script>
+</script> --}}
 <script>
     // Get iframe element
-    const iframe = document.querySelector('iframe');
+    // const iframe = document.querySelector('iframe');
 
-    // Show iframe
-    iframe.classList.add('show');
+    // // Show iframe
+    // iframe.classList.add('show');
 </script>
 <script>
     const optionMenu = document.querySelector(".select-menu"),
@@ -356,6 +398,18 @@
 </script>
 <script>
     document.getElementById('daftar').addEventListener('click', function() {
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            text: "Berhasil Ditambahkan",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    });
+
+
+    document.getElementById('disukai').addEventListener('click', function() {
 
         Swal.fire({
             position: "center",

@@ -95,4 +95,8 @@ class AuthController extends Controller
     {
         return view('user.film');
     }
+    public function podcast()
+    {
+        return view('user.podcast');
+    }
 }

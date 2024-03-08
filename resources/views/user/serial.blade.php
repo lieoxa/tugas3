@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css/detail.css">
     <title>Detail</title>
 </head>
+<style>
+    .hidden {
+            display: none;
+        }
+
+        .btn-simpan.active {
+            background-color: #28a745; /* Ganti warna sesuai keinginan Anda */
+            cursor: pointer;
+        }
+
+        .btn-simpan:disabled {
+            background-color: #6c757d; /* Ganti warna sesuai keinginan Anda */
+            cursor: not-allowed;
+        }
+</style>
 
 <body>
     <nav class="navbar ps-2 pe-3 sticky-top w-100 p-0 d-flex justify-content-between"
@@ -402,8 +417,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <button type="button m-0" class="btn bg-secondary text-white btn-simpan py-2 px-4"
-                        data-bs-dismiss="modal">Laporkan</button>
+                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
+                        data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -412,6 +427,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    // Ambil elemen-elemen yang diperlukan
+    const radioButtons = document.querySelectorAll('input[name="when"]');
+    const submitButton = document.querySelector('.btn-simpan');
+    
+    // Tambahkan event listener untuk setiap radio button
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Cek apakah salah satu radio button terpilih
+            const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
+            
+            // Aktifkan atau nonaktifkan tombol berdasarkan hasil cek
+            submitButton.disabled = !isAnyRadioSelected;
+            
+            // Tambah atau hapus kelas "active" untuk mengubah warna tombol
+            if (isAnyRadioSelected) {
+                submitButton.classList.add('active');
+            } else {
+                submitButton.classList.remove('active');
+            }
+        });
+    });
+</script>
+
 
 <script type="text/javascript">
     $("body").on("click", "input[name='when']", function() {

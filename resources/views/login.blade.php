@@ -166,7 +166,7 @@ const passwordInput = document.getElementById("password");
 
 <script>
     function enableSubmit() {
-            let inputs = document.getElementsByClassName('required'); // Enter your class name for a required field, this should also be reflected within your form fields.
+            let inputs = document.getElementsByClassName('required');
             let btn = document.querySelector('input[type="submit"]');
             let isValid = true;
             for (var i = 0; i < inputs.length; i++) {
