@@ -53,7 +53,7 @@
                                             class="wish-list"><i
                                                 class="bi-heart-fill my-auto icon-heart"></i></span><span
                                             class="text-btn2">Favorit</span></button>
-                                    <img src="{{ asset('img/slide.jpg') }}" class="w-100 rounded-5">
+                                    <img src="{{ asset('img/slide.jpg') }}" class="w-100 rounded-5 img-slide-atas">
                                 </div>
                             </li>
                             <li class="splide__slide li">
@@ -68,7 +68,7 @@
                                             class="wish-list"><i
                                                 class="bi-heart-fill my-auto icon-heart"></i></span><span
                                             class="text-btn2">Favorit</span></button>
-                                    <img src="{{ asset('img/slide1.jpg') }}" class="w-100 rounded-5">
+                                    <img src="{{ asset('img/slide1.jpg') }}" class="w-100 rounded-5 img-slide-atas">
                                 </div>
                             </li>
                             <li class="splide__slide li">
@@ -86,7 +86,7 @@
                                         </span>
                                         <span class="text-btn2">Favorit</span>
                                     </button>
-                                    <img src="{{ asset('img/slide2.jpg') }}" class="w-100 rounded-5">
+                                    <img src="{{ asset('img/slide2.jpg') }}" class="w-100 rounded-5 img-slide-atas">
                                 </div>
                             </li>
                         </ul>
@@ -192,7 +192,7 @@
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
-                                        <img src="{{ asset('img/fi.jpg') }}" class="card-img-top slider-img"
+                                        <img src="{{ asset('img/anim7.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
@@ -512,7 +512,7 @@
                         <h1 class="text-white text-start fw-bold">Acara Podcast</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="saran-1 position-relative">
+                                <div class="saran-1 position-relative" onclick="window.location='{{ route('podcast') }}'">
                                     <img src="img/play-button.png"
                                         class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
                                         style="width: 25%;">

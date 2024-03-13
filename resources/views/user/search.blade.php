@@ -123,7 +123,7 @@
                     <ul class="splide__list">
                         <li class="splide__slide d-grid gap-2 li-anim">
                             <div class="card bg-transparent border-0" style="max-width: 540px;"
-                                onclick="window.location='{{ route('detail') }}'">
+                                onclick="window.location='{{ route('film') }}'">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
                                         <img src="img/tren-anim2.jpeg" class="img-fluid rounded img-anim"
@@ -308,12 +308,13 @@
                             <div class="card bg-transparent border-0" style="max-width: 540px;">
                                 <div class="row g-0 d-flex">
                                     <div class="col-4">
-                                        <img src="img/ta.jpg" class="img-fluid rounded img-anim" alt="...">
+                                        <img src="img/tren-anim14.jpg" class="img-fluid rounded img-wwwanim"
+                                            alt="...">
                                     </div>
                                     <div class="col-8 text-white">
                                         <div class="card-body py-0 px-2">
-                                            <h6 class="card-title">Princess Mononoke</h6>
-                                            <p class="text-secondary perusahaan"><small>Ghibli</small></p>
+                                            <h6 class="card-title">One Piece Gold</h6>
+                                            <p class="text-secondary perusahaan"><small>Toei Animation</small></p>
                                             <p class="text-secondary view"><i class="bi bi-eye-fill"></i><small
                                                     class="my-auto"> 88.8K</small></p>
                                         </div>

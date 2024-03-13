@@ -311,3 +311,7 @@ h1 {
 .bar::-webkit-scrollbar {
     display: none;
 }
+.img-slide-atas{
+    min-height: 470.94px;
+    max-height: 470.94px;
+}

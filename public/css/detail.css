@@ -266,7 +266,7 @@ label {
 h5{
     padding-top: 1.2rem;
     margin: 0;
-    border-top: 0.1px solid rgb(255, 255, 255);
+    border-top: 0.1px solid #60636d;
 }
 
 .img-relate img{
@@ -274,6 +274,11 @@ h5{
     max-height: 175px;
     margin-bottom: 4px;
     max-width: 116.66px;
+    border-radius: 5px;
+}
+.img-relate-podcast img{
+    margin-bottom: 4px;
+    max-width: 150px;
     border-radius: 5px;
 }
 

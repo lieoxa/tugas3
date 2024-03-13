@@ -127,11 +127,11 @@
                             <ul class="d-flex p-0 justify-content-around" style="list-style: none">
                                 <li class="text-center favorit" id="disukai">
                                     <i class="bi bi-heart"></i>
-                                    <h6><small>Disukai</small></h6>
+                                    <h6><small>Favorit</small></h6>
                                 </li>
                                 <li class="text-center" onclick="downloadVideo('downloadVideo', '')">
                                     <div class="mx-auto"><i class="bi bi-download"></i></div>
-                                    <h6><small>Download</small></h6>
+                                    <h6><small>Unduh</small></h6>
                                 </li>
                                 <li class="text-center share">
                                     <i class="bi bi-share"></i>
@@ -229,7 +229,7 @@
             </div>
         </div>
     </div>
-</body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -270,13 +270,10 @@
     // Tambahkan event listener untuk setiap radio button
     radioButtons.forEach(radio => {
         radio.addEventListener('change', function() {
-            // Cek apakah salah satu radio button terpilih
             const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
 
-            // Aktifkan atau nonaktifkan tombol berdasarkan hasil cek
             submitButton.disabled = !isAnyRadioSelected;
 
-            // Tambah atau hapus kelas "active" untuk mengubah warna tombol
             if (isAnyRadioSelected) {
                 submitButton.classList.add('active');
             } else {
@@ -300,10 +297,8 @@
     let isFavorite = false;
 
     function changeIconAndColor(button) {
-        // Mengambil elemen ikon pada tombol
         var iconElement = button.querySelector("i");
 
-        // Mengganti kelas ikon untuk mengubahnya menjadi bintang terisi (filled star)
         iconElement.classList.toggle("bi-heart");
         iconElement.classList.toggle("bi-heart-fill");
     }
@@ -362,13 +357,12 @@
         elem.play();
     }
 </script> --}}
-<script>
-    // Get iframe element
-    // const iframe = document.querySelector('iframe');
+{{-- <script>
+    Get iframe element
+    const iframe = document.querySelector('iframe');
 
-    // // Show iframe
-    // iframe.classList.add('show');
-</script>
+    iframe.classList.add('show');
+</script> --}}
 <script>
     const optionMenu = document.querySelector(".select-menu"),
         selectBtn = optionMenu.querySelector(".select-btn"),
@@ -402,7 +396,7 @@
         Swal.fire({
             position: "center",
             icon: "success",
-            text: "Berhasil Ditambahkan",
+            text: "Berhasil Ditambah",
             showConfirmButton: false,
             timer: 2000
         });
@@ -414,7 +408,7 @@
         Swal.fire({
             position: "center",
             icon: "success",
-            text: "Berhasil Ditambahkan",
+            text: "Berhasil Ditambah",
             showConfirmButton: false,
             timer: 2000
         });
@@ -436,5 +430,5 @@
         document.body.removeChild(link);
     }
 </script>
-
+</body>
 </html>

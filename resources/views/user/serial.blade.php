@@ -36,7 +36,7 @@
         </div>
         <span>
             <button class="btn-heart sticky-top border-0" onclick="changeIconAndColor(this)"><i
-                    class="bi bi-heart"></i></button>
+                    class=""></i></button>
         </span>
     </nav>
     <div class="full mb-3" style="margin-top: -43px">
@@ -93,12 +93,12 @@
                 <div class="text-white">
                     <ul class="d-flex p-0 justify-content-around" style="list-style: none">
                         <li class="text-center">
-                            <i class="bi bi-share"></i>
-                            <h6><small>Bagikan</small></h6>
+                            <i class="bi bi-heart"></i>
+                            <h6><small>Favorited</small></h6>
                         </li>
                         <li class="text-center" onclick="downloadVideo('downloadVideo', '')">
                             <div class="mx-auto"><i class="bi bi-download"></i></div>
-                            <h6><small>Download</small></h6>
+                            <h6><small>Unduh</small></h6>
                         </li>
                         <li class="text-center">
                             <i class="bi bi-share"></i>
@@ -109,7 +109,7 @@
             </div>
             <div class="episode container">
                 <div class="jumlah-e d-flex gap-2">
-                    <h5 class="fw-medium mb-3">Season </h5>
+                    <h4 class="fw-medium mb-3">Season</h4>
                 </div>
                 <div class="accordion accordion-flush gap-2 d-grid" id="accordionFlushExample">
                     <div class="accordion-item rounded-4 border">
@@ -350,11 +350,11 @@
                         </div>
                     </div>
                     <div class="kategori pb-2">
-                        <a class="active" href="#relate">Serial Relate</a>
+                        <h5 class="active">Serial Relate</h5>
                     </div>
                     <div class="scroll-horizontal  d-flex">
                         <section class="relate" id="relate">
-                            <div class="img-relate d-flex row g-2" style="max-width: 100vw">
+                            <div class="img-relate d-flex row g-2 pt-0" style="max-width: 100vw">
                                 <div class="col-4">
                                     <img src="img/anim10.jpeg">
                                 </div>

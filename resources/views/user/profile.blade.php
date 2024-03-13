@@ -52,8 +52,9 @@
             </div>
             <div class="accordion">
                 <div class="accordion-item rounded-top-3">
-                    <button onclick="window.location='{{ route('watchlist') }}'" class="profil accordion-button collapsed position-relative rounded-top-3" 
-                        type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                    <button onclick="window.location='{{ route('watchlist') }}'"
+                        class="profil accordion-button collapsed position-relative rounded-top-3" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
                         <i class="bi bi-bookmark-check-fill fs-5"></i>
                         Daftar Tonton
                         <i class="bi bi-chevron-right"></i>
@@ -134,39 +135,21 @@
                         </div>
                         <div class="nama">
                             <h6>Nama</h6>
-                            <input type="text" class="w-100 rounded border txt"
-                                placeholder="Ketik nama barumu...">
+                            <input type="text" class="w-100 rounded border txt" placeholder="Ketik nama barumu..."
+                                id="nama">
                         </div>
-
-                        {{-- <div class="select-menu text-black-50">
-                            <div class="select-btn border">
-                                <span class="sBtn-text" style="font-size: 16px; color: white;">Select your option</span>
-                                <i class="bx bx-chevron-down"></i>
-                            </div>
-                            <ul class="options border">
-                                <li class="option">
-                                    <i class="bi bi-gender-male text-primary"></i>
-                                    <span class="option-text">Laki - laki</span>
-                                </li>
-                                <hr style="background: white">
-                                <li class="option">
-                                    <i class="bi bi-gender-female text-danger"></i>
-                                    <span class="option-text">Perempuan </span>
-                                </li>
-                            </ul>
-                        </div> --}}
                         <div class="img-profile">
                             <h6>Foto Profil</h6>
                             <input type="file" name="" hidden="" class="w-100 rounded border-dark"
-                                onchange="previewImage()" id="fileInput">
-                            <label for="fileInput"
+                                onchange="previewImage()" id="imgProfil">
+                            <label for="imgProfil"
                                 class="bgnya-input label-upload w-100 px-2 pt-2 border rounded  text-center"
                                 id="file-input-label" for="file-input"><i class="bi bi-upload"></i>Pilih File</label>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer mx-auto border-top-0 pb-0 pt-4">
-                    <button type="submit" class="btn btn-secondary m-0 py-2 px-3">Simpan</button>
+                <div class="modal-footer mx-auto border-top-0 pb-0 pt-4 justify-content-center">
+                    <input type="submit" id="simpanprofil" class="btn-simpan-profil btn btn-secondary text-center m-0 py-2 px-4" value="Simpan" disabled>
                 </div>
             </div>
         </div>
@@ -175,35 +158,43 @@
         aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content border edit-akun rounded-5">
-                <div class="modal-dialog text-center py-1">
+                <div>
+                    <div class="img-pw mx-auto d-flex">
+                        <img class="mx-auto" src="img/email.png" style="max-width: 25%; max-height: 25%;">
+                    </div>
+                </div>
+                <div class="modal-dialog text-center py-2">
                     <h1 class="modal-title fs-5" id="akunLabel">Edit Akun</h1>
                 </div>
                 <div class="modal-body container d-grid gap-3 pt-0">
-                    <div class="nama">
+                    <div class="email">
                         <h6>Email Baru</h6>
-                        <input type="email" class="w-100 rounded border txt"
-                            placeholder="Ketik email barumu...">
+                        <input type="email" id="email" class="w-100 rounded border txt" placeholder="Ketik email barumu...">
                     </div>
                     <div class="img-profile">
                         <h6>No. Tlpn Baru</h6>
-                        <input type="text" class="w-100 rounded txt" placeholder="Ketik no barumu...">
+                        <input type="text" id="tlpn" class="w-100 rounded txt" placeholder="Ketik no barumu...">
                     </div>
                 </div>
                 <div class="modal-footer mx-auto border-top-0 pb-0 pt-2">
-                    <button type="button" class="btn btn-secondary py-2 px-3 m-0">Simpan</button>
+                    <input type="submit" id="simpanakun" class="btn-simpan-profil btn btn-secondary py-1 px-4 m-0" value="Simpan" disabled>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal bg-modal fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel"
-        aria-hidden="true">
+    <div class="modal bg-modal fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel" aria-hidden="true">
         <div class="modal-dialog container my-auto">
             <div class="modal-content rounded-5 laporkan">
-                <div class="modal-header border-bottom-0 d-block pt-0">
-                    <h1 class="modal-title fs-5" id="laporLabel">Laporkan Kesalahan Film</h1>
+                <div>
+                    <div class="img-pw mx-auto d-flex">
+                        <img class="mx-auto" src="img/report.png" style="max-width: 25%; max-height: 25%;">
+                    </div>
+                </div>
+                <div class="modal-header border-bottom-0 d-block py-3">
+                    <h1 class="modal-title fs-5" id="laporLabel">Laporkan Kesalahan!</h1>
                 </div>
                 <div class="modal-body container py-0" style="height: 148px">
-                    <textarea class="w-100 px-1" cols="30" rows="6"></textarea>
+                    <textarea class="w-100 px-1" cols="30" rows="6" placeholder="Tuliskan laporan Anda di sini..." style="text-indent: 5px"></textarea>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
                     <button type="button m-0" class="btn bg-secondary text-white btn-simpan py-2 px-4"
@@ -220,7 +211,7 @@
                     <img class="mx-auto" src="img/lock.png" style="max-width: 25%; max-height: 25%;">
                 </div>
             </div>
-            <div class="modal-dialog  text-center py-3 my-0">
+            <div class="modal-dialog text-center py-3 my-0">
                 <h1 class="modal-title fs-5" id="passwordLabel">Ubah Kata Sandi</h1>
             </div>
             <div class="modal-body container d-grid gap-3 py-0">
@@ -251,8 +242,8 @@
             <div class="modal-footer mx-auto border-top-0 d-flex text-center pb-0 pt-4 gap-2">
                 <button type="button m-0" class="btn btn-simpan border py-2" style="width: 104.25px"
                     data-bs-dismiss="modal">Batal</button>
-                <button type="button m-0" class="btn bg-secondary btn-simpan py-2 px-4"
-                data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" id="simpan">Simpan</button>
+                <button type="button m-0" class="btn bg-secondary btn-simpan py-2 px-4" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalToggle2" id="simpan">Simpan</button>
             </div>
         </div>
     </div>
@@ -266,12 +257,57 @@
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center gap-2">
                     <button onclick="window.location='{{ route('login') }}'" type="button"
-                        class="btn bg-secondary text-white px-3 py-2" data-bs-dismiss="modal" style="width: 72.53px">Iya</button>
+                        class="btn bg-secondary text-white px-3 py-2" data-bs-dismiss="modal"
+                        style="width: 72.53px">Iya</button>
                     <button type="button" class="btn btn-danger py-2 px-3" data-bs-dismiss="modal">Tidak</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function checkInputs() {
+            var namaInput = document.getElementById('nama');
+            var imgProfilInput = document.getElementById('imgProfil');
+            var simpanButton = document.getElementById('simpanprofil');
+    
+            if (namaInput.value.trim() !== '' || imgProfilInput.value.trim() !== '') {
+                simpanButton.removeAttribute('disabled');
+                simpanButton.classList.remove('btn-secondary');
+                simpanButton.classList.add('btn-primary');
+            } else {
+                simpanButton.setAttribute('disabled', 'disabled');
+                simpanButton.classList.remove('btn-primary');
+                simpanButton.classList.add('btn-secondary');
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var namaInput = document.getElementById('nama');
+            var imgProfilInput = document.getElementById('imgProfil');
+    
+            namaInput.addEventListener('input', checkInputs);
+            imgProfilInput.addEventListener('change', checkInputs);
+        });
+    
+        function previewImage() {
+            var preview = document.getElementById('preview');
+            var imgProfilInput = document.getElementById('imgProfil');
+            var file = imgProfilInput.files[0];
+            var reader = new FileReader();
+    
+            reader.onloadend = function () {
+                preview.src = reader.result;
+                preview.style.display = 'block';
+            };
+    
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = '#';
+            }
+        }
+    </script>    
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -279,6 +315,33 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 </script>
+
+<script>
+    function checkInputs() {
+        var emailInput = document.getElementById('email');
+        var tlpnInput = document.getElementById('tlpn');
+        var simpanButton = document.getElementById('simpanakun');
+
+        if (emailInput.value.trim() !== '' || tlpnInput.value.trim() !== '') {
+            simpanButton.removeAttribute('disabled');
+            simpanButton.classList.remove('btn-secondary');
+            simpanButton.classList.add('btn-primary');
+        } else {
+            simpanButton.setAttribute('disabled', 'disabled');
+            simpanButton.classList.remove('btn-primary');
+            simpanButton.classList.add('btn-secondary');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var emailInput = document.getElementById('email');
+        var tlpnInput = document.getElementById('tlpn');
+
+        emailInput.addEventListener('input', checkInputs);
+        tlpnInput.addEventListener('input', checkInputs);
+    });
+</script>
+
 <script>
     const InputPwLama = document.getElementById("pwlama");
     const togglePwLama = document.getElementById("togglepwLama");
@@ -329,10 +392,10 @@
 </script>
 <script>
     function previewImage() {
-        var fileInput = document.getElementById('fileInput');
+        var imgProfil = document.getElementById('imgProfil');
         var preview = document.getElementById('preview');
 
-        if (fileInput.files && fileInput.files[0]) {
+        if (imgProfil.files && imgProfil.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function(e) {
@@ -340,7 +403,7 @@
                 preview.style.display = 'block';
             }
 
-            reader.readAsDataURL(fileInput.files[0]);
+            reader.readAsDataURL(imgProfil.files[0]);
         }
     }
 </script>

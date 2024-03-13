@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,7 @@ Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
 Route::get('/watchlist', [AuthController::class, 'watchlist'])->name('watchlist');
 Route::get('/film', [AuthController::class, 'film'])->name('film');
 Route::get('/podcast', [AuthController::class, 'podcast'])->name('podcast');
+
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('/admin/product', [AdminController::class, 'product'])->name('product');
+Route::get('/admin/user', [AdminController::class, 'user'])->name('user');
