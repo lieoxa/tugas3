@@ -210,7 +210,7 @@ label {
 
 .select-menu .options {
     position: absolute;
-    top: 80px;
+    top: 50px!important;
     right: 12px;
     padding: 0;
     margin-top: 10px;
@@ -273,6 +273,7 @@ h5{
     min-height: 175px; 
     max-height: 175px;
     margin-bottom: 4px;
+    min-width: 116.66px;
     max-width: 116.66px;
     border-radius: 5px;
 }

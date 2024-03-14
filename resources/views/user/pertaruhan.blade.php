@@ -12,61 +12,61 @@
 </head>
 <style>
     .hidden {
-            display: none;
-        }
+        display: none;
+    }
 
-        .btn-simpan.active {
-            background-color: #28a745; /* Ganti warna sesuai keinginan Anda */
-            cursor: pointer;
-        }
+    .btn-simpan.active {
+        background-color: #28a745;
+        /* Ganti warna sesuai keinginan Anda */
+        cursor: pointer;
+    }
 
-        .btn-simpan:disabled {
-            background-color: #6c757d; /* Ganti warna sesuai keinginan Anda */
-            cursor: not-allowed;
-        }
+    .btn-simpan:disabled {
+        background-color: #6c757d;
+        /* Ganti warna sesuai keinginan Anda */
+        cursor: not-allowed;
+    }
 </style>
 
 <body>
-    <nav class="navbar ps-2 pe-3 sticky-top w-100 p-0 d-flex justify-content-between"
-        style="height:68.59px;" id="mainNav">
-        <div class="d-flex gap-3" style="height: 68.58px">
-            <button onclick="window.location='{{ route('movie') }}'" class="btn1 border-0"><i class="bi bi-chevron-left"
-                    style="font-size: 25px; margin-bottom: 20px;"></i></button>
-            <h2 class="mb-0 txt-detail">Detail</h2>
-        </div>
-        <div class="select-menu">
-            <div class="select-btn">
-                <span class="sBtn-text"><i class="bi bi-three-dots-vertical"
-                        style="font-size: 25px"></i></span>
-                <i class="bx bx-chevron-down"></i>
-                <ul class="options rounded">
-                    <li class="option daftar" id="daftar">
-                        <span class="option-text"><i
-                                class="bi bi-bookmark-check-fill fs-5"></i>Tambahkan ke
-                            Daftar</span>
-                    </li>
-                    <hr>
-                    <li data-bs-toggle="modal" data-bs-target="#lapor" class="option laporkan">
-                        <span class="option-text"><i
-                                class="bi bi-question-circle-fill fs-5"></i>Laporkan
-                            Film</span>
-                    </li>
-                </ul>
+    <div class="sticky-top">
+        <nav class="navbar ps-2 pe-3  w-100 p-0 d-flex justify-content-between" style="height:68.59px;" id="mainNav">
+            <div class="d-flex gap-3" style="height: 68.58px">
+                <button onclick="window.location='{{ route('movie') }}'" class="btn1 border-0"><i
+                        class="bi bi-chevron-left" style="font-size: 25px; margin-bottom: 20px;"></i></button>
+                <h2 class="mb-0 txt-detail">Detail</h2>
             </div>
-        </div>
-    </nav>
+            <div class="select-menu">
+                <div class="select-btn">
+                    <span class="sBtn-text"><i class="bi bi-three-dots-vertical" style="font-size: 25px"></i></span>
+                    <i class="bx bx-chevron-down"></i>
+                    <ul class="options rounded">
+                        <li class="option daftar" id="daftar">
+                            <span class="option-text"><i class="bi bi-bookmark-check-fill fs-5"></i>Tambahkan ke
+                                Daftar</span>
+                        </li>
+                        <hr>
+                        <li data-bs-toggle="modal" data-bs-target="#lapor" class="option laporkan">
+                            <span class="option-text"><i class="bi bi-question-circle-fill fs-5"></i>Laporkan
+                                Film</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
     <div class="full mb-3">
-        <img src="img/jk.jpg" class="w-100 thumbnail-detail" alt="...">
+        <img src="img/thumb-pertaruhan.jpg" class="w-100 thumbnail-detail" alt="...">
         <div class="parent position-relative">
             <div class="half mb-4 pt-5"
                 style="margin-top: -172px; padding-left: 12px; padding-right: 12px; padding-bottom: 0.49rem;">
                 <div class="title mb-2 d-flex justify-content-between">
-                    <h1 class="fw-bolder">Jujutsu Kaisen</h1><br>
+                    <h1 class="fw-bolder">Pertaruhan</h1><br>
                 </div>
 
                 <div class="d-flex gap-2" style="font-size: 15px">
-                    <div class="tahun w-auto">2022</div>
-                    <div class="umur w-auto bg-secondary px-1">13+</div>
+                    <div class="tahun w-auto">2023</div>
+                    <div class="umur w-auto bg-secondary px-1">18+</div>
                     <div class="durasi w-auto">1 Season</div>
                 </div>
                 <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">MAPPA</p>
@@ -77,8 +77,9 @@
                 <div class="desk">
                     <p>Jujutsu Kaisen bercerita tentang Yuji Itadori yang menjadi murid SMA
                         karena sebuah kejadian, Iseng-iseng melakukan aktivitas melakukan
-                            aktivitas paranormal tanpa
-                            dasar dengan klub gaib. Siswa <span class="additional-text">     sekolah menengah Yuuji Itadori menghabiskan hari-harinya di
+                        aktivitas paranormal tanpa
+                        dasar dengan klub gaib. Siswa <span class="additional-text"> sekolah menengah Yuuji Itadori
+                            menghabiskan hari-harinya di
                             ruang klub atau rumah
                             sakit, dimana dia mengunjungi kakeknya yang terbaring di tempat tidur.</span>
                         <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
@@ -335,7 +336,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="modal bg-modal fade" id="lapor" tabindex="-1" aria-labelledby="laporLabel" aria-hidden="true">
         <div class="modal-dialog container my-auto">
             <div class="modal-content rounded-5 lapor mx-auto">
@@ -381,8 +382,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
-                        data-bs-dismiss="modal" value="Laporkan" disabled>
+                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
+                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -396,16 +397,16 @@
     // Ambil elemen-elemen yang diperlukan
     const radioButtons = document.querySelectorAll('input[name="when"]');
     const submitButton = document.querySelector('.btn-simpan');
-    
+
     // Tambahkan event listener untuk setiap radio button
     radioButtons.forEach(radio => {
         radio.addEventListener('change', function() {
             // Cek apakah salah satu radio button terpilih
             const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
-            
+
             // Aktifkan atau nonaktifkan tombol berdasarkan hasil cek
             submitButton.disabled = !isAnyRadioSelected;
-            
+
             // Tambah atau hapus kelas "active" untuk mengubah warna tombol
             if (isAnyRadioSelected) {
                 submitButton.classList.add('active');

@@ -55,7 +55,8 @@
             <div class="3-dot">
                 <div class="select-menu">
                     <div class="select-btn">
-                        <span class="sBtn-text"><i class="bi bi-three-dots-vertical" style="font-size: 25px;"></i></span>
+                        <span class="sBtn-text"><i class="bi bi-three-dots-vertical"
+                                style="font-size: 25px;"></i></span>
                         <i class="bx bx-chevron-down"></i>
                         <ul class="options rounded">
                             <li class="option daftar" id="daftar">
@@ -64,7 +65,8 @@
                             </li>
                             <hr>
                             <li data-bs-toggle="modal" id="report" data-bs-target="#lapor" class="option laporkan">
-                                <span class="option-text"><i class="bi bi-question-circle-fill fs-5"></i>Laporkan Video </span>
+                                <span class="option-text"><i class="bi bi-question-circle-fill fs-5"></i>Laporkan Video
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -76,22 +78,22 @@
             </span> --}}
         </nav>
         <div class="full mb-3">
-            <img src="img/anim.jpg" class="w-100 thumbnail-detail" alt="...">
+            <img src="img/comedy.jpg" class="w-100 thumbnail-detail" alt="...">
             <div class="parent position-relative">
                 <div class="half mb-4 pt-5"
                     style="margin-top: -172px; padding-left: 12px; padding-right: 12px; padding-bottom: 0.49rem;">
                     <div class="title mb-2 d-flex justify-content-between">
-                        <h1 class="fw-bolder">One Piece Film: Red</h1>
+                        <h1 class="fw-bolder">Spy</h1>
                     </div>
 
                     <div class="d-flex gap-2" style="font-size: 15px">
-                        <div class="tahun w-auto">2022</div>
+                        <div class="tahun w-auto">2015</div>
                         <div class="umur w-auto bg-secondary px-1">13+</div>
-                        <div class="durasi w-auto">1j 55m</div>
+                        <div class="durasi w-auto">2j 10m</div>
                     </div>
-                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">MAPPA</p>
+                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">Chernin Entertainment</p>
                     </h6>
-                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Goro Taniguchi</p>
+                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Paul Feig</p>
                     </h6>
                     <div class="btn-play">
                         <a href="#" id="myButton" onclick="playVideo()"
@@ -100,23 +102,16 @@
                                 class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
-                        <p>Sebagai seorang anak, Uta—mantan musisi Bajak Laut Rambut Merah dan teman masa kecil Monkey
-                            D.
-                            Luffy—berjanji bahwa dia akan membangun era baru, kebebasan dengan menampilkan musik<span
-                                class="additional-text"> yang
-                                menyenangkan bagi dunia. Luffy dan Kru Topi Jerami tiba di
-                                konser
-                                live pertama Uta, di mana banyak penggemar berkumpul untuk menikmati nyanyian dunia lain
-                                sang diva. Karena trauma masa kecil, Uta memiliki kebencian yang mendalam terhadap bajak
-                                laut, yang mana membuat reuni bahagianya dengan Luffy hanya sebentar, terutama ketika
-                                dia
-                                mengetahui kalau Luffy telah menjadi bajak laut itu sendiri. Penolakan Luffy untuk
-                                berhenti
-                                menjadi bajak laut membuat Uta mengerahkan kekuatannya pada kru Topi Jerami. Mereka
-                                segera
-                                sadar kalau pikiran mereka telah terperangkap di dunia mimpi yang diciptakan oleh Uta
-                                sejak
-                                awal konser, sementara tubuh asli mereka tertidur di dunia nyata.</span>
+                        <p> seorang analisis Susan Cooper yang selalu bekerja di dalam ruangan secara tiba-tiba harus
+                            bekerja di lapangan.Suatu ketika, CIA mendapatkan informasi bahwa akan ada bom kimia yang
+                            akan meledak. <span class="additional-text">
+                            Oleh karena itu, CIA harus menemukan bom tersebut sebelum meledak.
+                            Namun, para pelaku pemasang bom kebanyakan telah mengetahui identitas agen CIA.
+                            Hingga akhirnya, Susan Cooper menawarkan diri untuk mengatasi masalah tersebut.
+                            Awalnya, banyak yang menolak lantaran postur tubuh dan tingkah konyol Susan Cooper.
+                            Namun, tidak ada pilihan hingga akhirnya CIA melibatkan Susan.
+                            Susan mendapatkan pelatihan secara singkat untuk menyamar dan membongkar pelaku ancaman
+                            bom.</span>
                             <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                         </p>
                     </div>
@@ -155,16 +150,16 @@
                         <section class="relate" id="relate">
                             <div class="img-relate d-flex row g-1" style="max-width: 100vw">
                                 <div class="col-4">
-                                    <img src="img/anim10.jpeg">
+                                    <img src="img/comedy1.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim2.jpg">
+                                    <img src="img/comedy2.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim3.jpg">
+                                    <img src="img/comedy3.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim4.jpg">
+                                    <img src="img/comedy4.jpg">
                                 </div>
                             </div>
                         </section>
@@ -228,116 +223,117 @@
         </div>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>document.addEventListener('fullscreenchange', function () {
-    var video = document.querySelector('video');
-    if (document.fullscreenElement && video) {
-        video.style.setProperty('-webkit-media-controls-timeline', 'none', 'important');
-        video.style.setProperty('-moz-media-controls-timeline', 'none', 'important');
-        video.style.setProperty('-ms-media-controls-timeline', 'none', 'important');
-    }
-});
-</script>
-
-<script>
-    const shareData = {
-        title: "OnePiece",
-        text: "Learn web development on MDN!",
-        url: "http://192.168.184.86:8000/film",
-    };
-
-    const btn = document.querySelector(".share");
-
-    // Share must be triggered by "user activation"
-    btn.addEventListener("click", async () => {
-        try {
-            await navigator.share(shareData);
-        } catch (err) {
-            // resultPara.textContent = `Error: ${err}`;
-        }
-    });
-</script>
-
-<script>
-    const radioButtons = document.querySelectorAll('input[name="when"]');
-    const submitButton = document.querySelector('.btn-simpan');
-
-    // Tambahkan event listener untuk setiap radio button
-    radioButtons.forEach(radio => {
-        radio.addEventListener('change', function() {
-            const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
-
-            submitButton.disabled = !isAnyRadioSelected;
-
-            if (isAnyRadioSelected) {
-                submitButton.classList.add('active');
-            } else {
-                submitButton.classList.remove('active');
+    <script>
+        document.addEventListener('fullscreenchange', function() {
+            var video = document.querySelector('video');
+            if (document.fullscreenElement && video) {
+                video.style.setProperty('-webkit-media-controls-timeline', 'none', 'important');
+                video.style.setProperty('-moz-media-controls-timeline', 'none', 'important');
+                video.style.setProperty('-ms-media-controls-timeline', 'none', 'important');
             }
         });
-    });
-</script>
-<script type="text/javascript">
-    $("body").on("click", "input[name='when']", function() {
-        if ($("input[name='when']:checked").val() == 'other') {
-            $("textarea[name='when_other']").css('display', 'block');
-        } else {
-            $("textarea[name='when_other']").css('display', 'none');
-            $("textarea[name='when_other']").val('');
-        }
-    });
-</script>
+    </script>
 
-<script>
-    let isFavorite = false;
+    <script>
+        const shareData = {
+            title: "OnePiece",
+            text: "Learn web development on MDN!",
+            url: "http://192.168.184.86:8000/film",
+        };
 
-    function changeIconAndColor(button) {
-        var iconElement = button.querySelector("i");
+        const btn = document.querySelector(".share");
 
-        iconElement.classList.toggle("bi-heart");
-        iconElement.classList.toggle("bi-heart-fill");
-    }
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        window.addEventListener("scroll", function() {
-            var nav = document.getElementById("mainNav");
-
-            if (window.scrollY > 10) {
-                nav.classList.add("scrolled");
-            } else {
-                nav.classList.remove("scrolled");
+        // Share must be triggered by "user activation"
+        btn.addEventListener("click", async () => {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                // resultPara.textContent = `Error: ${err}`;
             }
         });
-    });
-</script>
-<script>
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-</script>
-<script>
-    function toggleReadMore() {
-        const textDesk = document.querySelector('.desk');
-        const readMoreBtn = document.querySelector('.read-more-btn');
-        const additionalText = document.querySelector('.additional-text');
+    </script>
 
-        textDesk.classList.toggle('expanded');
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="when"]');
+        const submitButton = document.querySelector('.btn-simpan');
 
-        if (textDesk.classList.contains('expanded')) {
-            additionalText.style.display = 'inline';
-            readMoreBtn.textContent = 'Tutup';
-        } else {
-            additionalText.style.display = 'none';
-            readMoreBtn.textContent = 'Selengkapnya...';
+        // Tambahkan event listener untuk setiap radio button
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', function() {
+                const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
+
+                submitButton.disabled = !isAnyRadioSelected;
+
+                if (isAnyRadioSelected) {
+                    submitButton.classList.add('active');
+                } else {
+                    submitButton.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $("body").on("click", "input[name='when']", function() {
+            if ($("input[name='when']:checked").val() == 'other') {
+                $("textarea[name='when_other']").css('display', 'block');
+            } else {
+                $("textarea[name='when_other']").css('display', 'none');
+                $("textarea[name='when_other']").val('');
+            }
+        });
+    </script>
+
+    <script>
+        let isFavorite = false;
+
+        function changeIconAndColor(button) {
+            var iconElement = button.querySelector("i");
+
+            iconElement.classList.toggle("bi-heart");
+            iconElement.classList.toggle("bi-heart-fill");
         }
-    }
-</script>
-{{-- <script>
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener("scroll", function() {
+                var nav = document.getElementById("mainNav");
+
+                if (window.scrollY > 10) {
+                    nav.classList.add("scrolled");
+                } else {
+                    nav.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        function toggleReadMore() {
+            const textDesk = document.querySelector('.desk');
+            const readMoreBtn = document.querySelector('.read-more-btn');
+            const additionalText = document.querySelector('.additional-text');
+
+            textDesk.classList.toggle('expanded');
+
+            if (textDesk.classList.contains('expanded')) {
+                additionalText.style.display = 'inline';
+                readMoreBtn.textContent = 'Tutup';
+            } else {
+                additionalText.style.display = 'none';
+                readMoreBtn.textContent = 'Selengkapnya...';
+            }
+        }
+    </script>
+    {{-- <script>
     function playVideo() {
         var elem = document.getElementsByTagName('iframe')[0];
         if (elem.requestFullscreen) {
@@ -355,78 +351,79 @@
         elem.play();
     }
 </script> --}}
-{{-- <script>
+    {{-- <script>
     Get iframe element
     const iframe = document.querySelector('iframe');
 
     iframe.classList.add('show');
 </script> --}}
-<script>
-    const optionMenu = document.querySelector(".select-menu"),
-        selectBtn = optionMenu.querySelector(".select-btn"),
-        options = optionMenu.querySelector(".options");
+    <script>
+        const optionMenu = document.querySelector(".select-menu"),
+            selectBtn = optionMenu.querySelector(".select-btn"),
+            options = optionMenu.querySelector(".options");
 
-    // Toggle the "active" class on the menu when the button is clicked
-    selectBtn.addEventListener("click", () => {
-        optionMenu.classList.toggle("active");
-    });
+        // Toggle the "active" class on the menu when the button is clicked
+        selectBtn.addEventListener("click", () => {
+            optionMenu.classList.toggle("active");
+        });
 
-    // Close the menu when clicking outside of it
-    document.addEventListener("click", (event) => {
-        if (!optionMenu.contains(event.target)) {
+        // Close the menu when clicking outside of it
+        document.addEventListener("click", (event) => {
+            if (!optionMenu.contains(event.target)) {
+                optionMenu.classList.remove("active");
+            }
+        });
+
+        // Prevent the menu from closing when clicking inside it
+        options.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        // Close the menu when scrolling outside of it
+        document.addEventListener("scroll", () => {
             optionMenu.classList.remove("active");
+        });
+    </script>
+    <script>
+        document.getElementById('daftar').addEventListener('click', function() {
+
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                text: "Berhasil Ditambah",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+
+
+        document.getElementById('disukai').addEventListener('click', function() {
+
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                text: "Berhasil Ditambah",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+    </script>
+    <script>
+        function downloadVideo(videoId, videoName) {
+            var video = document.getElementById(videoId);
+            var url = video.getElementsByTagName('source')[0].src;
+
+            var link = document.createElement('a');
+            link.href = url;
+            link.download = 'downloaded_video_' + videoName + '.mp4';
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
         }
-    });
-
-    // Prevent the menu from closing when clicking inside it
-    options.addEventListener("click", (event) => {
-        event.stopPropagation();
-    });
-
-    // Close the menu when scrolling outside of it
-    document.addEventListener("scroll", () => {
-        optionMenu.classList.remove("active");
-    });
-</script>
-<script>
-    document.getElementById('daftar').addEventListener('click', function() {
-
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            text: "Berhasil Ditambah",
-            showConfirmButton: false,
-            timer: 2000
-        });
-    });
-
-
-    document.getElementById('disukai').addEventListener('click', function() {
-
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            text: "Berhasil Ditambah",
-            showConfirmButton: false,
-            timer: 2000
-        });
-    });
-</script>
-<script>
-    function downloadVideo(videoId, videoName) {
-        var video = document.getElementById(videoId);
-        var url = video.getElementsByTagName('source')[0].src;
-
-        var link = document.createElement('a');
-        link.href = url;
-        link.download = 'downloaded_video_' + videoName + '.mp4';
-
-        document.body.appendChild(link);
-
-        link.click();
-
-        document.body.removeChild(link);
-    }
-</script>
+    </script>
 </body>
+
 </html>

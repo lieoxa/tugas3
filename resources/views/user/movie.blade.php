@@ -184,11 +184,11 @@
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
-                                        <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
+                                        <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
-                                        <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
+                                        <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
@@ -248,7 +248,7 @@
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
-                                        <img src="{{ asset('img/fi2.jpg') }}" class="card-img-top slider-img"
+                                        <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
                                             alt="...">
                                     </li>
                                     <li class="splide__slide li">
@@ -271,12 +271,13 @@
                         <h1 class="text-white text-start fw-bold">Animasi Anak-Anak</h1>
                         <section class="animasi">
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="li position-relative">
+                                <div class="li position-relative"
+                                    onclick="window.location='{{ route('toystory') }}'">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color: #000000;width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
@@ -296,7 +297,7 @@
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi2.jpg') }}" class="card-img-top slider-img">
                                 </div>
@@ -314,7 +315,7 @@
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi4.jpg') }}" class="card-img-top slider-img">
                                 </div>
@@ -332,7 +333,7 @@
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi6.jpg') }}" class="card-img-top slider-img">
                                 </div>
@@ -350,7 +351,7 @@
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi8.jpg') }}" class="card-img-top slider-img">
                                 </div>
@@ -368,7 +369,7 @@
                                         style="top: 88%">
                                         <input type="button"
                                             style="font-size: 10px; background-color:#ffffff;color:rgb(0, 0, 0);width:98px;border-style: none; padding: 3px 0 ;"
-                                            value="Episode Terbaru">
+                                            value="Film Terbaru">
                                     </div>
                                     <img src="{{ asset('img/animasi10.jpg') }}" class="card-img-top slider-img">
                                 </div>
@@ -413,7 +414,7 @@
                         <section class="splide new-8" aria-label="Splide Basic HTML Example">
                             <div class="splide__track">
                                 <ul class="splide__list" style="gap: 0.5rem;">
-                                    <li class="splide__slide saran">
+                                    <li class="splide__slide saran" onclick="window.location='{{ route('spy') }}'">
                                         <img src="{{ asset('img/comedy.jpg') }}"
                                             class="card-img-top film-khusus slider-img" alt="...">
                                     </li>
@@ -457,7 +458,7 @@
                         <h1 class="text-white text-start fw-bold">Super Hero</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="li">
+                                <div class="li" onclick="window.location='{{ route('iron3') }}'">
                                     <img src="{{ asset('img/hero.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                 </div>
@@ -512,7 +513,8 @@
                         <h1 class="text-white text-start fw-bold">Acara Podcast</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="saran-1 position-relative" onclick="window.location='{{ route('podcast') }}'">
+                                <div class="saran-1 position-relative"
+                                    onclick="window.location='{{ route('podcast') }}'">
                                     <img src="img/play-button.png"
                                         class="position-absolute top-50 text-white fs-7 top-50 start-50 translate-middle"
                                         style="width: 25%;">
@@ -594,7 +596,7 @@
                         <h1 class="text-white text-start fw-bold">Anime Jepang</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="li">
+                                <div class="li" onclick="window.location='{{ route('film') }}'">
                                     <img src="{{ asset('img/anim.jpg') }}" class="card-img-top slider-img"
                                         style="width: 100%" alt="...">
                                     <div class="card-body mt-1 mx-auto">
@@ -676,55 +678,48 @@
                         <h1 class="text-white text-start fw-bold">Film Korea</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative" onclick="window.location='{{ route('century') }}'">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
+                                    <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
+                                    <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
+                                    <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
+                                    <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
+                                        alt="...">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
+                                        alt="...">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
+                                    <img src="{{ asset('img/drakor7.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
+                                    <img src="{{ asset('img/drakor8.jpg') }}" class="card-img-top slider-img">
                                 </div>
-                                <div class="splide__slide li position-relative">
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/drakor9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
+                                        alt="...">
+                                </div>
+                                <div class="li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/drakor10.jpg') }}" class="card-img-top slider-img">
                                 </div>
                             </div>
                         </section>
@@ -845,61 +840,52 @@
                         <h1 class="text-white text-start fw-bold">Film Horror</h1>
                         <section>
                             <div class="d-flex gap-2 bar mt-1">
-                                <li class="splide__slide li position-relative">
+                                <div class="li position-relative" onclick="window.location='{{ route('jawa') }}'">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror1.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror2.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror3.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror4.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
-                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror5.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/horror6.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%" alt="...">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                        alt="...">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
                                     <img src="{{ asset('img/horror7.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                        alt="...">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror8.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
-                                <li class="splide__slide li position-relative">
+                                    <img src="{{ asset('img/horror9.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
                                     <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
-                                    <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img"
-                                        style="width: 100%">
-                                </li>
+                                    <img src="{{ asset('img/horror10.jpg') }}" class="card-img-top slider-img">
+                                </div>
+                                <div class="li position-relative">
+                                    <img src="img/logo-podcast.png" class="logo-podcast-1 position-absolute">
+                                    <img src="{{ asset('img/horror11.jpg') }}" class="card-img-top slider-img">
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -957,8 +943,10 @@
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/f1-4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border bg-secondary text-white">
-                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>4</div>
+                                                        <li
+                                                            class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i
+                                                                    class="bi bi-plus"></i>4</div>
                                                         </li>
                                                         <!-- Add more thumbn    ail slider items as needed -->
                                                     </ul>
@@ -1010,8 +998,10 @@
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/switch4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border bg-secondary text-white">
-                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>4</div>
+                                                        <li
+                                                            class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i
+                                                                    class="bi bi-plus"></i>4</div>
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1062,8 +1052,10 @@
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/dbs4.webp">
                                                         </li>
-                                                        <li class="splide__slide rounded border bg-secondary text-white">
-                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i class="bi bi-plus"></i>2</div>
+                                                        <li
+                                                            class="splide__slide rounded border bg-secondary text-white">
+                                                            <div class="sisa-eps mt-2" style="font-size: 20px"><i
+                                                                    class="bi bi-plus"></i>2</div>
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1203,12 +1195,12 @@
             lazyLoad: 'nearby',
             focus: 0,
             omitEnd: true,
-            drag:'free',
+            drag: 'free',
         });
 
         splide.mount();
 
-    var splide = new Splide('.splide.new-11', {
+        var splide = new Splide('.splide.new-11', {
             arrows: false,
             lazyLoad: 'nearby',
             autoplay: true,
@@ -1242,7 +1234,7 @@
                 },
                 pagination: false,
                 cover: true,
-                drag: false ,
+                drag: false,
                 breakpoints: {
                     640: {
                         fixedWidth: 45,

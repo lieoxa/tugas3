@@ -37,6 +37,13 @@ Route::get('/search', [AuthController::class, 'search'])->name('search');
 Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
 Route::get('/watchlist', [AuthController::class, 'watchlist'])->name('watchlist');
 Route::get('/film', [AuthController::class, 'film'])->name('film');
+Route::get('/toystory', [AuthController::class, 'toystory'])->name('toystory');
+Route::get('/mario', [AuthController::class, 'mario'])->name('mario');
+Route::get('/spy', [AuthController::class, 'spy'])->name('spy');
+Route::get('/iron3', [AuthController::class, 'iron3'])->name('iron3');
+Route::get('/century', [AuthController::class, 'century'])->name('century');
+Route::get('/jawa', [AuthController::class, 'jawa'])->name('jawa');
+Route::get('/pertaruhan', [AuthController::class, 'pertaruhan'])->name('pertaruhan');
 Route::get('/podcast', [AuthController::class, 'podcast'])->name('podcast');
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');

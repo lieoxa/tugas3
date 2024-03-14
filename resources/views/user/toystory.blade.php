@@ -76,22 +76,22 @@
             </span> --}}
         </nav>
         <div class="full mb-3">
-            <img src="img/anim.jpg" class="w-100 thumbnail-detail" alt="...">
+            <img src="img/animasi.jpg" class="w-100 thumbnail-detail" alt="...">
             <div class="parent position-relative">
                 <div class="half mb-4 pt-5"
                     style="margin-top: -172px; padding-left: 12px; padding-right: 12px; padding-bottom: 0.49rem;">
                     <div class="title mb-2 d-flex justify-content-between">
-                        <h1 class="fw-bolder">One Piece Film: Red</h1>
+                        <h1 class="fw-bolder">Toy Story 4</h1>
                     </div>
 
                     <div class="d-flex gap-2" style="font-size: 15px">
-                        <div class="tahun w-auto">2022</div>
+                        <div class="tahun w-auto">2019</div>
                         <div class="umur w-auto bg-secondary px-1">13+</div>
-                        <div class="durasi w-auto">1j 55m</div>
+                        <div class="durasi w-auto">1j 40m</div>
                     </div>
-                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">MAPPA</p>
+                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">Pixar Animation Studios</p>
                     </h6>
-                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Goro Taniguchi</p>
+                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Josh Cooley</p>
                     </h6>
                     <div class="btn-play">
                         <a href="#" id="myButton" onclick="playVideo()"
@@ -100,23 +100,9 @@
                                 class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
-                        <p>Sebagai seorang anak, Uta—mantan musisi Bajak Laut Rambut Merah dan teman masa kecil Monkey
-                            D.
-                            Luffy—berjanji bahwa dia akan membangun era baru, kebebasan dengan menampilkan musik<span
-                                class="additional-text"> yang
-                                menyenangkan bagi dunia. Luffy dan Kru Topi Jerami tiba di
-                                konser
-                                live pertama Uta, di mana banyak penggemar berkumpul untuk menikmati nyanyian dunia lain
-                                sang diva. Karena trauma masa kecil, Uta memiliki kebencian yang mendalam terhadap bajak
-                                laut, yang mana membuat reuni bahagianya dengan Luffy hanya sebentar, terutama ketika
-                                dia
-                                mengetahui kalau Luffy telah menjadi bajak laut itu sendiri. Penolakan Luffy untuk
-                                berhenti
-                                menjadi bajak laut membuat Uta mengerahkan kekuatannya pada kru Topi Jerami. Mereka
-                                segera
-                                sadar kalau pikiran mereka telah terperangkap di dunia mimpi yang diciptakan oleh Uta
-                                sejak
-                                awal konser, sementara tubuh asli mereka tertidur di dunia nyata.</span>
+                        <p>Toy Story 4 dibuka dengan kilas balik peristiwa sembilan tahun sebelum Woody dan kawan-kawan pindah ke tangan Bonnie. Di bawah hujan deras, Woody dan kawanannya termasuk sang pujaan hati Bo Peep <span class="additional-text">sedang melakukan misi penyelamatan pada sebuah mainan. yang
+                                menyenangkan bagi dunia.Singkat cerita, peristiwa itu juga menjadi awal perpisahan Woody dengan Bo Peep, karakter yang nantinya memegang peranan penting dalam kisah kali ini.
+                                Toy Story 4 kemudian berlanjut pada kegelisahan Woody karena selama beberapa waktu belakangan tak lagi dipilih Bonnie untuk dimainkan. Meski berusaha tetap optimistis, Woody tak bisa menghilangkan raut sedih penuh harapnya.</span>
                             <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                         </p>
                     </div>
@@ -155,16 +141,16 @@
                         <section class="relate" id="relate">
                             <div class="img-relate d-flex row g-1" style="max-width: 100vw">
                                 <div class="col-4">
-                                    <img src="img/anim10.jpeg">
+                                    <img src="img/animasi1.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim2.jpg">
+                                    <img src="img/animasi2.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim3.jpg">
+                                    <img src="img/animasi3.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/anim4.jpg">
+                                    <img src="img/animasi4.jpg">
                                 </div>
                             </div>
                         </section>
