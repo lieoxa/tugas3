@@ -3,8 +3,9 @@
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
             <a href="./index.html" class="text-nowrap logo-img">
-                <img src="{{ asset('admin') }}/dist/images/logos/dark-logo.svg" class="dark-logo" width="180"
-                    alt="" />
+                <h1 class="logo-muviku">MUVIKU</h1>
+                {{-- <img src="{{ asset('admin') }}/dist/images/logos/dark-logo.svg" class="dark-logo" width="180"
+                    alt="" /> --}}
                 <img src="{{ asset('admin') }}/dist/images/logos/light-logo.svg" class="light-logo" width="180"
                     alt="" />
             </a>

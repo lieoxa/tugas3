@@ -103,10 +103,16 @@
                                 class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
-                        <p>Setelah peristiwa "The Avengers", Tony Stark merasa terganggu dan mengalami gangguan emosional yang serius. 
+                        <p>Setelah peristiwa "The Avengers", Tony Stark merasa terganggu dan mengalami gangguan
+                            emosional yang serius.
 
-                            Ketika teroris misterius yang dikenal sebagai Mandarin <span class="additional-text"> (Ben Kingsley) mulai menyerang rumah-rumah dan fasilitas militer AS, Tony menantangnya secara terbuka dan menyatakan siap menghadapinya. Namun, serangan yang dilakukan pada rumah Tony sendiri membuatnya kehilangan semua peralatan Iron Man dan hampir membunuhnya.
-                                Tanpa bantuan Jarvis (Paul Bettany) atau J.A.R.V.I.S, Tony harus mengandalkan kreativitas dan kecerdasannya untuk mengungkap rencana jahat Mandarin dan menghentikannya sebelum terlambat.  </span>
+                            Ketika teroris misterius yang dikenal sebagai Mandarin <span class="additional-text"> (Ben
+                                Kingsley) mulai menyerang rumah-rumah dan fasilitas militer AS, Tony menantangnya secara
+                                terbuka dan menyatakan siap menghadapinya. Namun, serangan yang dilakukan pada rumah
+                                Tony sendiri membuatnya kehilangan semua peralatan Iron Man dan hampir membunuhnya.
+                                Tanpa bantuan Jarvis (Paul Bettany) atau J.A.R.V.I.S, Tony harus mengandalkan
+                                kreativitas dan kecerdasannya untuk mengungkap rencana jahat Mandarin dan
+                                menghentikannya sebelum terlambat. </span>
                             <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                         </p>
                     </div>
@@ -211,8 +217,9 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
-                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
+                    <input type="submit" id="laporbtn"
+                        class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
+                        data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -255,6 +262,8 @@
     <script>
         const radioButtons = document.querySelectorAll('input[name="when"]');
         const submitButton = document.querySelector('.btn-simpan');
+        const lainnyaTextarea = document.getElementById('lainnyaTextarea');
+        const lainnyaInput = document.getElementById('lainnyaInput');
 
         // Tambahkan event listener untuk setiap radio button
         radioButtons.forEach(radio => {
@@ -268,7 +277,23 @@
                 } else {
                     submitButton.classList.remove('active');
                 }
+
+                // Jika radio button "Lainnya" dipilih, tampilkan textarea dan aktifkan tombol
+                if (radio.id === 'lainnya') {
+                    lainnyaTextarea.classList.remove('hidden');
+                    lainnyaInput.style.display = 'block';
+                    submitButton.disabled = lainnyaInput.value.trim() ===
+                        ''; // Nonaktifkan tombol jika textarea kosong
+                } else {
+                    lainnyaTextarea.classList.add('hidden');
+                    lainnyaInput.style.display = 'none';
+                }
             });
+        });
+
+        // Tambahkan event listener untuk textarea
+        lainnyaInput.addEventListener('input', function() {
+            submitButton.disabled = lainnyaInput.value.trim() === ''; // Nonaktifkan tombol jika textarea kosong
         });
     </script>
     <script type="text/javascript">
@@ -398,6 +423,17 @@
                 position: "center",
                 icon: "success",
                 text: "Berhasil Ditambah",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+
+        document.getElementById('laporbtn').addEventListener('click', function() {
+
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                text: "Laporan Terkirim",
                 showConfirmButton: false,
                 timer: 2000
             });

@@ -282,7 +282,7 @@
                                     <img src="{{ asset('img/animasi.jpg') }}" class="card-img-top slider-img"
                                         alt="...">
                                 </div>
-                                <div class="li position-relative">
+                                <div class="li position-relative" onclick="window.location='{{ route('mario') }}'">
                                     <div class="tonton position-absolute start-50 translate-middle w-100"
                                         style="top: 88%">
                                         <input type="button"
@@ -898,16 +898,15 @@
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide saran-2">
-                                        <div
-                                            class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
-                                            <div id="main-slider" class="splide pb-2">
+                                        <div class="card border-white bg-custom bg-gradient rounded-3 rounded-bottom-4">
+                                            <div id="main-slider" class="splide pb-2" onclick="window.location='{{ route('pertaruhan') }}'">
                                                 <div class="splide__track">
                                                     <ul class="splide__list">
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 1 -->
                                                             <img src="img/f1-1.webp">
                                                         </li>
-                                                        {{-- <li class="splide__slide rounded-3">
+                                                        <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/f1-2.webp">
                                                         </li>
@@ -918,7 +917,7 @@
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/f1-4.webp">
-                                                        </li> --}}
+                                                        </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
                                                 </div>
@@ -952,9 +951,9 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="saran-bawah d-flex ps-6 pe-4">
+                                            <div class="saran-bawah d-flex ps-6 pe-4" onclick="window.location='{{ route('pertaruhan') }}'">
                                                 <div class="text-white my-auto text-start" style="width: 80%">
-                                                    <h6 class="m-0">Pertaruhan</h6>
+                                                    <h6 class="m-0">Pertaruhan The Series</h6>
                                                     <p class="mb-0 text-secondary" style="font-size: 12px">2024</p>
                                                 </div>
                                                 <div class="tombol text-end" style="width: 20%">
@@ -973,6 +972,18 @@
                                                         <li class="splide__slide rounded-3">
                                                             <!-- Content for thumbnail slider item 2 -->
                                                             <img src="img/switch1.webp">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/switch2.webp">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 1 -->
+                                                            <img src="img/switch3.webp">
+                                                        </li>
+                                                        <li class="splide__slide rounded-3">
+                                                            <!-- Content for thumbnail slider item 2 -->
+                                                            <img src="img/switch4.webp">
                                                         </li>
                                                         <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
@@ -1057,7 +1068,6 @@
                                                             <div class="sisa-eps mt-2" style="font-size: 20px"><i
                                                                     class="bi bi-plus"></i>2</div>
                                                         </li>
-                                                        <!-- Add more thumbnail slider items as needed -->
                                                     </ul>
                                                 </div>
                                             </div>

@@ -105,13 +105,13 @@
                         <p> seorang analisis Susan Cooper yang selalu bekerja di dalam ruangan secara tiba-tiba harus
                             bekerja di lapangan.Suatu ketika, CIA mendapatkan informasi bahwa akan ada bom kimia yang
                             akan meledak. <span class="additional-text">
-                            Oleh karena itu, CIA harus menemukan bom tersebut sebelum meledak.
-                            Namun, para pelaku pemasang bom kebanyakan telah mengetahui identitas agen CIA.
-                            Hingga akhirnya, Susan Cooper menawarkan diri untuk mengatasi masalah tersebut.
-                            Awalnya, banyak yang menolak lantaran postur tubuh dan tingkah konyol Susan Cooper.
-                            Namun, tidak ada pilihan hingga akhirnya CIA melibatkan Susan.
-                            Susan mendapatkan pelatihan secara singkat untuk menyamar dan membongkar pelaku ancaman
-                            bom.</span>
+                                Oleh karena itu, CIA harus menemukan bom tersebut sebelum meledak.
+                                Namun, para pelaku pemasang bom kebanyakan telah mengetahui identitas agen CIA.
+                                Hingga akhirnya, Susan Cooper menawarkan diri untuk mengatasi masalah tersebut.
+                                Awalnya, banyak yang menolak lantaran postur tubuh dan tingkah konyol Susan Cooper.
+                                Namun, tidak ada pilihan hingga akhirnya CIA melibatkan Susan.
+                                Susan mendapatkan pelatihan secara singkat untuk menyamar dan membongkar pelaku ancaman
+                                bom.</span>
                             <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                         </p>
                     </div>
@@ -216,8 +216,9 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
-                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
+                    <input type="submit" id="laporbtn"
+                        class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
+                        data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -260,6 +261,8 @@
     <script>
         const radioButtons = document.querySelectorAll('input[name="when"]');
         const submitButton = document.querySelector('.btn-simpan');
+        const lainnyaTextarea = document.getElementById('lainnyaTextarea');
+        const lainnyaInput = document.getElementById('lainnyaInput');
 
         // Tambahkan event listener untuk setiap radio button
         radioButtons.forEach(radio => {
@@ -273,7 +276,23 @@
                 } else {
                     submitButton.classList.remove('active');
                 }
+
+                // Jika radio button "Lainnya" dipilih, tampilkan textarea dan aktifkan tombol
+                if (radio.id === 'lainnya') {
+                    lainnyaTextarea.classList.remove('hidden');
+                    lainnyaInput.style.display = 'block';
+                    submitButton.disabled = lainnyaInput.value.trim() ===
+                        ''; // Nonaktifkan tombol jika textarea kosong
+                } else {
+                    lainnyaTextarea.classList.add('hidden');
+                    lainnyaInput.style.display = 'none';
+                }
             });
+        });
+
+        // Tambahkan event listener untuk textarea
+        lainnyaInput.addEventListener('input', function() {
+            submitButton.disabled = lainnyaInput.value.trim() === ''; // Nonaktifkan tombol jika textarea kosong
         });
     </script>
     <script type="text/javascript">
@@ -403,6 +422,17 @@
                 position: "center",
                 icon: "success",
                 text: "Berhasil Ditambah",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+
+        document.getElementById('laporbtn').addEventListener('click', function() {
+
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                text: "Laporan Terkirim",
                 showConfirmButton: false,
                 timer: 2000
             });

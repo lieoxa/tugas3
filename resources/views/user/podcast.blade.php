@@ -12,20 +12,21 @@
 </head>
 <style>
     .hidden {
-            display: none;
-        }
+        display: none;
+    }
 
-        .btn-simpan.active {
-            background-color: #28a745;
-            /* Ganti warna sesuai keinginan Anda */
-            cursor: pointer;
-        }
+    .btn-simpan.active {
+        background-color: #28a745;
+        /* Ganti warna sesuai keinginan Anda */
+        cursor: pointer;
+    }
 
-        .btn-simpan:disabled {
-            background-color: #6c757d;
-            /* Ganti warna sesuai keinginan Anda */
-            cursor: not-allowed;
-        }
+    .btn-simpan:disabled {
+        background-color: #6c757d;
+        /* Ganti warna sesuai keinginan Anda */
+        cursor: not-allowed;
+    }
+
     .select-menu .select-btn {
         color: black;
         display: flex;
@@ -44,7 +45,7 @@
 
     .select-menu .options {
         position: absolute;
-        top: 50px!important;
+        top: 50px !important;
         right: 12px;
         padding: 0;
         margin-top: 10px;
@@ -96,7 +97,8 @@
             <div class="3-dot">
                 <div class="select-menu">
                     <div class="select-btn">
-                        <span class="sBtn-text"><i class="bi bi-three-dots-vertical" style="font-size: 25px;"></i></span>
+                        <span class="sBtn-text"><i class="bi bi-three-dots-vertical"
+                                style="font-size: 25px;"></i></span>
                         <i class="bx bx-chevron-down"></i>
                         <ul class="options rounded">
                             <li class="option daftar" id="daftar">
@@ -105,7 +107,8 @@
                             </li>
                             <hr>
                             <li data-bs-toggle="modal" id="report" data-bs-target="#lapor" class="option laporkan">
-                                <span class="option-text"><i class="bi bi-question-circle-fill fs-5"></i>Laporkan Video </span>
+                                <span class="option-text"><i class="bi bi-question-circle-fill fs-5"></i>Laporkan Video
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -119,7 +122,7 @@
         <div class="video">
             {{-- <img src="img/podcast.jpg" class="w-100"> --}}
             <video controls width="100%" poster="img/podcast.jpg">
-                <source src="vid/test.mp4">    
+                <source src="vid/test.mp4">
             </video>
         </div>
         <div class="container pt-2">
@@ -255,8 +258,9 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
-                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
+                    <input type="submit" id="laporbtn"
+                        class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
+                        data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -270,6 +274,8 @@
 <script>
     const radioButtons = document.querySelectorAll('input[name="when"]');
     const submitButton = document.querySelector('.btn-simpan');
+    const lainnyaTextarea = document.getElementById('lainnyaTextarea');
+    const lainnyaInput = document.getElementById('lainnyaInput');
 
     // Tambahkan event listener untuk setiap radio button
     radioButtons.forEach(radio => {
@@ -283,17 +289,23 @@
             } else {
                 submitButton.classList.remove('active');
             }
+
+            // Jika radio button "Lainnya" dipilih, tampilkan textarea dan aktifkan tombol
+            if (radio.id === 'lainnya') {
+                lainnyaTextarea.classList.remove('hidden');
+                lainnyaInput.style.display = 'block';
+                submitButton.disabled = lainnyaInput.value.trim() ===
+                    ''; // Nonaktifkan tombol jika textarea kosong
+            } else {
+                lainnyaTextarea.classList.add('hidden');
+                lainnyaInput.style.display = 'none';
+            }
         });
     });
-</script>
-<script type="text/javascript">
-    $("body").on("click", "input[name='when']", function() {
-        if ($("input[name='when']:checked").val() == 'other') {
-            $("textarea[name='when_other']").css('display', 'block');
-        } else {
-            $("textarea[name='when_other']").css('display', 'none');
-            $("textarea[name='when_other']").val('');
-        }
+
+    // Tambahkan event listener untuk textarea
+    lainnyaInput.addEventListener('input', function() {
+        submitButton.disabled = lainnyaInput.value.trim() === ''; // Nonaktifkan tombol jika textarea kosong
     });
 </script>
 </script>
@@ -341,6 +353,17 @@
             position: "center",
             icon: "success",
             text: "Berhasil Ditambah",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    });
+
+    document.getElementById('laporbtn').addEventListener('click', function() {
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            text: "Laporan Terkirim",
             showConfirmButton: false,
             timer: 2000
         });

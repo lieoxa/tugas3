@@ -69,19 +69,30 @@
                     <div class="umur w-auto bg-secondary px-1">18+</div>
                     <div class="durasi w-auto">1 Season</div>
                 </div>
-                <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">MAPPA</p>
+                <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">Screen Play Films</p>
                 </h6>
-                <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Goro Taniguchi</p>
+                <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Sidharta Tata</p>
                 </h6>
-                <h6 class="mb-2" style="font-size:0.9rem">Perusahaan produksi : MAPPA</h6>
                 <div class="desk">
-                    <p>Jujutsu Kaisen bercerita tentang Yuji Itadori yang menjadi murid SMA
-                        karena sebuah kejadian, Iseng-iseng melakukan aktivitas melakukan
-                        aktivitas paranormal tanpa
-                        dasar dengan klub gaib. Siswa <span class="additional-text"> sekolah menengah Yuuji Itadori
-                            menghabiskan hari-harinya di
-                            ruang klub atau rumah
-                            sakit, dimana dia mengunjungi kakeknya yang terbaring di tempat tidur.</span>
+                    <p>Pertaruhan The Series melanjutkan kisah persaudaraan antara Elzan
+                        (Jefri Nichol) dan Ahmad Faisal alias Ical (Giulio Parengkuan) setelah ditinggal Ibra
+                        (Adipati Dolken) yang telah berpulang.<span class="additional-text">
+
+                            Elzan baru saja keluar dari penjara. Ia berusaha menata lagi hidupnya sambil mencari sumber
+                            penghasilan untuk keluarga sekaligus memperjuangkan rumah keluarga yang akan disita oleh
+                            bank.
+
+                            Selain itu, ia juga berusaha memberi nafkah pada anak Jamila (Widika Sidmore), mantan
+                            kekasih almarhum kakaknya.
+
+                            Ia pun bekerja menjadi montir di suatu bengkel. Selain itu, Elzan juga bekerja sebagai
+                            penagih utang dan mencari uang lewat pertarungan jalanan sampai akhirnya harus berurusan
+                            dengan Tony Tjokro (Kiki Narendra).
+
+                            Berbagai suka duka kehidupan ia hadapi dengan ditemani sahabat yang ditemukan di dalam
+                            penjara dulu, Maurio Longa alias Rio (Abdurrahman Arif) hingga akhirnya bertemu dengan Ara
+                            (Clara Bernadeth).
+                        </span>
                         <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                     </p>
                 </div>
@@ -89,9 +100,9 @@
             <div class="btn-fungsional my-4">
                 <div class="text-white">
                     <ul class="d-flex p-0 justify-content-around" style="list-style: none">
-                        <li class="text-center">
+                        <li class="text-center favorit" id="disukai">
                             <i class="bi bi-heart"></i>
-                            <h6><small>Favorited</small></h6>
+                            <h6><small>Favorit</small></h6>
                         </li>
                         <li class="text-center" onclick="downloadVideo('downloadVideo', '')">
                             <div class="mx-auto"><i class="bi bi-download"></i></div>
@@ -321,7 +332,7 @@
                         <section class="relate" id="relate">
                             <div class="img-relate d-flex row g-2 pt-0" style="max-width: 100vw">
                                 <div class="col-4">
-                                    <img src="img/anim10.jpeg">
+                                    <img src="img/thumb-switchover.jpg">
                                 </div>
                                 <div class="col-4">
                                     <img src="img/anim11.jpg">
@@ -382,8 +393,9 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 justify-content-center p-0 pt-3">
-                    <input type="submit" class="text-white text-center border-0 btn-simpan py-2 rounded-3"
-                        style="width: 35%" data-bs-dismiss="modal" value="Laporkan" disabled>
+                    <input type="submit" id="laporbtn"
+                        class="text-white text-center border-0 btn-simpan py-2 rounded-3" style="width: 35%"
+                        data-bs-dismiss="modal" value="Laporkan" disabled>
                 </div>
             </div>
         </div>
@@ -394,26 +406,40 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    // Ambil elemen-elemen yang diperlukan
     const radioButtons = document.querySelectorAll('input[name="when"]');
     const submitButton = document.querySelector('.btn-simpan');
+    const lainnyaTextarea = document.getElementById('lainnyaTextarea');
+    const lainnyaInput = document.getElementById('lainnyaInput');
 
     // Tambahkan event listener untuk setiap radio button
     radioButtons.forEach(radio => {
         radio.addEventListener('change', function() {
-            // Cek apakah salah satu radio button terpilih
             const isAnyRadioSelected = [...radioButtons].some(radio => radio.checked);
 
-            // Aktifkan atau nonaktifkan tombol berdasarkan hasil cek
             submitButton.disabled = !isAnyRadioSelected;
 
-            // Tambah atau hapus kelas "active" untuk mengubah warna tombol
             if (isAnyRadioSelected) {
                 submitButton.classList.add('active');
             } else {
                 submitButton.classList.remove('active');
             }
+
+            // Jika radio button "Lainnya" dipilih, tampilkan textarea dan aktifkan tombol
+            if (radio.id === 'lainnya') {
+                lainnyaTextarea.classList.remove('hidden');
+                lainnyaInput.style.display = 'block';
+                submitButton.disabled = lainnyaInput.value.trim() ===
+                    ''; // Nonaktifkan tombol jika textarea kosong
+            } else {
+                lainnyaTextarea.classList.add('hidden');
+                lainnyaInput.style.display = 'none';
+            }
         });
+    });
+
+    // Tambahkan event listener untuk textarea
+    lainnyaInput.addEventListener('input', function() {
+        submitButton.disabled = lainnyaInput.value.trim() === ''; // Nonaktifkan tombol jika textarea kosong
     });
 </script>
 
@@ -503,12 +529,35 @@
     });
 </script>
 <script>
+    document.getElementById('disukai').addEventListener('click', function() {
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            text: "Laporan Terkirim",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    });
+
+
     document.getElementById('daftar').addEventListener('click', function() {
 
         Swal.fire({
             position: "center",
             icon: "success",
             text: "Berhasil Ditambahkan",
+            showConfirmButton: false,
+            timer: 2000
+        });
+    });
+
+    document.getElementById('laporbtn').addEventListener('click', function() {
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            text: "Laporan Terkirim",
             showConfirmButton: false,
             timer: 2000
         });

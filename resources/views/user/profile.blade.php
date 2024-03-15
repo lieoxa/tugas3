@@ -252,6 +252,11 @@
         aria-hidden="true">
         <div class="modal-dialog container">
             <div class="modal-content logout rounded-5">
+                <div class="img-lock">
+                    <div class="img-pw mx-auto d-flex">
+                        <img class="mx-auto" src="img/img-logout.png" style="max-width: 25%; max-height: 25%;">
+                    </div>
+                </div>
                 <div class="modal-header border-bottom-0 text-center d-block pb-0">
                     <h1 class="modal-title fs-5" id="logoutLabel">Anda Yakin Ingin Keluar?</h1>
                 </div>

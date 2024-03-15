@@ -127,4 +127,12 @@ class AuthController extends Controller
     {
         return view('user.pertaruhan');
     }
+    public function detailsrc()
+    {
+        return view('user.detailsrc');
+    }
+    public function jumanji()
+    {
+        return view('user.jumanji');
+    }
 }

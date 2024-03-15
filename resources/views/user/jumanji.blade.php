@@ -78,23 +78,22 @@
             </span> --}}
         </nav>
         <div class="full mb-3">
-            <img src="img/horror1.jpg" class="w-100 thumbnail-detail" alt="...">
+            <img src="img/comedy6.jpg" class="w-100 thumbnail-detail" alt="...">
             <div class="parent position-relative">
                 <div class="half mb-4 pt-5"
                     style="margin-top: -172px; padding-left: 12px; padding-right: 12px; padding-bottom: 0.49rem;">
                     <div class="title mb-2 d-flex justify-content-between">
-                        <h1 class="fw-bolder">Kisah Tanah Jawa</h1>
+                        <h1 class="fw-bolder">Jumanji: The Next Level</h1>
                     </div>
 
                     <div class="d-flex gap-2" style="font-size: 15px">
-                        <div class="tahun w-auto">2023</div>
-                        <div class="umur w-auto bg-secondary px-1">15+</div>
-                        <div class="durasi w-auto">1j 47m</div>
+                        <div class="tahun w-auto">2019</div>
+                        <div class="umur w-auto bg-secondary px-1">13+</div>
+                        <div class="durasi w-auto">2j 3m</div>
                     </div>
-                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">MD Pictures
-                        </p>
+                    <h6 class="d-flex" style="font-size:0.9rem">Perusahaan : <p class="ms-1">Columbia Pictures</p>
                     </h6>
-                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Awi Suryadi</p>
+                    <h6 class="mb-2 d-flex" style="font-size:0.9rem">Sutradara : <p class="ms-1">Jake Kasdan</p>
                     </h6>
                     <div class="btn-play">
                         <a href="#" id="myButton" onclick="playVideo()"
@@ -103,24 +102,25 @@
                                 class="bi bi-play-fill fs-1 my-auto"></i><span class="fs-5 fw-bold">Putar</span></a>
                     </div>
                     <div class="desk">
-                        <p> Dikisahkan Hao mempunyai kemampuan retrokognisi, yakni sebuah
-                            kemampuan supranatural dimana seseorang dapat melihat kejadian di masa lampau. Melalui
-                            kemampuan tersebut, Hao berupaya<span class="additional-text"> membantu Sari, seorang siswi
-                                SMK yang ternyata hilang
-                                diculik oleh sosok pocong berkepala gundul.
+                        <p> Kini, mereka berencana untuk bertemu selama liburan Natal. Tapi, Spencer merasa putus asa
+                            bahwa hidupnya tidak seglamour teman-temannya. Ia ingin
+                            merasa seperti avatarnya lagi di <span class="additional-text">
+                                dunia Jumanji, yakni Dr Smolder Bravestone.
 
-                                Bersama sahabatnya yang bernama Rida, mereka berhasil menjalankan misi penyelamatan
-                                siswi tersebut. Sejak kejadian itu makhluk itu menunjukkan amarahnya dengan memberikan
-                                sederetan terror yang mulai mengancam keselamatan Hao.
+                                Ia pun memutuskan masuk dunia permainan itu lagi. Teman-temannya pun terkejut menyadari
+                                bahwa dia memasuki permainan dan mengejarnya, karena Spencer pasti tidak bisa keluar
+                                sendiri.Sayangnya, kakek Spencer, Eddie dan temannya Milo, juga tersedot ke dalam
+                                permainan. Mereka harus menemui Alex Vreeke, pemain Jumanji yang sebelumnya terjebak
+                                dalam permainan selama 20 tahun sebelum mereka menyelamatkannya.
 
-                                Hao pun mencoba mengintip masa lalu dari Pocong Gundul tersebut menggunakan kemampuan
-                                supranaturalnya. Ternyata, Pocong Gundul dulunya merupakan sosok pengguna ilmu hitam
-                                bernama Walisdi. Dukun itu dikenal sebagai manusia jahat yang melancarkan berbagai
-                                ritual kuno yang membahayakan, sehingga membuatnya berakhir menjadi Pocong Gundul.
+                                Mereka makin terkejut mengetahui bahwa ada plot baru dalam game ini. Jumanji menderita
+                                kekeringan. Untuk meninggalkan permainan, mereka harus mengakhiri kekeringan dengan
+                                memulihkan kalung ajaib yang dikenal sebagai Falcon Heart, yang dicuri oleh panglima
+                                perang Jurgen the Brutal.
 
-                                Saat ini, apabila makhluk tersebut dibiarkan berkeliaran maka akan memakan lebih banyak
-                                korban jiwa. Oleh karena itu, Hao berinisiatif untuk menghentikan rencana jahat dari
-                                Pocong Gundul, meskipun harus bertaruh nyawa.</span>
+                                Mampukah mereka berjuang kembali menyelesaikan Jumanji dengan alur yang baru? Meskipun
+                                Eddie masuk dengan tak sengaja, akankah ia selamat dalam game ini?
+                            </span>
                             <span class="read-more-btn text-primary" onclick="toggleReadMore()">Selengkapnya...</span>
                         </p>
                     </div>
@@ -159,16 +159,16 @@
                         <section class="relate" id="relate">
                             <div class="img-relate d-flex row g-1" style="max-width: 100vw">
                                 <div class="col-4">
-                                    <img src="img/horror2.jpg">
+                                    <img src="img/comedy1.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/horror3.jpg">
+                                    <img src="img/comedy2.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/horror4.jpg">
+                                    <img src="img/comedy3.jpg">
                                 </div>
                                 <div class="col-4">
-                                    <img src="img/horror5.jpg">
+                                    <img src="img/comedy4.jpg">
                                 </div>
                             </div>
                         </section>

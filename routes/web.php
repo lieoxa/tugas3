@@ -44,6 +44,8 @@ Route::get('/iron3', [AuthController::class, 'iron3'])->name('iron3');
 Route::get('/century', [AuthController::class, 'century'])->name('century');
 Route::get('/jawa', [AuthController::class, 'jawa'])->name('jawa');
 Route::get('/pertaruhan', [AuthController::class, 'pertaruhan'])->name('pertaruhan');
+Route::get('/detailsrc', [AuthController::class, 'detailsrc'])->name('detailsrc');
+Route::get('/jumanji', [AuthController::class, 'jumanji'])->name('jumanji');
 Route::get('/podcast', [AuthController::class, 'podcast'])->name('podcast');
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
