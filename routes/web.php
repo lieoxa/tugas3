@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AccUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,4 +51,8 @@ Route::get('/podcast', [AuthController::class, 'podcast'])->name('podcast');
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 Route::get('/admin/product', [AdminController::class, 'product'])->name('product');
-Route::get('/admin/user', [AdminController::class, 'user'])->name('user');
+Route::get('/admin/film', [AdminController::class, 'film'])->name('film');
+Route::get('/admin/serial', [AdminController::class, 'serial'])->name('serial');
+Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('laporan');
+
+Route::resource('index', AccUserController::class);

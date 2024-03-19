@@ -2,60 +2,114 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="./index.html" class="text-nowrap logo-img">
-                <h1 class="logo-muviku">MUVIKU</h1>
-                {{-- <img src="{{ asset('admin') }}/dist/images/logos/dark-logo.svg" class="dark-logo" width="180"
-                    alt="" /> --}}
-                <img src="{{ asset('admin') }}/dist/images/logos/light-logo.svg" class="light-logo" width="180"
-                    alt="" />
-            </a>
+            <div class="mx-auto">
+                <a href="./index.html" class="text-nowrap logo-img">
+                    <img src="{{ asset('img') }}/muviku-dark.png" class="logo-muviku fw-bolder" width="180">
+                    {{-- <img src="{{ asset('admin') }}/dist/images/logos/dark-logo.svg" class="dark-logo" width="180"
+                        alt="" /> --}}
+                    {{-- <img src="{{ asset('admin') }}/dist/images/logos/light-logo.svg" class="light-logo" width="180"
+                        alt="" /> --}}
+                </a>
+            </div>
             <div class="close-btn d-lg-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                 <i class="ti ti-x fs-8 text-muted"></i>
             </div>
         </div>
         <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+        <nav class="sidebar-nav scroll-sidebar px-2" data-simplebar>
             <ul id="sidebarnav">
                 <!-- ============================= -->
                 <!-- Home -->
                 <!-- ============================= -->
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">Home</span>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-clipboard"></i>
+                        </span>
+                        <span class="hide-menu">Dashboard</span>
+                    </a>
                 </li>
                 <!-- =================== -->
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="admin/dashboard" aria-expanded="false">
+                    <a class="sidebar-link" href="../../index" aria-expanded="false">
                         <span>
-                            <i class="ti ti-aperture"></i>
+                            <i class="ti ti-users"></i>
                         </span>
-                        <span class="hide-menu">Modern</span>
+                        <span class="hide-menu">Akun User</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/film" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-movie"></i>
+                        </span>
+                        <span class="hide-menu">Film</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/serial" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-brand-youtube"></i>
+                        </span>
+                        <span class="hide-menu">Serial</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="admin/user" aria-expanded="false">
                         <span>
-                            <i class="ti ti-aperture"></i>
+                            <i class="ti ti-badge-ad"></i>
                         </span>
-                        <span class="hide-menu">User</span>
+                        <span class="hide-menu">Banner</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-photo-search"></i>
+                        </span>
+                        <span class="hide-menu">Rekom Search</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-trending-up"></i>
+                        </span>
+                        <span class="hide-menu">Trending Anime</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-chart-histogram"></i>
+                        </span>
+                        <span class="hide-menu">Banyak Ditonton</span>
+                    </a>
+                </li>
+                
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-photo-edit"></i>
+                        </span>
+                        <span class="hide-menu">Edit Bg Login</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/laporan" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-clipboard-text"></i>
+                        </span>
+                        <span class="hide-menu">Laporan</span>
                     </a>
                 </li>
 
             </ul>
-            <div class="unlimited-access hide-menu bg-light-primary position-relative my-7 rounded">
-                <div class="d-flex">
-                    <div class="unlimited-access-title">
-                        <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Unlimited Access</h6>
-                        <button class="btn btn-primary fs-2 fw-semibold lh-sm">Signup</button>
-                    </div>
-                    <div class="unlimited-access-img">
-                        <img src="{{ asset('admin') }}/dist/images/backgrounds/rocket.png" alt=""
-                            class="img-fluid">
-                    </div>
-                </div>
-            </div>
         </nav>
         <div class="fixed-profile p-3 bg-light-secondary rounded sidebar-ad mt-3">
             <div class="hstack gap-3">

@@ -13,7 +13,15 @@ class AdminController extends Controller
     public function product() {
         return view('admin.product.product');
     }
-    public function user() {
-        return view('admin.user.user');
+
+    
+    public function film() {
+        return view('admin.film.film');
+    }
+    public function serial () {
+        return view('admin.serial.serial');
+    }
+    public function laporan () {
+        return view('admin.laporan.laporan');
     }
 }
