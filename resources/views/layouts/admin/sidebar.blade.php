@@ -1,10 +1,10 @@
-<aside class="left-sidebar">
+<aside class="left-sidebar" style="width: 230px">
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
             <div class="mx-auto">
                 <a href="./index.html" class="text-nowrap logo-img">
-                    <img src="{{ asset('img') }}/muviku-dark.png" class="logo-muviku fw-bolder" width="180">
+                    <img src="{{ asset('img') }}/muviku-dark.png" class="logo-muviku fw-bolder" width="130">
                     {{-- <img src="{{ asset('admin') }}/dist/images/logos/dark-logo.svg" class="dark-logo" width="180"
                         alt="" /> --}}
                     {{-- <img src="{{ asset('admin') }}/dist/images/logos/light-logo.svg" class="light-logo" width="180"
@@ -36,7 +36,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="../../index" aria-expanded="false">
+                    <a class="sidebar-link" href="../../user" aria-expanded="false">
                         <span>
                             <i class="ti ti-users"></i>
                         </span>
@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
+                    <a class="sidebar-link" href="../admin/banner" aria-expanded="false">
                         <span>
                             <i class="ti ti-badge-ad"></i>
                         </span>

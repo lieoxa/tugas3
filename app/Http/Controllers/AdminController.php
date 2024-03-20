@@ -24,4 +24,8 @@ class AdminController extends Controller
     public function laporan () {
         return view('admin.laporan.laporan');
     }
+    public function banner ()
+    {
+        return view('admin.banner.banner');
+    }
 }

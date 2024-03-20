@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccUserController;
+use App\Http\Controllers\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,4 +56,6 @@ Route::get('/admin/film', [AdminController::class, 'film'])->name('film');
 Route::get('/admin/serial', [AdminController::class, 'serial'])->name('serial');
 Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('laporan');
 
-Route::resource('index', AccUserController::class);
+Route::resource('user', AccUserController::class);
+
+Route::resource('comingsoon', BannerController::class);

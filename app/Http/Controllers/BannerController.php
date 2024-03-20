@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AccUser;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
-class AccUserController extends Controller
+class BannerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index() 
     {
-        return view('admin.user.user')->with([
-            'users' => AccUser::all(),
+        return view('admin.banner.banner')->with([
+            'banner' => Banner::all(),
         ]);
+        // return view('admin.banner.banner-index');
     }
 
     /**
@@ -61,14 +62,7 @@ class AccUserController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
-    {   
+    {
         
-        
-        $useracc = AccUser::find($id);
-        $useracc->delete();
-    
-        return back()->with('success', 'Data Berhasil Di hapus');
-        // AccUser::destroy($id);
-        // return back('/admin/user');
     }
 }

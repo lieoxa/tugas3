@@ -3,9 +3,10 @@
 @section('styles')
     <link rel="shortcut icon" type="image/png" href="{{ asset('admin') }}/dist/images/logos/favicon.ico" />
     <!-- --------------------------------------------------- -->
-    <!-- Core Css -->
+
     <!-- --------------------------------------------------- -->
     <link id="themeColors" rel="stylesheet" href="{{ asset('admin') }}/dist/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @endsection
 
 @section('content')
@@ -35,7 +36,7 @@
         <div class="card card-body px-4 p-2 mb-0 rounded-bottom-0">
             <div class="row">
                 <div class="col-md-4 col-xl-3 my-auto">
-                    <h4 class="my-auto" style="font-size: 18px">Tabel Akun</h4>
+                    <h4 class="my-auto" style="font-size: 18px">Daftar Akun User</h4>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
                     <div class="action-btn show-btn" style="display: none">
@@ -56,8 +57,8 @@
             </div>
         </div>
         <!-- ---------------------
-                                end Contact
-                            ---------------- -->
+                                            end Contact
+                                        ---------------- -->
         <!-- Modal -->
         {{-- <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalTitle"
             aria-hidden="true">
@@ -112,7 +113,7 @@
             <div class="table-responsive">
                 <table class="table search-table align-middle text-nowrap">
                     <thead class="header-item">
-                        <th>
+                        {{-- <th>
                             <div class="n-chk align-self-center text-center">
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input primary" id="contact-check-all" />
@@ -120,16 +121,18 @@
                                     <span class="new-control-indicator"></span>
                                 </div>
                             </div>
-                        </th>
+                        </th> --}}
+                        <th>No.</th>
                         <th>Nama</th>
                         <th>Email</th>
                         <th>No. Tlpn</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        @foreach ($users as $item)
+                        @foreach ($users as $useracc)
                             <tr>
-                                <td>
+                                {{-- <td>
                                     <div class="n-chk align-self-center text-center">
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input contact-chkbox primary"
@@ -137,18 +140,34 @@
                                             <label class="form-check-label" for="checkbox1"></label>
                                         </div>
                                     </div>
+                                </td> --}}
+
+                                <td>{{ $useracc->id }}</td>
+                                <td class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ asset('admin') }}/dist/images/profile/user-1.jpg" alt="avatar"
+                                            class="rounded-circle" width="35" />
+                                    </div>
+                                    <div class="ms-2">
+                                        {{ $useracc->name }}
+                                    </div>
                                 </td>
-                                <td>{{ $item->name }}</td>
-                                <td>{{ $item->email }}</td>
-                                <td>{{ $item->nohp }}</td>
-                                <td>
-                                    <div class="action-btn">
-                                        <a href="{{ route('index.edit', $item->id) }}" class="text-info edit">
-                                            <i class="ti ti-edit fs-5"></i>
+                                <td>{{ $useracc->email }}</td>
+                                <td>{{ $useracc->nohp }}</td>
+                                <td>{{ $useracc->status }}</td>
+                                <td class="px-0">
+                                    {{-- <a href=""><i class="fa-solid fa-trash"></i></a> --}}
+                                    <div class="action-btn d-flex">
+                                        <form action="{{ route('user.destroy', $useracc->id) }}" method="POST">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="ms-0 btn btn-outline-danger ms-2">
+                                                <i class="ti ti-trash fs-5"></i>
+                                            </button>
+                                        </form>
+                                        <a href="" class="btn btn-danger ms-1">
+                                            <i class="bi bi-ban"></i>
                                         </a>
-                                        <button href="javascript:void(0)" class="text-dark delete ms-2 border-0 bg-transparent">
-                                            <i class="ti ti-trash text-danger fs-5"></i>
-                                        </button>
                                     </div>
                                 </td>
                             </tr>
