@@ -58,4 +58,4 @@ Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('laporan
 
 Route::resource('user', AccUserController::class);
 
-Route::resource('comingsoon', BannerController::class);
+Route::resource('banner', BannerController::class);

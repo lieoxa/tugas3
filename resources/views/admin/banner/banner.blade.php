@@ -12,7 +12,7 @@
 @section('content')
     <div class="widget-content searchable-container list">
         <!-- --------------------- start Contact ---------------- -->
-        <div class="card card-body px-4 p-2 mb-0 rounded-bottom-0">
+        <div class="card card-body px-4 p-2 mb-3">
             <div class="row">
                 <div class="col-md-4 col-xl-3 my-auto">
                     <h4 class="my-auto" style="font-size: 18px">Daftar Banner</h4>
@@ -29,18 +29,21 @@
                             placeholder="Cari User..." />
                         <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
                     </form> --}}
-                    <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-info d-flex align-items-center">Tambah
-                        Banner
+                    {{-- <a style="padding: 7px 16px 7px 10px;" href="{{ route('banner.create') }}" id="btn-add-contact"
+                        class="btn btn-info d-flex align-items-center"><i class="bi bi-plus fs-5"></i> Tambah
+                    </a> --}}
+                    <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-info d-flex align-items-center" style="padding: 7px 16px 7px 10px;">
+                        <i class="bi bi-plus fs-5"></i>Tambah
                     </a>
                 </div>
             </div>
         </div>
         <!-- ---------------------
-                                                                                        end Contact
-                                                                                    ---------------- -->
+                                                                                                            end Contact
+                                                                                                        ---------------- -->
         <!-- Modal -->
 
-        <div class="card card-body rounded-top-0">
+        <div class="card card-body">
             <div class="table-responsive">
                 <table class="table search-table align-middle text-nowrap">
                     <thead class="header-item">
@@ -53,28 +56,42 @@
                                 </div>
                             </div>
                         </th> --}}
-                        <th>No.</th>
+                        <th class="w-0">No.</th>
                         <th>Gambar</th>
-                        <th>Action</th>
+                        <th>Nama</th>
+                        <th>Lokasi</th>
+                        <th>Tgl. Film</th>
+                        <th>Jam Film</th>
+                        <th>Aksi</th>
                     </thead>
                     <tbody>
                         @foreach ($banner as $items)
-
-                        <td>{{ $items->id }}</td>
-                        <td>{{ $items->gambar }}</td>
-                        <td class="px-0">
-                            <div class="action-btn d-flex">
-                                <button href="javascript:void(0)" class="ms-0 btn btn-danger delete ms-2">
-                                    <i class="ti ti-trash fs-5"></i>
-                                </button>
-                                <a href="" class="btn btn-warning ms-1">
+                            <td class="w-0">{{ $items->id }}</td>
+                            <td><img src="{{ asset('imgdb/' . $items->gambar) }}" alt="" width="150"
+                                    height="75"></td>
+                            <td>{{ $items->nama }}</td>
+                            <td>{{ $items->lokasi }}</td>
+                            <td>{{ $items->tglfilm }}</td>
+                            <td>{{ $items->jamfilm }}</td>
+                            <td class="px-0">
+                                <div class="action-btn d-flex">
+                                    <form action="{{ route('banner.destroy', $items->id) }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="ms-0 btn btn-outline-danger ms-2">
+                                            <i class="ti ti-trash fs-5"></i>
+                                        </button>
+                                    </form>
+                                    <button type="button" class="btn btn-outline-warning ms-1"
+                                        style="padding: 0px 18px;"><i class="bi bi-pencil-square"></i></button>
+                                    {{-- <a href="" class="btn btn-warning ms-1">
                                     <i class="ti ti-edit"></i>
-                                </a>
-                            </div>
-                        </td>
-                        <tr>
-                            {{-- <td>{{ $banner->gambar }}</td> --}}
-                        {{-- </tr>
+                                </a> --}}
+                                </div>
+                            </td>
+                            <tr>
+                                {{-- <td>{{ $banner->gambar }}</td> --}}
+                                {{-- </tr>
                         <!-- start row -->
                         <tr class="search-items">
                             <td>
@@ -138,6 +155,70 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form action="{{ route('banner.store') }}" class="row" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center">
+                        <h5 class="modal-title">Contact</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-contact-box">
+                            <div class="add-contact-content">
+                                <form id="addContactModalTitle">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-name">
+                                                <input name="gambar" id="gambar" type="file" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-email">
+                                                <input name="nama" id="nama" type="text" class="form-control"
+                                                    placeholder="Ketik...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-occupation">
+                                                <select name="lokasi" class="form-select mr-sm-2"
+                                                    id="inlineFormCustomSelect">
+                                                    <option selected>Pilih...</option>
+                                                    <option value="Utama">Utama</option>
+                                                    <option value="Search">Search</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-phone">
+                                                <input name="tglfilm" id="tglfilm" type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-3 contact-location">
+                                                <input name="jamfilm" id="jamfilm" type="time" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-add" class="btn btn-success rounded-pill px-4">Tambah</button>
+                        {{-- <button id="btn-edit" class="btn btn-success rounded-pill px-4">Save</button>
+                    <button class="btn btn-danger rounded-pill px-4" data-bs-dismiss="modal"> Discard </button> --}}
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 @endsection

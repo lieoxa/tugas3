@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="../admin/banner" aria-expanded="false">
+                    <a class="sidebar-link" href="../../banner" aria-expanded="false">
                         <span>
                             <i class="ti ti-badge-ad"></i>
                         </span>

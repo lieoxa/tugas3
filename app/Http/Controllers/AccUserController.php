@@ -62,8 +62,6 @@ class AccUserController extends Controller
      */
     public function destroy(string $id)
     {   
-        
-        
         $useracc = AccUser::find($id);
         $useracc->delete();
     

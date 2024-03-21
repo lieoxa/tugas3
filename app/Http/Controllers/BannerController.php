@@ -10,7 +10,7 @@ class BannerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() 
+    public function index()
     {
         return view('admin.banner.banner')->with([
             'banner' => Banner::all(),
@@ -23,7 +23,8 @@ class BannerController extends Controller
      */
     public function create()
     {
-        //
+        $banner = Banner::all();
+        return view('admin.banner.create', ['banner' => $banner]);
     }
 
     /**
@@ -31,7 +32,28 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'gambar' => 'required',
+            'nama' => 'required',
+            'lokasi' => 'required',
+            'tglfilm' => 'required',
+            'jamfilm' => 'required',
+        ]);
+
+        $gambarBarang = $request->file('gambar');
+        $namaFile = time().'.'.$gambarBarang->getClientOriginalExtension();
+        $gambarBarang->move(public_path('imgdb'), $namaFile);
+
+        $banner = new Banner;
+        $banner->gambar = $namaFile;
+        $banner->nama = $request->nama;
+        $banner->lokasi = $request->lokasi;
+        $banner->tglfilm = $request->tglfilm;
+        $banner->jamfilm = $request->jamfilm;
+
+        $banner->save();
+
+        return redirect()->route('banner.index')->with('success', 'Banner berhasil ditambahkan.');
     }
 
     /**
@@ -47,7 +69,7 @@ class BannerController extends Controller
      */
     public function edit(string $id)
     {
-        
+        //
     }
 
     /**
@@ -55,7 +77,7 @@ class BannerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-
+        //
     }
 
     /**
@@ -63,6 +85,9 @@ class BannerController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        $banner = Banner::find($id);
+        $banner->delete();
+
+        return back()->with('success', 'Data Berhasil Di hapus');
     }
 }

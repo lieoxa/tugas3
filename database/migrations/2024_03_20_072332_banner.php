@@ -11,7 +11,10 @@ return new class extends Migration
         Schema::create('banner', function (Blueprint $table) {
             $table->id();
             $table->string('gambar');
-            // $table->string('password_confirmation');
+            $table->string('nama');
+            $table->string('lokasi');
+            $table->string('tglfilm');
+            $table->string('jamfilm');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -165,8 +165,8 @@
                                                 <i class="ti ti-trash fs-5"></i>
                                             </button>
                                         </form>
-                                        <a href="" class="btn btn-danger ms-1">
-                                            <i class="bi bi-ban"></i>
+                                        <a href="" class="btn btn-danger ms-1" style="padding: 7px 18px">
+                                            <i class="bi bi-ban align-items-center"></i>
                                         </a>
                                     </div>
                                 </td>
