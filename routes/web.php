@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
@@ -59,3 +60,5 @@ Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('laporan
 Route::resource('user', AccUserController::class);
 
 Route::resource('banner', BannerController::class);
+
+Route::resource('laporan', LaporanController::class);

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('lokasi');
             $table->string('tglfilm');
             $table->string('jamfilm');
+            $table->string('status');
             $table->rememberToken();
             $table->timestamps();
         });

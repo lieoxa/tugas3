@@ -101,11 +101,19 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/laporan" aria-expanded="false">
+                    <a class="sidebar-link" href="../../laporan" aria-expanded="false">
                         <span>
                             <i class="ti ti-clipboard-text"></i>
                         </span>
                         <span class="hide-menu">Laporan</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/kategori" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-square-plus"></i>
+                        </span>
+                        <span class="hide-menu">Tambah Kategori</span>
                     </a>
                 </li>
 

@@ -32,15 +32,16 @@
                     {{-- <a style="padding: 7px 16px 7px 10px;" href="{{ route('banner.create') }}" id="btn-add-contact"
                         class="btn btn-info d-flex align-items-center"><i class="bi bi-plus fs-5"></i> Tambah
                     </a> --}}
-                    <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-info d-flex align-items-center" style="padding: 7px 16px 7px 10px;">
+                    <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-warning d-flex align-items-center"
+                        style="padding: 7px 16px 7px 10px;">
                         <i class="bi bi-plus fs-5"></i>Tambah
                     </a>
                 </div>
             </div>
         </div>
         <!-- ---------------------
-                                                                                                            end Contact
-                                                                                                        ---------------- -->
+                                                                                                                            end Contact
+                                                                                                                        ---------------- -->
         <!-- Modal -->
 
         <div class="card card-body">
@@ -62,109 +63,141 @@
                         <th>Lokasi</th>
                         <th>Tgl. Film</th>
                         <th>Jam Film</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                     </thead>
                     <tbody>
                         @foreach ($banner as $items)
-                            <td class="w-0">{{ $items->id }}</td>
-                            <td><img src="{{ asset('imgdb/' . $items->gambar) }}" alt="" width="150"
-                                    height="75"></td>
-                            <td>{{ $items->nama }}</td>
-                            <td>{{ $items->lokasi }}</td>
-                            <td>{{ $items->tglfilm }}</td>
-                            <td>{{ $items->jamfilm }}</td>
-                            <td class="px-0">
-                                <div class="action-btn d-flex">
-                                    <form action="{{ route('banner.destroy', $items->id) }}" method="POST">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="ms-0 btn btn-outline-danger ms-2">
-                                            <i class="ti ti-trash fs-5"></i>
-                                        </button>
-                                    </form>
-                                    <button type="button" class="btn btn-outline-warning ms-1"
-                                        style="padding: 0px 18px;"><i class="bi bi-pencil-square"></i></button>
-                                    {{-- <a href="" class="btn btn-warning ms-1">
-                                    <i class="ti ti-edit"></i>
-                                </a> --}}
-                                </div>
-                            </td>
                             <tr>
-                                {{-- <td>{{ $banner->gambar }}</td> --}}
-                                {{-- </tr>
-                        <!-- start row -->
-                        <tr class="search-items">
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('img') }}/cs.jpg" alt="avatar" class="rounded" width="130" />
-                                </div>
-                            </td>
-                            <td class="px-0">
-                                <div class="action-btn d-flex">
-                                    <button href="javascript:void(0)" class="ms-0 btn btn-danger delete ms-2">
-                                        <i class="ti ti-trash fs-5"></i>
-                                    </button>
-                                    <a href="" class="btn btn-warning ms-1">
-                                        <i class="ti ti-edit"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="search-items">
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('img') }}/cs1.jpg" alt="avatar" class="rounded" width="130" />
-                                </div>
-                            </td>
-                            <td class="px-0">
-                                <div class="action-btn d-flex">
-                                    <button href="javascript:void(0)" class="ms-0 btn btn-danger delete ms-2">
-                                        <i class="ti ti-trash fs-5"></i>
-                                    </button>
-                                    <a href="" class="btn btn-warning ms-1">
-                                        <i class="ti ti-edit"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="search-items">
-                            <td>3</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('img') }}/cs2.jpg" alt="avatar" class="rounded" width="130" />
-                                </div>
-                            </td>
-                            <td class="px-0">
-                                <div class="action-btn d-flex">
-                                    <button href="javascript:void(0)" class="ms-0 btn btn-danger delete ms-2">
-                                        <i class="ti ti-trash fs-5"></i>
-                                    </button>
-                                    <a href="" class="btn btn-warning ms-1">
-                                        <i class="ti ti-edit"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr> --}}
+                                <td class="w-0">{{ $items->id }}</td>
+                                <td><img src="{{ asset('imgdb/' . $items->gambar) }}" alt="" width="120"
+                                        height="60" class="rounded"></td>
+                                <td>{{ $items->nama }}</td>
+                                <td>{{ $items->lokasi }}</td>
+                                <td>{{ $items->tglfilm }}</td>
+                                <td>{{ $items->jamfilm }}</td>
+                                <td>{{ $items->status }}</td>
+                                <td class="px-0">
+                                    <div class="action-btn d-flex">
+                                        <form action="{{ route('banner.destroy', $items->id) }}" method="POST">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="ms-0 btn btn-outline-danger ms-2">
+                                                <i class="ti ti-trash fs-5"></i>
+                                            </button>
+                                        </form>
+                                        <button type="button" class="btn btn-outline-warning ms-1"
+                                            style="padding: 0px 18px;" data-bs-toggle="modal" data-bs-target="#edit"><i
+                                                class="bi bi-pencil-square"></i></button>
+                                    </div>
+                                    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header d-flex align-items-center">
+                                                    <h5 class="modal-title">Tambah Banner</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <form action="{{ route('banner.update', $items->id) }}" class="row"
+                                                    method="POST">
+                                                    @csrf
+                                                    <div class="modal-body">
+                                                        <div class="add-contact-box">
+                                                            <div class="add-contact-content">
+                                                                <form id="addContactModalTitle">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-name">
+                                                                                <label for="">
+                                                                                    <h6>Gambar</h6>
+                                                                                </label>
+                                                                                <input name="gambar" id="gambar"
+                                                                                    type="file"
+                                                                                    value="{{ $items->gambar }}"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-email">
+                                                                                <label for="">
+                                                                                    <h6>Nama</h6>
+                                                                                </label>
+                                                                                <input name="nama" id="nama"
+                                                                                    type="text" class="form-control"
+                                                                                    value="{{ $items->nama }}"
+                                                                                    placeholder="Ketik...">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-phone">
+                                                                                <label for="">
+                                                                                    <h6>Tanggal Film</h6>
+                                                                                </label>
+                                                                                <input name="tglfilm" id="tglfilm"
+                                                                                    type="date" class="form-control"
+                                                                                    value="{{ $items->tglfilm }}">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-location">
+                                                                                <label for="">
+                                                                                    <h6>Jam Film</h6>
+                                                                                </label>
+                                                                                <input name="jamfilm" id="jamfilm"
+                                                                                    type="time" class="form-control"
+                                                                                    value="{{ $items->jamfilm }}">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="mb-3 contact-occupation">
+                                                                                <label for="">
+                                                                                    <h6>Lokasi</h6>
+                                                                                </label>
+                                                                                <select name="lokasi"
+                                                                                    class="form-select mr-sm-2"
+                                                                                    id="inlineFormCustomSelect">
+                                                                                    <option selected>Pilih...</option>
+                                                                                    <option value="Utama"
+                                                                                        {{ $items->lokasi == 'Utama' ? 'selected' : '' }}>
+                                                                                        Utama</option>
+                                                                                    <option value="Search"
+                                                                                        {{ $items->lokasi == 'Search' ? 'selected' : '' }}>
+                                                                                        Search</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button id="btn-add"
+                                                            class="btn btn-warning rounded-3 px-4">Simpan</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalTitle"
-        aria-hidden="true">
+    <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <form action="{{ route('banner.store') }}" class="row" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header d-flex align-items-center">
-                        <h5 class="modal-title">Contact</h5>
+                        <h5 class="modal-title">Tambah Banner</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -174,11 +207,18 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mb-3 contact-name">
-                                                <input name="gambar" id="gambar" type="file" class="form-control">
+                                                <label for="">
+                                                    <h6>Gambar</h6>
+                                                </label>
+                                                <input name="gambar" id="gambar" type="file"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3 contact-email">
+                                                <label for="">
+                                                    <h6>Nama</h6>
+                                                </label>
                                                 <input name="nama" id="nama" type="text" class="form-control"
                                                     placeholder="Ketik...">
                                             </div>
@@ -186,7 +226,30 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <div class="mb-3 contact-phone">
+                                                <label for="">
+                                                    <h6>Tanggal Film</h6>
+                                                </label>
+                                                <input name="tglfilm" id="tglfilm" type="date"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-location">
+                                                <label for="">
+                                                    <h6>Jam Film</h6>
+                                                </label>
+                                                <input name="jamfilm" id="jamfilm" type="time"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="mb-3 contact-occupation">
+                                                <label for="">
+                                                    <h6>Lokasi</h6>
+                                                </label>
                                                 <select name="lokasi" class="form-select mr-sm-2"
                                                     id="inlineFormCustomSelect">
                                                     <option selected>Pilih...</option>
@@ -195,25 +258,13 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3 contact-phone">
-                                                <input name="tglfilm" id="tglfilm" type="date" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="mb-3 contact-location">
-                                                <input name="jamfilm" id="jamfilm" type="time" class="form-control">
-                                            </div>
-                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn-add" class="btn btn-success rounded-pill px-4">Tambah</button>
+                        <button id="btn-add" class="btn btn-warning rounded-3 px-4">Tambah</button>
                         {{-- <button id="btn-edit" class="btn btn-success rounded-pill px-4">Save</button>
                     <button class="btn btn-danger rounded-pill px-4" data-bs-dismiss="modal"> Discard </button> --}}
                     </div>

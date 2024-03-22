@@ -38,6 +38,7 @@ class BannerController extends Controller
             'lokasi' => 'required',
             'tglfilm' => 'required',
             'jamfilm' => 'required',
+            'status' => 'required',
         ]);
 
         $gambarBarang = $request->file('gambar');
@@ -50,6 +51,7 @@ class BannerController extends Controller
         $banner->lokasi = $request->lokasi;
         $banner->tglfilm = $request->tglfilm;
         $banner->jamfilm = $request->jamfilm;
+        $banner->status = $request->status;
 
         $banner->save();
 
@@ -69,7 +71,9 @@ class BannerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('banner.edit')->with([
+            'banner' => Banner::find($id),
+        ]);
     }
 
     /**
@@ -77,7 +81,30 @@ class BannerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'gambar' => 'required',
+            'nama' => 'required',
+            'lokasi' => 'required',
+            'tglfilm' => 'required',
+            'jamfilm' => 'required',
+            'status' => 'required',
+        ]);
+
+        $gambarBarang = $request->file('gambar');
+        $namaFile = time().'.'.$gambarBarang->getClientOriginalExtension();
+        $gambarBarang->move(public_path('imgdb'), $namaFile);
+
+        $banner = Banner::find($id);
+        $banner->gambar = $namaFile;
+        $banner->nama = $request->nama;
+        $banner->lokasi = $request->lokasi;
+        $banner->tglfilm = $request->tglfilm;
+        $banner->jamfilm = $request->jamfilm;
+        $banner->status = $request->status;
+
+        $banner->save();
+
+        return redirect()->route('banner.index')->with('success', 'Banner berhasil ditambahkan.');
     }
 
     /**
