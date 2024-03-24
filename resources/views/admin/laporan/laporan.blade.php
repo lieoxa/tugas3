@@ -43,7 +43,10 @@
                     <div class="card card-body">
                         <span class="side-stick"></span>
                         <div class="d-flex justify-content-between mb-2">
-                            <p class="note-date my-auto fs-2">{{ $items->nama }}</p>
+                            <div class="div">
+                                <p class="note-date my-auto fs-2">{{ $items->nama }}</p>
+                            <h6>{{ $items->judul }}</h6>
+                            </div>
                             <form action="{{ route('laporan.destroy', $items->id) }}" method="POST">
                                 @csrf
                                 @method('delete')

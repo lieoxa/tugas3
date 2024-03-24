@@ -7,6 +7,7 @@
     <!-- Core Css -->
     <!-- --------------------------------------------------- -->
     <link id="themeColors" rel="stylesheet" href="{{ asset('admin') }}/dist/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .columns .columns-right .btn-group .float-right {
             display: none;
@@ -27,17 +28,6 @@
                     <h4 class="my-auto" style="font-size: 18px">Daftar Film</h4>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                    {{-- <div class="action-btn show-btn" style="display: none">
-                        <a href="javascript:void(0)"
-                            class="delete-multiple btn-light-danger btn me-2 text-danger d-flex align-items-center font-medium">
-                            <i class="ti ti-trash text-danger text-danger me-1 fs-5"></i> Hapus Semua Akun
-                        </a>
-                    </div> --}}
-                    {{-- <form class="position-relative">
-                        <input type="text" class="form-control product-search ps-5" id="input-search"
-                            placeholder="Cari User..." />
-                        <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
-                    </form> --}}
                 </div>
             </div>
         </div>

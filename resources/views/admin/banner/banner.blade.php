@@ -90,13 +90,11 @@
                                             style="padding: 0px 18px;" data-bs-toggle="modal" data-bs-target="#edit"><i
                                                 class="bi bi-pencil-square"></i></button>
                                     </div>
-                                    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal fade" id="edit" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
+                                            <div class="modal-content px-3">
                                                 <div class="modal-header d-flex align-items-center">
                                                     <h5 class="modal-title">Tambah Banner</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
                                                 </div>
                                                 <form action="{{ route('banner.update', $items->id) }}" class="row"
                                                     method="POST">
@@ -152,7 +150,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <div class="col-md-12">
+                                                                        <div class="col-md-6">
                                                                             <div class="mb-3 contact-occupation">
                                                                                 <label for="">
                                                                                     <h6>Lokasi</h6>
@@ -170,14 +168,33 @@
                                                                                 </select>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-occupation">
+                                                                                <label for="">
+                                                                                    <h6>Status</h6>
+                                                                                </label>
+                                                                                <select name="status"
+                                                                                    class="form-select mr-sm-2"
+                                                                                    id="status">
+                                                                                    <option selected>Pilih...</option>
+                                                                                    <option value="Publish"
+                                                                                        {{ $items->status == 'Publish' ? 'selected' : '' }}>
+                                                                                        Publish</option>
+                                                                                    <option value="Unpublish"
+                                                                                        {{ $items->status == 'Unpublish' ? 'selected' : '' }}>
+                                                                                        Unpublish</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </form>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
+                                                        <button class="btn btn-danger rounded-2 px-3" data-bs-dismiss="modal" aria-label="Close">Batal</button>
                                                         <button id="btn-add"
-                                                            class="btn btn-warning rounded-3 px-4">Simpan</button>
+                                                            class="btn btn-warning rounded-2 px-3">Simpan</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -191,14 +208,13 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="addContactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <form action="{{ route('banner.store') }}" class="row" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="modal-content">
+                <div class="modal-content px-2">
                     <div class="modal-header d-flex align-items-center">
                         <h5 class="modal-title">Tambah Banner</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="add-contact-box">
@@ -245,16 +261,29 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="mb-3 contact-occupation">
                                                 <label for="">
                                                     <h6>Lokasi</h6>
                                                 </label>
                                                 <select name="lokasi" class="form-select mr-sm-2"
-                                                    id="inlineFormCustomSelect">
+                                                    id="lokasi">
                                                     <option selected>Pilih...</option>
                                                     <option value="Utama">Utama</option>
                                                     <option value="Search">Search</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 contact-occupation">
+                                                <label for="">
+                                                    <h6>Status</h6>
+                                                </label>
+                                                <select name="status" class="form-select mr-sm-2"
+                                                    id="status">
+                                                    <option selected>Pilih...</option>
+                                                    <option value="Publish">Publish</option>
+                                                    <option value="Unpublish">Unpublish</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -264,9 +293,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn-add" class="btn btn-warning rounded-3 px-4">Tambah</button>
-                        {{-- <button id="btn-edit" class="btn btn-success rounded-pill px-4">Save</button>
-                    <button class="btn btn-danger rounded-pill px-4" data-bs-dismiss="modal"> Discard </button> --}}
+                        <button class="btn btn-danger rounded-2 px-3" data-bs-dismiss="modal">Batal</button>
+                        <button id="btn-add" class="btn btn-warning rounded-2 px-3">Tambah</button>
                     </div>
                 </div>
             </form>
