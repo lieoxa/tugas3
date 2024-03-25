@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccUserController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\FilmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,5 @@ Route::resource('user', AccUserController::class);
 Route::resource('banner', BannerController::class);
 
 Route::resource('laporan', LaporanController::class);
+
+Route::resource('film', FilmController::class);

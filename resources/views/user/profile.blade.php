@@ -125,7 +125,7 @@
                 <div class="modal-body container py-0">
                     <div class="image-profil">
                         <div class="img-profil">
-                            <img class="mx-auto mt-3" id="preview" src="#" alt="Preview"
+                            <img class="mx-auto mt-3" id="preview" src="#" alt="Preview" height="100" width="100"
                                 style="display: none;max-width: 100px; max-height: 100px; border-radius: 999px;" />
                         </div>
                     </div>

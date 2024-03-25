@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('Sutradara');
             $table->string('Deskripsi');
             $table->string('Kategori');
+            $table->string('Status');
             $table->timestamps();
         });
     }

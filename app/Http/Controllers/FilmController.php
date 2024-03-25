@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Film;
 use Illuminate\Http\Request;
 
 class FilmController extends Controller
@@ -11,7 +12,9 @@ class FilmController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.film.film')->with([
+            'films' => Film::all(),
+        ]);
     }
 
     /**
@@ -19,7 +22,8 @@ class FilmController extends Controller
      */
     public function create()
     {
-        //
+        $films = Film::all();
+        return view('admin.film.create', ['films' => $films]);
     }
 
     /**
@@ -27,7 +31,30 @@ class FilmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'thumbnail' => 'required',
+            'nama' => 'required',
+            'lokasi' => 'required',
+            'tglfilm' => 'required',
+            'jamfilm' => 'required',
+            'status' => 'required',
+        ]);
+
+        $thumbnail = $request->file('thumbnail');
+        $namaFile = time() . '.' . $thumbnail->getClientOriginalExtension();
+        $thumbnail->move(public_path('imgdb'), $namaFile);
+
+        $film = new Film;
+        $film->thumbnail = $namaFile;
+        $film->nama = $request->nama;
+        $film->lokasi = $request->lokasi;
+        $film->tglfilm = $request->tglfilm;
+        $film->jamfilm = $request->jamfilm;
+        $film->status = $request->status;
+
+        $film->save();
+
+        return redirect()->route('film.index')->with('success', 'Film berhasil ditambahkan.');
     }
 
     /**

@@ -15,10 +15,20 @@
     <!--  Favicon -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('admin') }}/dist/images/logos/logo-muviku.png" />
     <!-- Owl Carousel  -->
+
+    <style>
+
+      * {
+        font-family: 'Ubuntu';
+      }
+    </style>
+
     <link rel="stylesheet" href="{{ asset('admin') }}/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css">
     
     <!-- Core Css -->
     <link  id="themeColors"  rel="stylesheet" href="{{ asset('admin') }}/dist/css/style.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <script src="//unpkg.com/alpinejs" defer></script>
     @yield('styles')
   </head>
   <body>
