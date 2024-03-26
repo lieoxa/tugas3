@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccUserController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\FilmController;
 
 /*

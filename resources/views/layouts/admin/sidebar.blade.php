@@ -36,7 +36,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="../../user" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('user.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-users"></i>
                         </span>
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/film" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('film.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-movie"></i>
                         </span>
@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="../../banner" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('banner.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-badge-ad"></i>
                         </span>
@@ -101,7 +101,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="../../laporan" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('laporan.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-clipboard-text"></i>
                         </span>

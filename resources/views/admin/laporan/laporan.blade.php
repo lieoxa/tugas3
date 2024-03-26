@@ -33,7 +33,7 @@
     </div> --}}
     <ul class="nav nav-pills p-3 mb-3 rounded align-items-center card flex-row px-4">
         <div class="my-auto">
-            <h4 class="card-title mb-0">Tabel Laporan</h4>
+            <h4 class="card-title mb-0 fw-bolder">Tabel Laporan</h4>
         </div>
     </ul>
     <div class="tab-content">

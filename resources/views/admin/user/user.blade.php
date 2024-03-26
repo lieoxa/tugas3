@@ -15,7 +15,7 @@
         <div class="card card-body px-4 p-2 mb-0 rounded-bottom-0">
             <div class="row">
                 <div class="col-md-4 col-xl-3 my-auto">
-                    <h4 class="my-auto" style="font-size: 18px">Daftar Akun User</h4>
+                    <h4 class="my-auto fw-bolder" style="font-size: 18px">Daftar Akun User</h4>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
                     <div class="action-btn show-btn" style="display: none">

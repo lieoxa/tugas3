@@ -32,24 +32,35 @@ class FilmController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'judul' => 'required',
+            'tahun' => 'required',
+            'usia' => 'required',
+            'durasi' => 'required',
+            'perusahaan' => 'required',
+            'sutradara' => 'required',
+            'deskripsi' => 'required',
+            'kategori' => 'required',
             'thumbnail' => 'required',
-            'nama' => 'required',
-            'lokasi' => 'required',
-            'tglfilm' => 'required',
-            'jamfilm' => 'required',
+            'video' => 'required',
             'status' => 'required',
         ]);
 
         $thumbnail = $request->file('thumbnail');
-        $namaFile = time() . '.' . $thumbnail->getClientOriginalExtension();
-        $thumbnail->move(public_path('imgdb'), $namaFile);
+        $imgFile = time() . '.' . $thumbnail->getClientOriginalExtension();
+        $thumbnail->move(public_path('imgdb'), $imgFile);
+        
 
         $film = new Film;
-        $film->thumbnail = $namaFile;
-        $film->nama = $request->nama;
-        $film->lokasi = $request->lokasi;
-        $film->tglfilm = $request->tglfilm;
-        $film->jamfilm = $request->jamfilm;
+        $film->thumbnail = $imgFile;
+        $film->video = $request->video;
+        $film->judul = $request->judul;
+        $film->tahun = $request->tahun;
+        $film->usia = $request->usia;
+        $film->durasi = $request->durasi;
+        $film->perusahaan = $request->perusahaan;
+        $film->sutradara = $request->sutradara;
+        $film->deskripsi = $request->deskripsi;
+        $film->kategori = $request->kategori;
         $film->status = $request->status;
 
         $film->save();
@@ -86,6 +97,9 @@ class FilmController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $film = Film::find($id);
+        $film->delete();
+
+        return back()->with('success', 'Data Berhasil Di hapus');
     }
 }

@@ -5,7 +5,6 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
     <!-- --------------------------------------------------- -->
     <style>
-
         * {
             font-family: 'Ubuntu';
         }
@@ -65,8 +64,8 @@
             </div>
         </div>
         <!-- ---------------------
-                end Contact
-                ---------------- -->
+                    end Contact
+                    ---------------- -->
         <!-- Modal -->
 
         <div class="card card-body">
@@ -85,7 +84,7 @@
                         <th class="w-0">No.</th>
                         <th>Gambar</th>
                         <th>Nama</th>
-                        <th>Lokasi</th>
+                        <th>Lokasi Banner</th>
                         <th>Tgl. Film</th>
                         <th>Jam Film</th>
                         <th>Status</th>
@@ -137,7 +136,7 @@
                                                                         <div class="col-md-6">
                                                                             <div class="mb-3 contact-email">
                                                                                 <label for="">
-                                                                                    <h6>Nama <span
+                                                                                    <h6>Nama Film<span
                                                                                             class="text-danger">*</span>
                                                                                     </h6>
                                                                                 </label>
@@ -181,7 +180,7 @@
                                                                         <div class="col-md-6">
                                                                             <div class="mb-3 contact-occupation">
                                                                                 <label for="">
-                                                                                    <h6>Status <span
+                                                                                    <h6>Status<span
                                                                                             class="text-danger">*</span>
                                                                                     </h6>
                                                                                 </label>
@@ -203,7 +202,7 @@
                                                                         <div class="col-md-6">
                                                                             <div class="mb-3 contact-name">
                                                                                 <label for="">
-                                                                                    <h6>Gambar <span
+                                                                                    <h6>Gambar Film<span
                                                                                             class="text-danger">*</span>
                                                                                     </h6>
                                                                                 </label>
@@ -215,7 +214,7 @@
                                                                         <div class="col-md-6">
                                                                             <div class="mb-3 contact-occupation">
                                                                                 <label for="">
-                                                                                    <h6>Lokasi <span
+                                                                                    <h6>Lokasi Banner<span
                                                                                             class="text-danger">*</span>
                                                                                     </h6>
                                                                                 </label>
@@ -239,9 +238,9 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button class="btn rounded-2 px-3" data-bs-dismiss="modal"
-                                                            aria-label="Close"
                                                             style="background: #838383; color: white;">Batal</button>
-                                                        <button class="btn btn-warning rounded-2 px-3">Simpan</button>
+                                                        <button type="submit"
+                                                            class="btn btn-warning rounded-2 px-3" style="background: #838383; color: #white;">Simpan</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -325,7 +324,7 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3 contact-occupation">
                                                     <label for="">
-                                                        <h6>Lokasi <span class="text-danger">*</span></h6>
+                                                        <h6>Lokasi Banner<span class="text-danger">*</span></h6>
                                                     </label>
                                                     <select name="lokasi" class="form-select mr-sm-2" x-model="lokasi"
                                                         id="lokasi">
@@ -350,7 +349,7 @@
                             data-bs-dismiss="modal">Batal</button> --}}
                         <button type="button" class="btn rounded-2 px-3" style="background: #838383; color: white;"
                             data-bs-dismiss="modal">Batal</button>
-                        <button type="submit" id="btn-add" class="btn btn-warning rounded-2 px-3"
+                        <button type="submit" id="btn-add" class="btn rounded-2 px-3" style="background: #838383; color: #white;"
                             :class="nama && tglfilm && gambar && jamfilm && status && lokasi ? null : 'disabled'">Tambah</button>
                     </div>
                 </div>
