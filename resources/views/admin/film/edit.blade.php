@@ -22,7 +22,7 @@
         <div class="card card-body px-4 p-2 mb-3">
             <div class="row">
                 <div class="col-md-4 col-xl-3 my-auto">
-                    <h4 class="my-auto fw-bolder" style="font-size: 18px">Tambah Film</h4>
+                    <h4 class="my-auto fw-bolder" style="font-size: 18px">Edit   Film</h4>
                 </div>
                 <div class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
                     <a href="{{ route('film.index') }}" class="btn btn-warning d-flex align-items-center"
@@ -32,20 +32,19 @@
                 </div>
             </div>
         </div>
-        <!-- ---------------------
-                                                        end Contact
-                                                    ---------------- -->
-        <!-- Modal -->
-        <form action="{{ route('film.store') }}" method="POST" enctype="multipart/form-data">
+    
+        
+        <form action="{{ route('film.update', $films->id) }}" method="POST">
             @csrf
+            @method('put')
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Judul<span class="text-danger">*</span></label>
-                    <input type="text" name="judul" class="form-control" placeholder="Ketik di sini...">
+                    <input type="text" name="judul" class="form-control" value="{{ $films->judul }}" placeholder="Ketik di sini...">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Tahun Release<span class="text-danger">*</span></label>
-                    <input type="number" name="tahun" min="1000" max="3000" step="1" value="" class="d-block form-control">
+                    <input type="number" name="tahun" min="1000" max="3000" step="1" value="{{ $films->tahun }}" class="d-block form-control">
                 </div>
             </div>
             <div class="row mb-3">
@@ -53,25 +52,25 @@
                     <label class="form-label">Rating Usia<span class="text-danger">*</span></label>
                     <select name="usia" class="form-select mr-sm-2">
                         <option value="">Pilih...</option>
-                        <option value="SU">SU</option>
-                        <option value="13+">13+</option>
-                        <option value="17+">17+</option>
-                        <option value="21+">21+</option>
+                        <option value="SU" {{ $films->usia == 'SU' ? 'selected' : '' }}>SU</option>
+                        <option value="13+" {{ $films->usia == '13+' ? 'selected' : '' }}>13+</option>
+                        <option value="17+" {{ $films->usia == '17+' ? 'selected' : '' }}>17+</option>
+                        <option value="21+" {{ $films->usia == '21+' ? 'selected' : '' }}>21+</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Durasi FIlm<span class="text-danger">*</span></label>
-                    <input type="time" name="durasi" class="form-control">
+                    <input type="time" name="durasi" class="form-control" value="{{ $films->durasi }}">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Perusahaan Produksi<span class="text-danger">*</span></label>
-                    <input type="Text" name="perusahaan" class="form-control" placeholder="Ketik di sini...">
+                    <input type="Text" name="perusahaan" class="form-control" placeholder="Ketik di sini..." value="{{ $films->perusahaan }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Sutradara<span class="text-danger">*</span></label>
-                    <input type="text" name="sutradara" class="form-control" placeholder="Ketik di sini...">
+                    <input type="text" name="sutradara" class="form-control" placeholder="Ketik di sini..." value="{{ $films->sutradara }}">
                 </div>
             </div>
             <div class="row mb-3">
@@ -79,41 +78,45 @@
                     <label class="form-label">Kategori<span class="text-danger">*</span></label>
                     <select name="kategori" class="form-select mr-sm-2">
                         <option value="">Pilih...</option>
-                        <option value="Film Indonesia">Film Indonesia</option>
-                        <option value="Film Korea">Film Korea</option>
-                        <option value="Anime">Anime</option>
-                        <option value="Super Hero">Super Hero</option>
-                        <option value="Horror">Horror</option>
-                        <option value="Film MUVIKU">Film MUVIKU</option>
+                        <option value="Film Indonesia" {{ $films->kategori == 'Film Indonesia' ? 'selected' : '' }}>Film Indonesia</option>
+                        <option value="Film Korea" {{ $films->kategori == 'Film Korea' ? 'selected' : '' }}>Film Korea</option>
+                        <option value="Anime" {{ $films->kategori == 'Anime' ? 'selected' : '' }}>Anime</option>
+                        <option value="Super Hero" {{ $films->kategori == 'Super Hero' ? 'selected' : '' }}>Super Hero</option>
+                        <option value="Horror" {{ $films->kategori == 'Horror' ? 'selected' : '' }}>Horror</option>
+                        <option value="Film MUVIKU" {{ $films->kategori == 'Film MUVIKU' ? 'selected' : '' }}>Film MUVIKU</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Status<span class="text-danger">*</span></label>
                     <select name="status" class="form-select mr-sm-2">
                         <option value="">Pilih...</option>
-                        <option value="Publish">Publish</option>
-                        <option value="Unpublish">Unpublish</option>
+                        <option value="Publish" {{ $films->status == 'Publish' ? 'selected' : '' }}>Publish</option>
+                        <option value="Unpublish" {{ $films->status == 'Unpublish' ? 'selected' : '' }}>Unpublish</option>
                     </select>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label class="form-label">Thumbnail Film<span class="text-danger">*</span></label>
-                    <input type="file" name="thumbnail" class="form-control">
+                    <label class="form-label d-block">Thumbnail Film<span class="text-danger">*</span></label>
+                    <input type="file" name="thumbnail" class="form-control" value="{{ $films->thumbnail }}">
+                    @if ($imgfilm)
+                        
+                    <img src="{{ asset('imgdb/' . $imgfilm) }}" alt="" width="80" height="120" class="rounded mt-3">
+                    @endif
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Video<span class="text-danger">*</span></label>
-                    <input type="url" name="video" class="form-control">
+                    <input type="url" name="video" class="form-control" value="{{ $films->video }}">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-12">
                     <label class="d-block form-label">Deskripsi Film<span class="text-danger">*</span></label>
-                    <textarea class="d-block rounded px-2" name="deskripsi" id="" cols="141" style="height: 250px; resize: none;"></textarea>
+                    <textarea class="d-block rounded px-1" name="deskripsi" id="" cols="141" style="height: 78px; resize: none;">{{ $films->deskripsi }}</textarea>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-warning">Tambah</button>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">Simpan</button>
             </div>
         </form>
     </div>

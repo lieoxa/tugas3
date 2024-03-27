@@ -38,12 +38,12 @@
             }
 
             50% {
-                transform: scale(1.5) rotate(180deg);
+                transform: scale(1.5) rotate(360deg);
                 /* Zoom in dan rotasi setengah putaran */
             }
 
             100% {
-                transform: scale(2) rotate(360deg);
+                transform: scale(1.5) rotate(360deg);
                 /* Kembali ke posisi awal tanpa zoom dan rotasi */
             }
         }

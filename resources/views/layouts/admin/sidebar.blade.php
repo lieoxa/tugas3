@@ -60,6 +60,14 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('broadcast.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-broadcast"></i>
+                        </span>
+                        <span class="hide-menu">Podcast</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('banner.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-badge-ad"></i>

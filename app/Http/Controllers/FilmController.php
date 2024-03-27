@@ -81,7 +81,10 @@ class FilmController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.film.edit')->with([
+            'films' => Film::find($id),
+            'imgfilm' => Film::find($id)->thumbnail,
+        ]);
     }
 
     /**
@@ -89,7 +92,45 @@ class FilmController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'judul' => 'required',
+            'tahun' => 'required',
+            'usia' => 'required',
+            'durasi' => 'required',
+            'perusahaan' => 'required',
+            'sutradara' => 'required',
+            'deskripsi' => 'required',
+            'kategori' => 'required',
+            'thumbnail' => 'required',
+            'video' => 'required',
+            'status' => 'required',
+        ]);
+
+        if($request->thumbnail){
+        $thumbnail = $request->file('thumbnail');
+        $imgFile = time() . '.' . $thumbnail->getClientOriginalExtension();
+        $thumbnail->move(public_path('imgdb'), $imgFile);
+        } else {
+            $film=Film::find( $id );
+            $thumbnail = $film->thumbnail;
+        }
+
+        $film = Film::find( $id );
+        $film->judul = $request->judul;
+        $film->tahun = $request->tahun;
+        $film->usia = $request->usia;
+        $film->durasi = $request->durasi;
+        $film->perusahaan = $request->perusahaan;
+        $film->sutradara = $request->sutradara;
+        $film->thumbnail = $imgFile;
+        $film->video = $request->video;
+        $film->deskripsi = $request->deskripsi;
+        $film->kategori = $request->kategori;
+        $film->status = $request->status;
+
+        $film->save();
+
+        return redirect()->route('film.index')->with('success', 'Film berhasil diedit.');
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Http\Controllers\AccUserController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\FilmController;
+use App\Http\Controllers\PodcastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,5 @@ Route::resource('banner', BannerController::class);
 Route::resource('laporan', LaporanController::class);
 
 Route::resource('film', FilmController::class);
+
+Route::resource('broadcast', PodcastController::class);
