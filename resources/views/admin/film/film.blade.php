@@ -57,16 +57,16 @@
                 </div>
             </div>
             <!-- ---------------------
-                                                                        end Contact
-                                                                    ---------------- -->
+                                                                            end Contact
+                                                                        ---------------- -->
             <!-- Modal -->
             <div class="card card-body rounded-top-0">
                 <div class="table-responsive">
                     <table class="table search-table align-middle text-nowrap">
                         <thead class="header-item text-center">
                             <th>No.</th>
-                            <th>Judul</th>
                             <th>Thumbnail</th>
+                            <th>Judul</th>
                             <th>Video</th>
                             <th>Kategori</th>
                             <th>View</th>
@@ -77,8 +77,9 @@
                             @foreach ($films as $item)
                                 <tr>
                                     <td>{{ $item->id }}</td>
+                                    <td><img src="{{ asset('imgdb/' . $item->thumbnail) }}" alt="" width="60"
+                                        height="90" class="rounded"></td>
                                     <td>{{ $item->judul }}</td>
-                                    <td>{{ $item->thumbnail }}</td>
                                     <td>{{ $item->video }}</td>
                                     <td>{{ $item->kategori }}</td>
                                     <td>{{ $item->view }}</td>
@@ -148,7 +149,7 @@
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-12" style="max-width: 100%;">
-                                                                                <textarea style="height: 200px; resize: none; width: 100%;" class="rounded px-1 border-0">{{ $item->deskripsi }}</textarea>
+                                                                                <textarea style="height: 200px; resize: none; width: 100%;" class="rounded px-1 border-0" readonly>{{ $item->deskripsi }}</textarea>
                                                                             </div>
                                                                         </div>
                                                                         <div class="img-profil mb-2">
@@ -173,11 +174,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button style="background: #8a8a8a; color: white;"
-                                                                type="button" class="btn"
-                                                                data-bs-dismiss="modal">Tutup</button>
-                                                            <button style="background: #8a8a8a; color: white;"
-                                                                type="button" class="btn">Tutup</button>
+                                                            <button type="button" class="btn btn-success">Publish</button>
+                                                            <button data-bs-dismiss="modal" style="background: #8a8a8a; color: white;"
+                                                                type="button" class="btn btn-primary">Tutup</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -191,17 +190,17 @@
                     </table>
                 </div>
             @else
-            <div class="justify-content-center">
-                <div class="text-center">
-                    <img src="img/empty-banner.png" width="300" style="margin-top: 120px; opacity: 0.5;"><br>
-                    <h6 class="fw-medium">Tidak Ada Film!</h6>
-                    <a href="{{ route('film.create') }}" id="btn-add-contact"
-                        class="btn btn-warning justify-content-center mt-1 align-items-center"
-                        style="padding: 7px 16px 7px 10px;">
-                        <i class="bi bi-plus fs-5" style="vertical-align: -0.1em;"></i>Tambah Film
-                    </a>
+                <div class="justify-content-center">
+                    <div class="text-center">
+                        <img src="img/empty-banner.png" width="300" style="margin-top: 120px; opacity: 0.5;"><br>
+                        <h6 class="fw-medium">Belum Ada Film!</h6>
+                        <a href="{{ route('film.create') }}" id="btn-add-contact"
+                            class="btn btn-warning justify-content-center mt-1 align-items-center"
+                            style="padding: 7px 16px 7px 10px;">
+                            <i class="bi bi-plus fs-5" style="vertical-align: -0.1em;"></i>Tambah Film
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         @endif
     </div>

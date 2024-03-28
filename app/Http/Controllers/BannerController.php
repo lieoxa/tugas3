@@ -15,8 +15,8 @@ class BannerController extends Controller
         return view('admin.banner.banner')->with([
             'banner' => Banner::all(),
         ]);
-        // return view('admin.banner.banner-index');
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -42,7 +42,7 @@ class BannerController extends Controller
         ]);
 
         $gambarBarang = $request->file('gambar');
-        $namaFile = time().'.'.$gambarBarang->getClientOriginalExtension();
+        $namaFile = time() . '.' . $gambarBarang->getClientOriginalExtension();
         $gambarBarang->move(public_path('imgdb'), $namaFile);
 
         $banner = new Banner;
@@ -82,7 +82,7 @@ class BannerController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'gambar' => 'required',
+            'gambar' => 'nullable',
             'nama' => 'required',
             'lokasi' => 'required',
             'tglfilm' => 'required',
@@ -90,9 +90,14 @@ class BannerController extends Controller
             'status' => 'required',
         ]);
 
-        $gambarBarang = $request->file('gambar');
-        $namaFile = time().'.'.$gambarBarang->getClientOriginalExtension();
-        $gambarBarang->move(public_path('imgdb'), $namaFile);
+        if ($request->gambarbanner) {
+            $imgBanner = $request->file('gambar');
+            $namaFile = time() . '.' . $imgBanner->getClientOriginalExtension();
+            $imgBanner->move(public_path('imgdb'), $namaFile);
+        } else {
+            $banner = Banner::find($id);
+            $namaFile = $banner->gambar;
+        }
 
         $banner = Banner::find($id);
         $banner->gambar = $namaFile;

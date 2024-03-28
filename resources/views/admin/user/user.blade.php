@@ -90,7 +90,7 @@
                 <div class="justify-content-center">
                     <div class="text-center">
                         <img src="img/empty-banner.png" width="300" style="margin-top: 120px; opacity: 0.5;"><br>
-                        <h6 class="fw-medium">Tidak Ada User!</h6>
+                        <h6 class="fw-medium">Belum Ada User!</h6>
                     </div>
                 </div>
             </div>

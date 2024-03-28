@@ -72,7 +72,10 @@ class PodcastController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.podcast.edit')->with([
+            'podcpodcast' => Podcast::find($id),
+            'imgfilm' => Podcast::find($id)->thumbnail,
+        ]);
     }
 
     /**
@@ -80,7 +83,34 @@ class PodcastController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'judul' => 'required',
+            'channel' => 'required',
+            'host' => 'required',
+            'thumbnail' => 'nullable',
+            'deskripsi' => 'required',
+            'video' => 'required',
+            'status' => 'required',
+        ]);
+
+        $thumbnail = $request->file('thumbnail');
+        $imgFile = time() . '.' . $thumbnail->getClientOriginalExtension();
+        $thumbnail->move(public_path('imgdb'), $imgFile);
+        
+
+        $podcast = Podcast::find( $id );
+        $podcast->judul = $request->judul;
+        $podcast->channel = $request->channel;
+        $podcast->host = $request->host;
+        $podcast->thumbnail = $imgFile;
+        $podcast->deskripsi = $request->deskripsi;
+        $podcast->video = $request->video;
+        $podcast->status = $request->status;
+
+        $podcast->save();
+
+        return redirect()->route('broadcast.index')->with('success', 'Film berhasil ditambahkan.');
+
     }
 
     /**

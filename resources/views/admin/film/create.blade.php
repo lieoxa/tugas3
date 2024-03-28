@@ -90,9 +90,8 @@
                 <div class="col-md-6">
                     <label class="form-label">Status<span class="text-danger">*</span></label>
                     <select name="status" class="form-select mr-sm-2">
-                        <option value="">Pilih...</option>
                         <option value="Publish">Publish</option>
-                        <option value="Unpublish">Unpublish</option>
+                        <option value="Unpublish" selected>Unpublish</option>
                     </select>
                 </div>
             </div>

@@ -80,7 +80,7 @@
                         <span>
                             <i class="ti ti-photo-search"></i>
                         </span>
-                        <span class="hide-menu">Rekom Search</span>
+                        <span class="hide-menu">Rekomendasi</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -88,18 +88,9 @@
                         <span>
                             <i class="ti ti-trending-up"></i>
                         </span>
-                        <span class="hide-menu">Trending Anime</span>
+                        <span class="hide-menu"> Anime</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="admin/user" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-chart-histogram"></i>
-                        </span>
-                        <span class="hide-menu">Banyak Ditonton</span>
-                    </a>
-                </li>
-                
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="admin/user" aria-expanded="false">
                         <span>

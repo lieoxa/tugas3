@@ -112,7 +112,7 @@
             <div class="row mb-3">
                 <div class="col-md-12">
                     <label class="d-block form-label">Deskripsi Film<span class="text-danger">*</span></label>
-                    <textarea class="d-block rounded px-1" name="deskripsi" id="" cols="141" style="height: 78px; resize: none;">{{ $films->deskripsi }}</textarea>
+                    <textarea class="d-block rounded px-2" name="deskripsi" id="" cols="141" style="height: 250px; resize: none;">{{ $films->deskripsi }}</textarea>
                 </div>
             </div>
                 <div class="modal-footer">

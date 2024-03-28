@@ -33,6 +33,11 @@
             line-height: 2;
             vertical-align: -0.2215em;
         }
+
+        .btn.disabled {
+            background: #5c5c5c !important;
+            color: white !important;
+        }
     </style>
     <!-- --------------------------------------------------- -->
     <link id="themeColors" rel="stylesheet" href="{{ asset('admin') }}/dist/css/style.min.css" />
@@ -51,16 +56,16 @@
                     <div
                         class="col-md-8 col-xl-9 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
 
-                        <a data-bs-toggle="modal" data-bs-target="#create" id="btn-add-contact" class="btn btn-warning d-flex align-items-center"
-                            style="padding: 7px 16px 7px 10px;">
+                        <a data-bs-toggle="modal" data-bs-target="#create" id="btn-add-contact"
+                            class="btn btn-warning d-flex align-items-center" style="padding: 7px 16px 7px 10px;">
                             <i class="bi bi-plus fs-5"></i>Tambah
                         </a>
                     </div>
                 </div>
             </div>
             <!-- ---------------------
-                                end Contact
-                                ---------------- -->
+                                            end Contact
+                                            ---------------- -->
             <!-- Modal -->
 
             <div class="card card-body">
@@ -80,8 +85,8 @@
                             <th>Gambar</th>
                             <th>Nama</th>
                             <th>Lokasi Banner</th>
-                            <th>Tgl. Film</th>
-                            <th>Jam Film</th>
+                            <th>Tgl. Publish</th>
+                            <th>Jam Publish</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </thead>
@@ -109,133 +114,143 @@
                                                 </button>
                                             </form>
                                             <button type="button" class="btn btn-outline-warning ms-1"
-                                                style="padding: 0px 18px;" data-bs-toggle="modal" data-bs-target="#edit"><i
+                                                style="padding: 0px 18px;" data-bs-toggle="modal"
+                                                data-bs-target="#edit-{{ $items->id }}"><i
                                                     class="bi bi-pencil-square"></i></button>
                                         </div>
 
-                                        <div class="modal fade" id="edit" data-bs-backdrop="static" tabindex="-1"
-                                            data-bs-keyboard="false">
+                                        <div class="modal fade" id="edit-{{ $items->id }}" data-bs-backdrop="static"
+                                            tabindex="-1" data-bs-keyboard="false">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content px-3">
                                                     <div class="modal-header d-flex align-items-center">
-                                                        <h5 class="modal-title">Tambah Banner</h5>
+                                                        <h5 class="modal-title">Edit Banner</h5>
                                                     </div>
                                                     <form action="{{ route('banner.update', $items->id) }}" class="row"
-                                                        method="POST">
+                                                        method="POST" enctype="multipart/form-data">
                                                         @csrf
+                                                        @method('put')
                                                         <div class="modal-body">
                                                             <div class="add-contact-box">
                                                                 <div class="add-contact-content">
-                                                                    <form id="addContactModalTitle">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-email">
-                                                                                    <label for="">
-                                                                                        <h6>Nama Film<span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <input name="nama" id="nama"
-                                                                                        type="text" class="form-control"
-                                                                                        value="{{ $items->nama }}"
-                                                                                        placeholder="Ketik...">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-location">
-                                                                                    <label for="">
-                                                                                        <h6>Jam Film <span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <input name="jamfilm" id="jamfilm"
-                                                                                        type="time" class="form-control"
-                                                                                        value="{{ $items->jamfilm }}">
-                                                                                </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-email">
+                                                                                <label for="">
+                                                                                    <h6>Nama Film
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <input name="nama" id="nama"
+                                                                                    type="text" class="form-control"
+                                                                                    value="{{ $items->nama }}"
+                                                                                    placeholder="Ketik...">
+                                                                                @error('nama')
+                                                                                    {{ $message }}
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
-                                                                        <div class="img-profil mb-2">
-                                                                            <img class="mx-auto rounded" id="preview"
-                                                                                src="#" alt="Preview" height="150"
-                                                                                width="266.66" style="display: none;">
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-phone">
-                                                                                    <label for="">
-                                                                                        <h6>Tanggal Film <span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <input name="tglfilm" id="tglfilm"
-                                                                                        type="date" class="form-control"
-                                                                                        value="{{ $items->tglfilm }}">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-occupation">
-                                                                                    <label for="">
-                                                                                        <h6>Status<span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <select name="status"
-                                                                                        class="form-select mr-sm-2"
-                                                                                        id="status">
-                                                                                        <option selected>Pilih...</option>
-                                                                                        <option value="Publish"
-                                                                                            {{ $items->status == 'Publish' ? 'selected' : '' }}>
-                                                                                            Publish</option>
-                                                                                        <option value="Unpublish"
-                                                                                            {{ $items->status == 'Unpublish' ? 'selected' : '' }}>
-                                                                                            Unpublish</option>
-                                                                                    </select>
-                                                                                </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-phone">
+                                                                                <label for="">
+                                                                                    <h6>Tanggal Film Tayang
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <input name="tglfilm" id="tglfilm"
+                                                                                    type="date" class="form-control"
+                                                                                    value="{{ $items->tglfilm }}">
+                                                                                @error('tglfilm')
+                                                                                    {{ $message }}
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-name">
-                                                                                    <label for="">
-                                                                                        <h6>Gambar Film<span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <input name="gambar" type="file"
-                                                                                        value="{{ $items->gambar }}"
-                                                                                        class="form-control">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="mb-3 contact-occupation">
-                                                                                    <label for="">
-                                                                                        <h6>Lokasi Banner<span
-                                                                                                class="text-danger">*</span>
-                                                                                        </h6>
-                                                                                    </label>
-                                                                                    <select name="lokasi"
-                                                                                        class="form-select mr-sm-2"
-                                                                                        id="inlineFormCustomSelect">
-                                                                                        <option selected>Pilih...</option>
-                                                                                        <option value="Utama"
-                                                                                            {{ $items->lokasi == 'Utama' ? 'selected' : '' }}>
-                                                                                            Utama</option>
-                                                                                        <option value="Search"
-                                                                                            {{ $items->lokasi == 'Search' ? 'selected' : '' }}>
-                                                                                            Search</option>
-                                                                                    </select>
-                                                                                </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-location">
+                                                                                <label for="">
+                                                                                    <h6>Jam Film Tayang
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <input name="jamfilm" id="jamfilm"
+                                                                                    type="time" class="form-control"
+                                                                                    value="{{ $items->jamfilm }}">
+                                                                                @error('jamfilm')
+                                                                                    {{ $message }}
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
-                                                                    </form>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-occupation">
+                                                                                <label for="">
+                                                                                    <h6>Status
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <select name="status"
+                                                                                    class="form-select mr-sm-2"
+                                                                                    id="status">
+                                                                                    <option selected>Pilih...</option>
+                                                                                    <option value="Publish"
+                                                                                        {{ $items->status == 'Publish' ? 'selected' : '' }}>
+                                                                                        Publish</option>
+                                                                                    <option value="Unpublish"
+                                                                                        {{ $items->status == 'Unpublish' ? 'selected' : '' }}>
+                                                                                        Unpublish</option>
+                                                                                    @error('status')
+                                                                                        {{ $message }}
+                                                                                    @enderror
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-name">
+                                                                                <label for="">
+                                                                                    <h6>Gambar Banner
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <input name="gambar" id="gambar"
+                                                                                    type="file"
+                                                                                    value="{{ $items->gambar }}"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="mb-3 contact-occupation">
+                                                                                <label for="">
+                                                                                    <h6>Lokasi Banner
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <select name="lokasi"
+                                                                                    class="form-select mr-sm-2"
+                                                                                    id="lokasi">
+                                                                                    <option selected>Pilih...</option>
+                                                                                    <option value="Utama"
+                                                                                        {{ $items->lokasi == 'Utama' ? 'selected' : '' }}>
+                                                                                        Utama</option>
+                                                                                    <option value="Search"
+                                                                                        {{ $items->lokasi == 'Search' ? 'selected' : '' }}>
+                                                                                        Search</option>
+                                                                                    @error('lokasi')
+                                                                                        {{ $message }}
+                                                                                    @enderror
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="rounded-2">
+                                                            <img src="{{ asset('imgdb/' . $items->gambar) }}" alt=""
+                                                            width="100%" height="200" class="rounded-1" style="border-radius: 0.5rem !important;">
+                                                        </div>
                                                         <div class="modal-footer">
-                                                            <button class="btn rounded-2 px-3" data-bs-dismiss="modal"
-                                                                style="background: #838383; color: white;">Batal</button>
-                                                            <button type="submit" class="btn btn-warning rounded-2 px-3"
-                                                                style="background: #838383; color: #white;">Simpan</button>
+                                                            <a href="#" class="btn rounded-2 px-3"
+                                                                data-bs-dismiss="modal"
+                                                                style="background: #838383; color: white;">Batal</a>
+                                                            <button type="submit" class="btn rounded-2 px-3"
+                                                                style="background: #838383; color: white;">Simpan</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -288,18 +303,18 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="mb-3 contact-phone">
+                                                <div class="mb-3 contact-location">
                                                     <label for="">
-                                                        <h6>Tanggal Film <span class="text-danger">*</span></h6>
+                                                        <h6>Jam Banner Publish <span class="text-danger">*</span></h6>
                                                     </label>
-                                                    <input name="tglfilm" id="tglfilm" type="date"
-                                                        class="form-control" x-model="tglfilm">
+                                                    <input name="jamfilm" id="jamfilm" x-model="jamfilm"
+                                                        type="time" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3 contact-name">
                                                     <label for="">
-                                                        <h6>Gambar Film <span class="text-danger">*</span></h6>
+                                                        <h6>Gambar Banner <span class="text-danger">*</span></h6>
                                                     </label>
                                                     <input name="gambar" id="gambar" type="file"
                                                         class="form-control" x-model="gambar" onchange="previewImage()">
@@ -308,12 +323,12 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="col-md-12">
-                                                <div class="mb-3 contact-location">
+                                                <div class="mb-3 contact-phone">
                                                     <label for="">
-                                                        <h6>Jam Film <span class="text-danger">*</span></h6>
+                                                        <h6>Tanggal Banner Publish <span class="text-danger">*</span></h6>
                                                     </label>
-                                                    <input name="jamfilm" id="jamfilm" x-model="jamfilm"
-                                                        type="time" class="form-control">
+                                                    <input name="tglfilm" id="tglfilm" type="date"
+                                                        class="form-control" x-model="tglfilm">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -323,9 +338,8 @@
                                                     </label>
                                                     <select name="status" class="form-select mr-sm-2" x-model="status"
                                                         id="status">
-                                                        <option value="">Pilih...</option>
-                                                        <option value="Publish">Publish</option>
                                                         <option value="Unpublish">Unpublish</option>
+                                                        <option value="Publish">Publish</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -346,7 +360,7 @@
                                     </div>
                                     <div class="img-profil mb-2">
                                         <img class="mx-auto rounded" id="preview" src="#" alt="Preview"
-                                            height="150" width="266.66" style="display: none;">
+                                        width="100%" height="200" style="display: none;">
                                     </div>
                                 </form>
                             </div>
@@ -355,10 +369,9 @@
                     <div class="modal-footer">
                         {{-- <button class="btn btn-danger rounded-2 px-3" :class="name ? 'disabled' : null"
                             data-bs-dismiss="modal">Batal</button> --}}
-                        <button type="button" class="btn rounded-2 px-3" style="background: #838383; color: white;"
+                        <button type="button" class="btn rounded-2 px-3" style="background: #5c5c5c; color: white;"
                             data-bs-dismiss="modal">Batal</button>
-                        <button type="submit" id="btn-add" class="btn rounded-2 px-3"
-                            style="background: #838383; color: white;"
+                        <button type="submit" id="btn-add" class="rounded-2 px-3 btn btn-warning border-0"
                             :class="nama && tglfilm && gambar && jamfilm && status && lokasi ? null : 'disabled'">Tambah</button>
                     </div>
                 </div>
@@ -397,23 +410,5 @@
                 reader.readAsDataURL(imgProfil.files[0]);
             }
         }
-
-        // const inputs = document.querySelectorAll('.input-with-bg');
-
-        // function enableSubmit() {
-        //     let inputs = document.getElementsByClassName(
-        //     'required'); // Enter your class name for a required field, this should also be reflected within your form fields.
-        //     let btn = document.querySelector('input[type="button"]');
-        //     let isValid = true;
-        //     for (var i = 0; i < inputs.length; i++) {
-        //         let changedInput = inputs[i];
-        //         if (changedInput.value.trim() === "" || changedInput.value === null) {
-        //             changedInput.classList.remove("disabled");
-        //             isValid = false;
-        //             break;
-        //         }
-        //     }
-        //     btn.disabled = !isValid;
-        // }
     </script>
 @endpush
